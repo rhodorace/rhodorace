@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import {
     Card,
     CardBody,
@@ -9,16 +8,8 @@ import {
     Input,
     Textarea,
 } from "@material-tailwind/react";
-
 import { UsersIcon } from "@heroicons/react/24/solid";
-import { ComplexNavbar } from '@/components/layout/complex-navbar';
-import SecondNavbar from '@/components/layout/second-navbar'
-import {
-    Menu,
-    MenuHandler,
-    MenuList,
-    MenuItem,
-} from "@material-tailwind/react";
+import Footer from "@/components/layout/footer";
 
 export default function Home() {
     return (
@@ -36,10 +27,10 @@ export default function Home() {
                 </div>
                 <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div class="text-sm lg:flex-grow">
-                        <Button className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>РЕГИСТРАЦИЯ</Button>
-                        <Button className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>ТРАСЕТА</Button>
-                        <Button className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>ГАЛЕРИЯ</Button>
-                        <Button className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>КОНТАКТИ</Button>
+                        <Button className='block mt-6 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>РЕГИСТРАЦИЯ</Button>
+                        <Button className='block mt-6 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>ТРАСЕТА</Button>
+                        <Button className='block mt-6 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>ГАЛЕРИЯ</Button>
+                        <Button className='block mt-6 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>КОНТАКТИ</Button>
                         {/* <Menu>
                             <MenuHandler>
                                 <Button className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>Open Menu</Button>
@@ -245,7 +236,7 @@ export default function Home() {
                 </div>
             </section>
             <div className="bg-blue-gray-50/50">
-                {/* <Footer /> */}
+                <Footer />
             </div>
         </>
     );

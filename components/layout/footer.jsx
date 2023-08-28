@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
-import { Typography, IconButton } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faYoutube, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const year = new Date().getFullYear();
 
@@ -16,20 +18,21 @@ export function Footer({ title, description, socials, menus, copyright }) {
               {description}
             </Typography>
             <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
-              {socials.map(({ color, name, path }) => (
-                <a
-                  key={name}
-                  href={path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <IconButton color="white" className="rounded-full">
-                    <Typography color={color}>
-                      <i className={`fa-brands fa-${name}`} />
-                    </Typography>
-                  </IconButton>
-                </a>
-              ))}
+              <button className="duration-500 rounded-full transform hover:-translate-y-3">
+                <FontAwesomeIcon icon={faYoutube}
+                  style={{ color: "red", fontSize: 50 }}
+                />
+              </button>
+              <button className="duration-500 rounded-full transform hover:-translate-y-3">
+                <FontAwesomeIcon icon={faInstagram}
+                  style={{ color: "red", fontSize: 50 }}
+                />
+              </button>
+              <button className="duration-500 rounded-full transform hover:-translate-y-3">
+                <FontAwesomeIcon icon={faFacebook}
+                  style={{ color: "blue", fontSize: 50 }}
+                />
+              </button>
             </div>
           </div>
           <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">
@@ -79,90 +82,68 @@ export function Footer({ title, description, socials, menus, copyright }) {
 }
 
 Footer.defaultProps = {
-  title: "Material Tailwind",
+  title: "Община Момчилград",
   description:
     "Easy to use React components for Tailwind CSS and Material Design.",
   socials: [
     {
       color: "blue",
       name: "facebook",
-      path: "https://www.facebook.com/CreativeTim",
+      path: "https://www.google.com",
     },
     {
       color: "light-blue",
       name: "twitter",
-      path: "https://www.twitter.com/creativetim",
-    },
-    {
-      color: "purple",
-      name: "instagram",
-      path: "https://www.instagram.com/creativetimofficial/",
-    },
-    {
-      color: "pink",
-      name: "dribbble",
-      path: "https://www.dribbble.com/creativetim",
-    },
-    {
-      color: "red",
-      name: "youtube",
-      path: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
-    },
-    {
-      color: "black",
-      name: "github",
-      path: "https://github.com/creativetimofficial/material-tailwind",
+      path: "https://www.google.com",
     },
   ],
   menus: [
     {
-      name: "useful links",
+      name: "Header 1",
       items: [
-        { name: "About Us", path: "https://www.creative-tim.com/presentation" },
-        { name: "Blog", path: "https://www.creative-tim.com/blog" },
+        { name: "Section 0", path: "https://www.google.com" },
+        { name: "Section 0", path: "https://www.google.com" },
         {
-          name: "Github",
-          path: "https://www.github.com/creativetimofficial/material-tailwind?ref=mtk",
+          name: "Section 0",
+          path: "https://www.google.com",
         },
         {
-          name: "Free Products",
-          path: "https://www.creative-tim.com/templates/free?ref=mtk",
+          name: "Section 0",
+          path: "https://www.google.com",
         },
       ],
     },
     {
-      name: "other resources",
+      name: "Header 2",
       items: [
         {
-          name: "MIT License",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
+          name: "Section 1",
+          path: "https://www.google.com",
         },
         {
-          name: "Contribute",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CONTRIBUTING.md?ref=mtk",
+          name: "Section 2",
+          path: "https://www.google.com",
         },
         {
-          name: "Change Log",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk",
+          name: "Section 3",
+          path: "https://www.google.com",
         },
         {
-          name: "Contact Us",
-          path: "https://creative-tim.com/contact-us?ref=mtk",
+          name: "Section 4",
+          path: "https://www.google.com",
         },
       ],
     },
   ],
   copyright: (
     <>
-      Copyright © {year} Material Tailwind by{" "}
+      Copyright © {year} Created by Taner Tasim
       <a
-        href="https://www.creative-tim.com?ref=mtk"
+        href="https://www.google.com"
         target="_blank"
         className="text-blue-gray-500 transition-colors hover:text-blue-500"
       >
-        Creative Tim
       </a>
-      .
     </>
   ),
 };
@@ -175,6 +156,6 @@ Footer.propTypes = {
   copyright: PropTypes.node,
 };
 
-Footer.displayName = "/components/layout/footer.js";
+Footer.displayName = "/components/footer.js";
 
 export default Footer;
