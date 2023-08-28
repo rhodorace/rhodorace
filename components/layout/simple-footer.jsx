@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Typography } from "@material-tailwind/react";
 import { HeartIcon } from "@heroicons/react/24/solid";
 
-export function SimpleFooter({ brandName, brandLink, routes }) {
+export function SimpleFooter({ brandName, brandLink }) {
   const year = new Date().getFullYear();
 
   return (
@@ -21,19 +21,7 @@ export function SimpleFooter({ brandName, brandLink, routes }) {
           for a better web.
         </Typography>
         <ul className="flex items-center gap-4">
-          {routes.map(({ name, path }) => (
-            <li key={name}>
-              <Typography
-                as="a"
-                href={path}
-                target="_blank"
-                variant="small"
-                className="py-0.5 px-1 font-normal text-inherit transition-colors hover:text-blue-500"
-              >
-                {name}
-              </Typography>
-            </li>
-          ))}
+          
         </ul>
       </div>
     </footer>
@@ -42,19 +30,12 @@ export function SimpleFooter({ brandName, brandLink, routes }) {
 
 SimpleFooter.defaultProps = {
   brandName: "Creative Tim",
-  brandLink: "https://www.creative-tim.com",
-  routes: [
-    { name: "Creative Tim", path: "https://www.creative-tim.com" },
-    { name: "About Us", path: "https://www.creative-tim.com/presentation" },
-    { name: "Blog", path: "https://www.creative-tim.com/blog" },
-    { name: "License", path: "https://www.creative-tim.com/license" },
-  ],
+  brandLink: "https://www.creative-tim.com"
 };
 
 SimpleFooter.propTypes = {
   brandName: PropTypes.string,
   brandLink: PropTypes.string,
-  routes: PropTypes.arrayOf(PropTypes.object),
 };
 
 SimpleFooter.displayName = "/src/widgets/layout/simple-footer.jsx";
