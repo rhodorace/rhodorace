@@ -1,51 +1,20 @@
 import {
     Card,
     CardBody,
-    CardHeader,
     Typography,
     Button,
     IconButton,
-    Input,
-    Textarea,
 } from "@material-tailwind/react";
-import { UsersIcon } from "@heroicons/react/24/solid";
-import Footer from "@/components/layout/footer";
-
+import Footer from "@/components/footer";
+import { NavbarDefault } from "@/components/navbar-default";
+import PageTitle from "@/components/layout/page-title";
+import { DefaultAccordion } from "@/components/default-accordion";
 export default function Home() {
     return (
         <>
-            <nav class="flex items-center justify-between flex-wrap bg-black p-6">
-                <div class="flex items-center flex-shrink-0 text-white mr-6">
-                    <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" /></svg>
-                    <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
-                </div>
-                <div class="block lg:hidden">
-                    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
-                    </button>
-                </div>
-                <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-                    <div class="text-sm lg:flex-grow">
-                        <Button className='block mt-6 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>РЕГИСТРАЦИЯ</Button>
-                        <Button className='block mt-6 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>ТРАСЕТА</Button>
-                        <Button className='block mt-6 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>ГАЛЕРИЯ</Button>
-                        <Button className='block mt-6 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'>КОНТАКТИ</Button>
-                        {/* <Menu>
-                            <MenuHandler>
-                                <Button className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white'>Open Menu</Button>
-                            </MenuHandler>
-                            <MenuList>
-                                <MenuItem>Menu Item 1</MenuItem>
-                                <MenuItem>Menu Item 2</MenuItem>
-                                <MenuItem>Menu Item 3</MenuItem>
-                            </MenuList>
-                        </Menu> */}
-                    </div>
-                 
-                </div>
-            </nav>
+
             <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
+                <NavbarDefault />
             </div>
             <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
                 <div className="absolute top-0 h-full w-full  bg-cover bg-center" />
@@ -99,29 +68,15 @@ export default function Home() {
                                 </Typography>
                             </CardBody>
                         </Card>
-                        {/* {featuresData.map(({ color, title, icon, description }) => (
-                            <FeatureCard
-                                key={title}
-                                color={color}
-                                title={title}
-                                icon={React.createElement(icon, {
-                                    className: "w-5 h-5 text-white",
-                                })}
-                                description={description}
-                            />
-                        ))} */}
                     </div>
                     <div className="mt-32 flex flex-wrap items-center">
                         <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-                            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white p-3 text-center shadow-lg">
-                                <UsersIcon className="h-6 w-6 text-blue-gray-900" />
-                            </div>
                             <Typography
                                 variant="h3"
                                 className="mb-3 font-bold"
                                 color="blue-gray"
                             >
-                                Working with us is a pleasure
+                               За състезанието
                             </Typography>
                             <Typography className="mb-8 font-normal text-blue-gray-500">
                                 Don't let your uses guess by attaching tooltips and popoves to
@@ -137,27 +92,11 @@ export default function Home() {
                         </div>
                         <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
                             <Card className="shadow-lg shadow-gray-500/10">
-                                <CardHeader className="relative h-56">
-                                    <img
+                                <img
                                         alt="Card Image"
-                                        src="/img/teamwork.jpeg"
+                                        src="https://nordmarkaskogsmaraton.no/wp-content/uploads/2014/05/langlangrekke.jpg"
                                         className="h-full w-full"
                                     />
-                                </CardHeader>
-                                <CardBody>
-                                    <Typography
-                                        variant="h5"
-                                        color="blue-gray"
-                                        className="mb-3 font-bold"
-                                    >
-                                        Top Notch Services
-                                    </Typography>
-                                    <Typography className="font-normal text-blue-gray-500">
-                                        The Arctic Ocean freezes every winter and much of the
-                                        sea-ice then thaws every summer, and that process will
-                                        continue whatever happens.
-                                    </Typography>
-                                </CardBody>
                             </Card>
                         </div>
                     </div>
@@ -165,74 +104,21 @@ export default function Home() {
             </section>
             <section className="px-4 pt-20 pb-48">
                 <div className="container mx-auto">
-                    {/* <PageTitle heading="Here are our heroes">
+                    <PageTitle heading="Here are our heroes">
                         According to the National Oceanic and Atmospheric Administration,
                         Ted, Scambos, NSIDClead scentist, puts the potentially record
                         maximum.
-                    </PageTitle> */}
+                    </PageTitle>
                     <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
-                        {/* {teamData.map(({ img, name, position, socials }) => (
-                            <TeamCard
-                                key={name}
-                                img={img}
-                                name={name}
-                                position={position}
-                                socials={
-                                    <div className="flex items-center gap-2">
-                                        {socials.map(({ color, name }) => (
-                                            <IconButton key={name} color={color} variant="text">
-                                                <i className={`fa-brands text-lg fa-${name}`} />
-                                            </IconButton>
-                                        ))}
-                                    </div>
-                                }
-                            />
-                        ))} */}
+
                     </div>
                 </div>
             </section>
-            <section className="relative bg-blue-gray-50/50 py-24 px-4">
+            <section className="relative bg-gray-50 py-24 px-4">
                 <div className="container mx-auto">
-                    {/* <PageTitle heading="Build something">
-                        Put the potentially record low maximum sea ice extent tihs year down
-                        to low ice. According to the National Oceanic and Atmospheric
-                        Administration, Ted, Scambos.
-                    </PageTitle> */}
-                    <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-                        {/* {contactData.map(({ title, icon, description }) => (
-                            <Card
-                                key={title}
-                                color="transparent"
-                                shadow={false}
-                                className="text-center text-blue-gray-900"
-                            >
-                                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-white shadow-lg shadow-gray-500/20">
-                                    {React.createElement(icon, {
-                                        className: "w-5 h-5",
-                                    })}
-                                </div>
-                                <Typography variant="h5" color="blue-gray" className="mb-2">
-                                    {title}
-                                </Typography>
-                                <Typography className="font-normal text-blue-gray-500">
-                                    {description}
-                                </Typography>
-                            </Card>
-                        ))} */}
-                    </div>
-                    {/* <PageTitle heading="Want to work with us?">
-                        Complete this form and we will get back to you in 24 hours.
-                    </PageTitle> */}
-                    <form className="mx-auto mt-12 max-w-3xl text-center">
-                        <div className="mb-8 flex gap-8">
-                            <Input variant="standard" size="lg" label="Full Name" />
-                            <Input variant="standard" size="lg" label="Email Address" />
-                        </div>
-                        <Textarea variant="standard" size="lg" label="Message" rows={8} />
-                        <Button variant="gradient" size="lg" className="mt-8">
-                            Send Message
-                        </Button>
-                    </form>
+                    <PageTitle heading="Често задавани въпроси">
+                    </PageTitle>
+                    <DefaultAccordion />
                 </div>
             </section>
             <div className="bg-blue-gray-50/50">

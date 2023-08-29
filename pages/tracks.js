@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   Card,
   CardHeader,
@@ -9,7 +8,7 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
-import { SimpleFooter } from "@/widgets/layout";
+import { Footer } from "@/components/footer";
 
 export function SignIn() {
   return (
@@ -48,7 +47,7 @@ export function SignIn() {
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">
               Don't have an account?
-              <Link to="/sign-up">
+              {/* <Link to="/sign-up">
                 <Typography
                   as="span"
                   variant="small"
@@ -57,13 +56,13 @@ export function SignIn() {
                 >
                   Sign up
                 </Typography>
-              </Link>
+              </Link> */}
             </Typography>
           </CardFooter>
         </Card>
       </div>
       <div className="container absolute bottom-6 left-2/4 z-10 mx-auto -translate-x-2/4 text-white">
-        <SimpleFooter />
+        <Footer />
       </div>
     </>
   );
