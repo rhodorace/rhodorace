@@ -7,6 +7,7 @@ const year = new Date().getFullYear();
 
 export function Footer({ title, description, socials, menus, copyright }) {
   return (
+    <div className="bg-blue-gray-50/50">
     <footer className="relative px-4 pt-8 pb-6">
       <div className="container mx-auto">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
@@ -78,6 +79,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
         </div>
       </div>
     </footer>
+    </div>
   );
 }
 

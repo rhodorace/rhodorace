@@ -1,48 +1,51 @@
 import React from "react";
 import {
-  Navbar,
   MobileNav,
   Typography,
   Button,
   IconButton,
 } from "@material-tailwind/react";
 import Link from "next/link";
- 
-export function NavbarDefault() {
+import {
+  Navbar as MaterialNavbar
+} from "@material-tailwind/react";
+
+export function Navbar() {
   const [openNav, setOpenNav] = React.useState(false);
- 
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
- 
+
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-       <Button variant="gradient" size="sm" className="hidden lg:inline-block">
-          <span>РЕГИСТРАЦИЯ</span>
-        </Button>
-        <Link href="/sign-up">
+      <Button variant="gradient" size="sm" className="hidden lg:inline-block">
+        <span>РЕГИСТРАЦИЯ</span>
+      </Button>
+      <Link href="/sign-up">
         <Button variant="outlined" className="hidden lg:inline-block text-white">
           <span>ТРАСЕТА</span>
         </Button>
-        </Link>
-    
-        <Button variant="gradient" className="hidden lg:inline-block" color="green">
-          <span>ГАЛЕРИЯ</span>
-        </Button>
-        <Button variant="gradient" className="hidden lg:inline-block" color="green">
-          <span>КОНТАКТИ</span>
-        </Button>
-        <Button variant="gradient" className="hidden lg:inline-block" color="green">
-          <span>СПОНСОРИ</span>
-        </Button>
+      </Link>
+
+      <Button variant="gradient" className="hidden lg:inline-block" color="green">
+        <span>ГАЛЕРИЯ</span>
+      </Button>
+      <Button variant="gradient" className="hidden lg:inline-block" color="green">
+        <span>КОНТАКТИ</span>
+      </Button>
+      <Button variant="gradient" className="hidden lg:inline-block" color="green">
+        <span>СПОНСОРИ</span>
+      </Button>
     </ul>
   );
- 
+
   return (
-    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4" style={{border: "none", backgroundColor: "transparent"}}>
+    <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
+    <MaterialNavbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4" style={{ border: "none", backgroundColor: "transparent" }}>
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
@@ -94,13 +97,14 @@ export function NavbarDefault() {
         <div className="container mx-auto">
           {navList}
           <Button variant="gradient" size="sm" fullWidth className="mb-2">
-          <span>Pages</span>
-        </Button>
+            <span>Pages</span>
+          </Button>
           <Button variant="gradient" size="sm" fullWidth className="mb-2">
             <span>Buy Now</span>
           </Button>
         </div>
       </MobileNav>
-    </Navbar>
+    </MaterialNavbar>
+    </div>
   );
 }
