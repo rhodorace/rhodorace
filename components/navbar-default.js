@@ -24,30 +24,30 @@ export function NavbarDefault() {
           <span>РЕГИСТРАЦИЯ</span>
         </Button>
         <Link href="/sign-up">
-        <Button variant="gradient" size="sm" className="hidden lg:inline-block">
+        <Button variant="outlined" className="hidden lg:inline-block text-white">
           <span>ТРАСЕТА</span>
         </Button>
         </Link>
     
-        <Button variant="gradient" size="sm" className="hidden lg:inline-block">
+        <Button variant="gradient" className="hidden lg:inline-block" color="green">
           <span>ГАЛЕРИЯ</span>
         </Button>
-        <Button variant="gradient" size="sm" className="hidden lg:inline-block">
+        <Button variant="gradient" className="hidden lg:inline-block" color="green">
           <span>КОНТАКТИ</span>
         </Button>
-        <Button variant="gradient" size="sm" className="hidden lg:inline-block">
+        <Button variant="gradient" className="hidden lg:inline-block" color="green">
           <span>СПОНСОРИ</span>
         </Button>
     </ul>
   );
  
   return (
-    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
+    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4" style={{border: "none", backgroundColor: "transparent"}}>
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
           href="#"
-          className="mr-4 cursor-pointer py-1.5 font-medium"
+          className="mr-4 cursor-pointer py-1.5 font-medium text-white"
         >
           RhodoRace Momchilgrad
         </Typography>

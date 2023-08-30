@@ -9,6 +9,10 @@ import Footer from "@/components/footer";
 import { NavbarDefault } from "@/components/navbar-default";
 import PageTitle from "@/components/layout/page-title";
 import { DefaultAccordion } from "@/components/default-accordion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRunning, faFlag, faFlagCheckered, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import RaceInfoCard from "@/components/race-info-cards";
+
 export default function Home() {
     return (
         <>
@@ -47,28 +51,11 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
+            <RaceInfoCard />
+
             <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
                 <div className="container mx-auto">
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        <Card className="rounded-2xl shadow-lg shadow-gray-500/10">
-                            <CardBody className="px-8 text-center">
-                                <IconButton
-                                    variant="gradient"
-                                    size="lg"
-                                    color="blue"
-                                    className="pointer-events-none mb-6 rounded-full"
-                                >
-                                    icon
-                                </IconButton>
-                                <Typography variant="h5" className="mb-2" color="blue-gray">
-                                    title
-                                </Typography>
-                                <Typography className="font-normal text-blue-gray-600">
-                                    description
-                                </Typography>
-                            </CardBody>
-                        </Card>
-                    </div>
                     <div className="mt-32 flex flex-wrap items-center">
                         <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
                             <Typography
@@ -76,7 +63,7 @@ export default function Home() {
                                 className="mb-3 font-bold"
                                 color="blue-gray"
                             >
-                               За състезанието
+                                За състезанието
                             </Typography>
                             <Typography className="mb-8 font-normal text-blue-gray-500">
                                 Don't let your uses guess by attaching tooltips and popoves to
@@ -93,10 +80,10 @@ export default function Home() {
                         <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
                             <Card className="shadow-lg shadow-gray-500/10">
                                 <img
-                                        alt="Card Image"
-                                        src="https://nordmarkaskogsmaraton.no/wp-content/uploads/2014/05/langlangrekke.jpg"
-                                        className="h-full w-full"
-                                    />
+                                    alt="Card Image"
+                                    src="https://nordmarkaskogsmaraton.no/wp-content/uploads/2014/05/langlangrekke.jpg"
+                                    className="h-full w-full"
+                                />
                             </Card>
                         </div>
                     </div>
