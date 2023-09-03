@@ -1,7 +1,10 @@
 import {
     Typography,
 } from "@material-tailwind/react";
-
+import version1 from "../public/version1.png";
+import version2 from "../public/version2.png";
+import version3 from "../public/version3.png";
+import Image from "next/image";
 
 export default function VideoHeading() {
     return (
@@ -21,18 +24,25 @@ export default function VideoHeading() {
                 <div className="max-w-8xl container relative mx-auto">
                     <div className="flex flex-wrap items-center">
                         <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
-                            <Typography
+                            {/* <Typography
                                 variant="h1"
                                 color="white"
                                 className="mb-6 font-black"
                             >
                                 RhodoRace Momchilgrad
-                            </Typography>
-                            <Typography variant="lead" color="white" className="opacity-80">
+                            </Typography> */}
+                            <Image
+                                priority
+                                src={version3}
+                             
+                                className="h-auto max-w-full rounded-lg"
+                                alt="RhodoRace Momchilgrad"
+                            />
+                            {/* <Typography variant="lead" color="white" className="opacity-80">
                                 This is a simple example of a Landing Page you can build using
                                 Material Tailwind. It features multiple components based on the
                                 Tailwind CSS and Material Design by Google.
-                            </Typography>
+                            </Typography> */}
                         </div>
                     </div>
                 </div>
