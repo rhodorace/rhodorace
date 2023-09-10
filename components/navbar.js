@@ -31,6 +31,11 @@ export function Navbar() {
           ТРАСЕТА
         </Button>
       </Link>
+      <Link href="/news" passHref>
+        <Button variant="gradient" className="lg:inline-block" color="green">
+          НОВИНИ
+        </Button>
+      </Link>
       <Link href="/sign-up" passHref>
         <Button variant="gradient" className="lg:inline-block" color="green">
           ГАЛЕРИЯ
