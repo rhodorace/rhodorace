@@ -36,7 +36,7 @@ export function Navbar() {
           НОВИНИ
         </Button>
       </Link>
-      <Link href="/sign-up" passHref>
+      <Link href="/image-gallery" passHref>
         <Button variant="gradient" className="lg:inline-block" color="green">
           ГАЛЕРИЯ
         </Button>
