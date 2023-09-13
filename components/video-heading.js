@@ -10,7 +10,7 @@ export default function VideoHeading() {
                     <source src="/videos/sample.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video> */}
-                <video id="cbb795d9-1a70-23c9-0010-fccc2a385aa6-video" autoPlay loop muted playsInline="" data-wf-ignore="true" data-object-fit="cover" >
+                <video id="cbb795d9-1a70-23c9-0010-fccc2a385aa6-video" autoPlay loop muted playsInline data-wf-ignore="true" data-object-fit="cover" >
                     {/* <source src="https://global-uploads.webflow.com/6352490b77ca662818abc793/64638e5059c2681e8a35f953_DEF_ZM_Homepage 15 sec_1080p-transcode.mp4" data-wf-ignore="true"/> */}
                     <source src="/videos/intro-video.mp4" data-wf-ignore="true" />
                 </video>

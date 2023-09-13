@@ -3,6 +3,10 @@ import {
   MobileNav,
   Button,
   IconButton,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
 } from "@material-tailwind/react";
 import Link from "next/link";
 import {
@@ -26,11 +30,19 @@ export function Navbar() {
           РЕГИСТРАЦИЯ
         </Button>
       </Link>
-      <Link href="/sign-up" passHref>
-        <Button variant="gradient" className="lg:inline-block text-white" color="green">
-          ТРАСЕТА
-        </Button>
-      </Link>
+
+        <Menu allowHover>
+          <MenuHandler>
+            <Button variant="gradient" className="lg:inline-block text-white" color="green">
+              ТРАСЕТА
+            </Button>
+          </MenuHandler>
+          <MenuList>
+            <MenuItem>21 KM</MenuItem>
+            <MenuItem>42 KM</MenuItem>
+          </MenuList>
+        </Menu>
+      
       <Link href="/news" passHref>
         <Button variant="gradient" className="lg:inline-block" color="green">
           НОВИНИ
@@ -43,12 +55,17 @@ export function Navbar() {
       </Link>
       <Link href="/sign-up" passHref>
         <Button variant="gradient" className="lg:inline-block" color="green">
-          КОНТАКТИ
+          СПОНСОРИ
         </Button>
       </Link>
       <Link href="/sign-up" passHref>
         <Button variant="gradient" className="lg:inline-block" color="green">
-          СПОНСОРИ
+          ИСТОРИЯ
+        </Button>
+      </Link>
+      <Link href="/sign-up" passHref>
+        <Button variant="gradient" className="lg:inline-block" color="green">
+          КОНТАКТИ
         </Button>
       </Link>
     </ul>

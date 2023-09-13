@@ -72,7 +72,7 @@ export default function News({ news }) {
             </p>
             <p class="text-neutral-500 dark:text-neutral-300 line-clamp-3">
               {article.content}
-            </p>
+            </p><a href="#">Виж повече</a>
           </div>
         </div>
 
