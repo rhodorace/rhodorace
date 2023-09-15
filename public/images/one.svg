@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="582.66669"
+   height="873.99994"
+   viewBox="0 0 582.66674 873.99994"
+   sodipodi:docname="onprogress.eps"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   inkscape:dataloss="true"
+   inkscape:export-filename="../onprogress.eps.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.59626181"
+     inkscape:cx="529.12998"
+     inkscape:cy="580.282"
+     inkscape:window-width="1680"
+     inkscape:window-height="997"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="group-R5"
+     inkscape:clip-to-page="false" />
+  <g
+     id="g1"
+     inkscape:groupmode="layer"
+     inkscape:label="1"
+     transform="translate(-568.04012,-178.33646)">
+    <g
+       id="group-R5">
+      <path
+         id="path6"
+         d="M 1150.7068,469.66979 H 637.39079 L 568.04012,324.00313 637.39079,178.33646 h 513.31601 v 291.33333"
+         style="fill:#f29d15;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.133333" />
+      <path
+         id="path7"
+         d="M 1150.7068,761.00311 H 637.39079 L 568.04012,615.33645 637.39079,469.66979 h 513.31601 v 291.33332"
+         style="fill:#ef5b23;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.133333" />
+      <path
+         id="path8"
+         d="M 1150.7068,1052.3364 H 637.39079 L 568.04012,906.66978 637.39079,761.00311 h 513.31601 v 291.33329"
+         style="fill:#5b8c93;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.133333" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:96px;font-family:Phosphate;-inkscape-font-specification:'Phosphate Bold';text-align:center;text-anchor:middle;fill:#ffffcc;stroke:#000000;stroke-width:0.667"
+         x="873.77728"
+         y="315.29776"
+         id="text799"><tspan
+           sodipodi:role="line"
+           id="tspan799"
+           x="873.77728"
+           y="315.29776">16.06.2024</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:74.6667px;font-family:Phosphate;-inkscape-font-specification:'Phosphate Bold';text-align:center;text-anchor:middle;fill:#ffffcc;stroke:#000000;stroke-width:0.667"
+         x="872.10022"
+         y="385.7366"
+         id="text800"><tspan
+           sodipodi:role="line"
+           id="tspan800"
+           x="872.10022"
+           y="385.7366"
+           style="font-size:74.6667px">momchilgrad</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:74.6667px;font-family:Phosphate;-inkscape-font-specification:'Phosphate Bold';text-align:center;text-anchor:middle;fill:#ffffcc;stroke:#000000;stroke-width:0.667"
+         x="878.80859"
+         y="588.6676"
+         id="text801"><tspan
+           sodipodi:role="line"
+           id="tspan801"
+           x="878.80859"
+           y="588.6676">21 KM</tspan><tspan
+           sodipodi:role="line"
+           x="878.80859"
+           y="682.00098"
+           id="tspan802">670 D+</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:74.6667px;font-family:Phosphate;-inkscape-font-specification:'Phosphate Bold';text-align:center;text-anchor:middle;fill:#ffffcc;stroke:#000000;stroke-width:0.667"
+         x="870.42303"
+         y="885.51709"
+         id="text803"><tspan
+           sodipodi:role="line"
+           id="tspan803"
+           x="870.42303"
+           y="885.51709">42 KM</tspan><tspan
+           sodipodi:role="line"
+           x="870.42303"
+           y="978.85046"
+           id="tspan804">1800 D+</tspan></text>
+    </g>
+  </g>
+</svg>

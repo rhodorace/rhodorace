@@ -5,6 +5,13 @@ import { FrequentlyAskedQuestions } from "@/components/frequently-asked-question
 import RaceInfoCard from "@/components/race-info-cards";
 import VideoHeading from "@/components/video-heading";
 import AboutTheRaceSection from "@/components/about-the-race";
+import {
+    Card,
+    Typography,
+    Button,
+} from "@material-tailwind/react";
+import Image from 'next/image'
+import arda from '../public/images/arda.jpg'
 
 export default function Home() {
     return (
@@ -13,14 +20,34 @@ export default function Home() {
             <VideoHeading />
             <RaceInfoCard />
             <AboutTheRaceSection />
-            <section className="px-4 pt-20 pb-48">
+            <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
                 <div className="container mx-auto">
-                    <PageTitle heading="Here are our heroes">
-                        According to the National Oceanic and Atmospheric Administration,
-                        Ted, Scambos, NSIDClead scentist, puts the potentially record
-                        maximum.
-                    </PageTitle>
-                    <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
+                    <div className="mt-32 flex flex-wrap items-center">
+                        <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
+                            <Card className="shadow-lg shadow-gray-500/10">
+                                <Image
+                                    alt="Arda river"
+                                    src={arda}
+                                    className="rounded-2xl"
+                                />
+
+                            </Card>
+                        </div>
+                        <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
+                            <Typography
+                                variant="h3"
+                                className="mb-3 font-bold"
+                                color="blue-gray"
+                            >
+                                Изживейте природата на Родопите: Маратонът като никога преди
+                            </Typography>
+                            <Typography className="mb-8 font-normal text-blue-gray-500">
+                                Маратонът в Родопите не е само състезание, това е възможност да се потопите в най-дивата и красива природа на Родопите.
+                                Събитието включва разнообразни маршрути, където ще преодолеете върхове и долини, реки и горски пътеки.
+                                Независимо дали сте професионален спортист или просто обичате приключенията на открито,
+                                този маратон ще ви предостави неповторимо опит за изживяване на природата.
+                            </Typography>
+                        </div>
                     </div>
                 </div>
             </section>

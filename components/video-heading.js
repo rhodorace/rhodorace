@@ -1,4 +1,5 @@
 import logo from "../public/logo.png";
+import one from "../public/images/one.svg";
 import Image from "next/image";
 
 export default function VideoHeading() {
@@ -26,7 +27,16 @@ export default function VideoHeading() {
                                 className="h-auto max-w-full rounded-lg"
                                 alt="RhodoRace Momchilgrad"
                             />
+                             {/* <Image
+                                priority
+                                src={one}
+                             
+                               width={200}
+                               
+                                alt="RhodoRace Momchilgrad"
+                            /> */}
                         </div>
+                        
                     </div>
                 </div>
             </div>
