@@ -12,6 +12,9 @@ import Link from "next/link";
 import {
   Navbar as MaterialNavbar
 } from "@material-tailwind/react";
+import logo from "../public/logo.png";
+import one from "../public/images/one.svg";
+import Image from "next/image";
 
 export function Navbar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -52,10 +55,16 @@ export function Navbar() {
           НОВИНИ
         </Button>
       </Link>
-      <Menu allowHover>
+      <Image
+        priority
+        src={logo}
+        width={300}
+        alt="RhodoRace Momchilgrad"
+      />
+      {/* <Menu allowHover>
         <MenuHandler>
           <Button variant="gradient" className="lg:inline-block text-white" color="green">
-           ГАЛЕРИЯ
+            ГАЛЕРИЯ
           </Button>
         </MenuHandler>
         <MenuList>
@@ -63,7 +72,7 @@ export function Navbar() {
             <MenuItem>2024</MenuItem>
           </Link>
         </MenuList>
-      </Menu>
+      </Menu> */}
       <Link href="/sponsors" passHref>
         <Button variant="gradient" className="lg:inline-block" color="green">
           СПОНСОРИ
@@ -72,7 +81,7 @@ export function Navbar() {
       <Menu allowHover>
         <MenuHandler>
           <Button variant="gradient" className="lg:inline-block text-white" color="green">
-          ИСТОРИЯ
+            ИСТОРИЯ
           </Button>
         </MenuHandler>
         <MenuList>
@@ -91,8 +100,8 @@ export function Navbar() {
 
   return (
     <div className=" absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
-      <MaterialNavbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4" style={{ border: "none", backgroundColor: "transparent" }}>
-        <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+      {/* <MaterialNavbar className=""> */}
+        <div className="container mx-auto flex items-center justify-between">
           <div className="hidden lg:block">{navList}</div>
           <IconButton
             variant="text"
@@ -143,7 +152,7 @@ export function Navbar() {
             </Button> */}
           </div>
         </MobileNav>
-      </MaterialNavbar>
+      {/* </MaterialNavbar> */}
     </div>
   );
 }
