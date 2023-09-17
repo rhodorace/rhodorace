@@ -1,7 +1,7 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
-export default function SignUp() {
+export default function Track1() {
   return (
     <>
       <section className="relative block h-[50vh]">
@@ -22,7 +22,7 @@ export default function SignUp() {
                 </div>
                 <div className="w-full px-4 lg:order-1 lg:w-4/12">
                   <div className="flex justify-center py-4 pt-8 lg:pt-4">
-                    Regisration placeholder     
+                    Track 1 placeholder     
                     </div>
                   </div>
                 </div>

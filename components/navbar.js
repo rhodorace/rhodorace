@@ -31,18 +31,22 @@ export function Navbar() {
         </Button>
       </Link>
 
-        <Menu allowHover>
-          <MenuHandler>
-            <Button variant="gradient" className="lg:inline-block text-white" color="green">
-              ТРАСЕТА
-            </Button>
-          </MenuHandler>
-          <MenuList>
+      <Menu allowHover>
+        <MenuHandler>
+          <Button variant="gradient" className="lg:inline-block text-white" color="green">
+            ТРАСЕТА
+          </Button>
+        </MenuHandler>
+        <MenuList>
+          <Link href="/track1" passHref>
             <MenuItem>21 KM</MenuItem>
+          </Link>
+          <Link href="/track2" passHref>
             <MenuItem>42 KM</MenuItem>
-          </MenuList>
-        </Menu>
-      
+          </Link>
+        </MenuList>
+      </Menu>
+
       <Link href="/news" passHref>
         <Button variant="gradient" className="lg:inline-block" color="green">
           НОВИНИ
