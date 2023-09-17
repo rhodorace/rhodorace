@@ -15,20 +15,26 @@ export default function VideoHeading() {
                     <source src="/videos/intro-video.mp4" data-wf-ignore="true" />
                 </video>
                 <div className="max-w-8xl container relative">
-                        <div className="rhodo-stripes-wrapper">
-                            <div className="rhodo-stripe blue">
-                                <h1 class="heading-5 hero-text mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">RHODO RACE</h1>
-                                <div className="rhodo-right-side">
-                                    <h1 class="heading-5 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">21 APRIL</h1>
-                                </div>
+                    <div>
+                        <div className="rhodo-stripe blue grid gap-2 grid-cols-2">
+                            <div className="text-right">
+                                <h1 class="mb-4 mt-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">RHODO RACE</h1>
                             </div>
-                            <div class="rhodo-stripe green">
-                                <h1 class="heading-5 hero-text mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">MOMCHILGRAD</h1>
-                                <div className="rhodo-right-side">
-                                    <h1 class="heading-5 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">2024</h1>
-                                </div>
+
+                            <div>
+                                <h1 class="mb-4 mt-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">21 APRIL</h1>
                             </div>
                         </div>
+                        <div className="rhodo-stripe green grid gap-2 grid-cols-2">
+                            <div className="text-right">
+                                <h1 class="mb-4 mt-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">MOMCHILGRAD</h1>
+                            </div>
+
+                            <div className="text-right lg:text-left">
+                                <h1 class="mb-4 mt-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">2024</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
