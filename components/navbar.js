@@ -52,22 +52,36 @@ export function Navbar() {
           НОВИНИ
         </Button>
       </Link>
-      <Link href="/image-gallery" passHref>
-        <Button variant="gradient" className="lg:inline-block" color="green">
-          ГАЛЕРИЯ
-        </Button>
-      </Link>
-      <Link href="/sign-up" passHref>
+      <Menu allowHover>
+        <MenuHandler>
+          <Button variant="gradient" className="lg:inline-block text-white" color="green">
+           ГАЛЕРИЯ
+          </Button>
+        </MenuHandler>
+        <MenuList>
+          <Link href="/image-gallery" passHref>
+            <MenuItem>2024</MenuItem>
+          </Link>
+        </MenuList>
+      </Menu>
+      <Link href="/sponsors" passHref>
         <Button variant="gradient" className="lg:inline-block" color="green">
           СПОНСОРИ
         </Button>
       </Link>
-      <Link href="/sign-up" passHref>
-        <Button variant="gradient" className="lg:inline-block" color="green">
+      <Menu allowHover>
+        <MenuHandler>
+          <Button variant="gradient" className="lg:inline-block text-white" color="green">
           ИСТОРИЯ
-        </Button>
-      </Link>
-      <Link href="/sign-up" passHref>
+          </Button>
+        </MenuHandler>
+        <MenuList>
+          <Link href="/history" passHref>
+            <MenuItem>2024</MenuItem>
+          </Link>
+        </MenuList>
+      </Menu>
+      <Link href="/contact" passHref>
         <Button variant="gradient" className="lg:inline-block" color="green">
           КОНТАКТИ
         </Button>
