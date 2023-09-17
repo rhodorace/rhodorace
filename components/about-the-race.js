@@ -3,6 +3,7 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
+import Image from "next/image";
 
 export default function AboutTheRaceSection() {
     return (
@@ -26,7 +27,7 @@ export default function AboutTheRaceSection() {
                     </div>
                     <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
                         <Card className="shadow-lg shadow-gray-500/10">
-                            <img
+                            <Image
                                 alt="Card Image"
                                 src="https://nordmarkaskogsmaraton.no/wp-content/uploads/2014/05/langlangrekke.jpg"
                                 className="h-full w-full rounded-2xl"

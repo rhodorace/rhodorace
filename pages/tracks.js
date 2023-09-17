@@ -9,11 +9,13 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Footer } from "@/components/footer";
+import Image from "next/image";
 
 export function SignIn() {
   return (
     <>
-      <img
+      <Image
+      alt="background"
         src="/img/background-2.jpg"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
@@ -46,7 +48,7 @@ export function SignIn() {
               Sign In
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">
-              Don't have an account?
+              Dont have an account?
               {/* <Link to="/sign-up">
                 <Typography
                   as="span"
