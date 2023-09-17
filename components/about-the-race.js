@@ -29,8 +29,10 @@ export default function AboutTheRaceSection() {
                         <Card className="shadow-lg shadow-gray-500/10">
                             <Image
                                 alt="Card Image"
-                                src="https://nordmarkaskogsmaraton.no/wp-content/uploads/2014/05/langlangrekke.jpg"
-                                className="h-full w-full rounded-2xl"
+                                src="/images/rekke.jpg"
+                                className="rounded-2xl"
+                                width={600}
+                                height={100}
                             />
                         </Card>
                     </div>

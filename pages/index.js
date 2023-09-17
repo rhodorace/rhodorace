@@ -1,6 +1,5 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import PageTitle from "@/components/layout/page-title";
 import { FrequentlyAskedQuestions } from "@/components/frequently-asked-questions";
 import RaceInfoCard from "@/components/race-info-cards";
 import VideoHeading from "@/components/video-heading";
@@ -8,7 +7,6 @@ import AboutTheRaceSection from "@/components/about-the-race";
 import {
     Card,
     Typography,
-    Button,
 } from "@material-tailwind/react";
 import Image from 'next/image'
 import arda from '../public/images/arda.jpg'
