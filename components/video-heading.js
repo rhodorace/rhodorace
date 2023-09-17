@@ -1,5 +1,4 @@
 import logo from "../public/logo.png";
-import one from "../public/images/one.svg";
 import Image from "next/image";
 
 export default function VideoHeading() {
@@ -11,33 +10,25 @@ export default function VideoHeading() {
                     <source src="/videos/sample.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video> */}
+                {/* <source src="https://global-uploads.webflow.com/6352490b77ca662818abc793/64638e5059c2681e8a35f953_DEF_ZM_Homepage 15 sec_1080p-transcode.mp4" data-wf-ignore="true"/> */}
                 <video id="cbb795d9-1a70-23c9-0010-fccc2a385aa6-video" autoPlay loop muted playsInline data-wf-ignore="true" data-object-fit="cover" >
-                    {/* <source src="https://global-uploads.webflow.com/6352490b77ca662818abc793/64638e5059c2681e8a35f953_DEF_ZM_Homepage 15 sec_1080p-transcode.mp4" data-wf-ignore="true"/> */}
                     <source src="/videos/intro-video.mp4" data-wf-ignore="true" />
                 </video>
-                {/* makes the video darker */}
-                {/* <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" /> */}
-                <div className="max-w-8xl container relative mx-auto">
-                    <div className="flex flex-wrap items-center">
-                        <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
-                            <Image
-                                priority
-                                src={logo}
-                             
-                                className="h-auto max-w-full rounded-lg"
-                                alt="RhodoRace Momchilgrad"
-                            />
-                             {/* <Image
-                                priority
-                                src={one}
-                             
-                               width={200}
-                               
-                                alt="RhodoRace Momchilgrad"
-                            /> */}
+                <div className="max-w-8xl container relative">
+                        <div className="rhodo-stripes-wrapper">
+                            <div className="rhodo-stripe blue">
+                                <h1 class="heading-5 hero-text mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">RHODO RACE</h1>
+                                <div className="rhodo-right-side">
+                                    <h1 class="heading-5 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">21 APRIL</h1>
+                                </div>
+                            </div>
+                            <div class="rhodo-stripe green">
+                                <h1 class="heading-5 hero-text mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">MOMCHILGRAD</h1>
+                                <div className="rhodo-right-side">
+                                    <h1 class="heading-5 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">2024</h1>
+                                </div>
+                            </div>
                         </div>
-                        
-                    </div>
                 </div>
             </div>
         </>

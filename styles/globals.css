@@ -21,6 +21,7 @@ body {
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+
 }
 
 video {
@@ -37,3 +38,71 @@ video {
   left: -100%;
   right: -100%;
 }
+
+.heading-5 {
+  z-index: 1;
+  color: #fff;
+  font-size: 70px;
+  position: relative;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: auto;
+}
+
+.heading-5.gray.description {
+  font-size: 60px;
+}
+
+.heading-5.hero-text {
+  z-index: 30;
+  text-align: right;
+  flex: 1;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.rhodo-stripes-wrapper {
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 60px;
+  display: flex;
+}
+
+.rhodo-stripe {
+  width: 100%;
+  height: 100%;
+  grid-column-gap: 80px;
+  grid-row-gap: 80px;
+  flex: 0 auto;
+  justify-content: space-between;
+  align-self: auto;
+  display: flex;
+  position: relative;
+}
+
+.rhodo-stripe.blue {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #1488ca 50%, #1488ca 65%, rgba(0, 0, 0, 0) 103%);
+  grid-column-gap: 80px;
+  grid-row-gap: 80px;
+}
+.rhodo-stripe.green {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #95c11f 50%, #95c11f 65%, rgba(0, 0, 0, 0) 103%);
+  grid-column-gap: 80px;
+  grid-row-gap: 80px;
+}
+
+.rhodo-right-side {
+  flex: 1;
+  position: relative;
+}
+
+.rhodo-right-side > h1 {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
