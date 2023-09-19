@@ -9,13 +9,8 @@ import {
   MenuItem,
 } from "@material-tailwind/react";
 import Link from "next/link";
-import logo from "../public/logo.png";
-import one from "../public/images/one.svg";
-import testSVG from "../public/testSVG.svg";
-import test2svg from "../public/test2svg.svg";
 import Image from "next/image";
-import asdf from "../public/asdf.svg";
-import bg from "../public/bg.svg";
+import bgLogo from "../public/bgLogo.svg";
 
 export function Navbar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -59,8 +54,8 @@ export function Navbar() {
    
       <Image
         priority
-        src={bg}
-        width={400}
+        src={bgLogo}
+        width={200}
         alt="RhodoRace Momchilgrad"
       />
       {/* <Menu allowHover>
