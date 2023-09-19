@@ -11,7 +11,11 @@ import {
 import Link from "next/link";
 import logo from "../public/logo.png";
 import one from "../public/images/one.svg";
+import testSVG from "../public/testSVG.svg";
+import test2svg from "../public/test2svg.svg";
 import Image from "next/image";
+import asdf from "../public/asdf.svg";
+import bg from "../public/bg.svg";
 
 export function Navbar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -52,10 +56,11 @@ export function Navbar() {
           НОВИНИ
         </Button>
       </Link>
+   
       <Image
         priority
-        src={logo}
-        width={300}
+        src={bg}
+        width={400}
         alt="RhodoRace Momchilgrad"
       />
       {/* <Menu allowHover>
@@ -96,8 +101,8 @@ export function Navbar() {
   );
 
   return (
-    <div className=" absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
-        <div className="container mx-auto flex items-center justify-between">
+      <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
+
           <div className="hidden lg:block">{navList}</div>
           <IconButton
             variant="text"
@@ -136,7 +141,7 @@ export function Navbar() {
               </svg>
             )}
           </IconButton>
-        </div>
+
         <MobileNav open={openNav}>
           <div className="container mx-auto">
             {navList}
@@ -148,7 +153,7 @@ export function Navbar() {
             </Button> */}
           </div>
         </MobileNav>
-      {/* </MaterialNavbar> */}
-    </div>
+        {/* </MaterialNavbar> */}
+      </div>
   );
 }
