@@ -53,3 +53,8 @@ video {
   grid-column-gap: 80px;
   grid-row-gap: 80px;
 }
+
+.navbarButton {
+  width: 100%;
+  color: white;
+}

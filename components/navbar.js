@@ -9,9 +9,6 @@ import {
   MenuItem,
 } from "@material-tailwind/react";
 import Link from "next/link";
-import {
-  Navbar as MaterialNavbar
-} from "@material-tailwind/react";
 import logo from "../public/logo.png";
 import one from "../public/images/one.svg";
 import Image from "next/image";
@@ -22,21 +19,21 @@ export function Navbar() {
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false),
+      () => window.innerWidth >= 960 ? setOpenNav(false) : setOpenNav(true),
     );
   }, []);
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Link href="/sign-up" passHref>
-        <Button variant="gradient" className="lg:inline-block" color="green">
+        <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
           РЕГИСТРАЦИЯ
         </Button>
       </Link>
 
       <Menu allowHover>
         <MenuHandler>
-          <Button variant="gradient" className="lg:inline-block text-white" color="green">
+          <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
             ТРАСЕТА
           </Button>
         </MenuHandler>
@@ -51,7 +48,7 @@ export function Navbar() {
       </Menu>
 
       <Link href="/news" passHref>
-        <Button variant="gradient" className="lg:inline-block" color="green">
+        <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
           НОВИНИ
         </Button>
       </Link>
@@ -74,13 +71,13 @@ export function Navbar() {
         </MenuList>
       </Menu> */}
       <Link href="/sponsors" passHref>
-        <Button variant="gradient" className="lg:inline-block" color="green">
+        <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
           СПОНСОРИ
         </Button>
       </Link>
       <Menu allowHover>
         <MenuHandler>
-          <Button variant="gradient" className="lg:inline-block text-white" color="green">
+          <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
             ИСТОРИЯ
           </Button>
         </MenuHandler>
@@ -91,7 +88,7 @@ export function Navbar() {
         </MenuList>
       </Menu>
       <Link href="/contact" passHref>
-        <Button variant="gradient" className="lg:inline-block" color="green">
+        <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
           КОНТАКТИ
         </Button>
       </Link>
@@ -100,7 +97,6 @@ export function Navbar() {
 
   return (
     <div className=" absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
-      {/* <MaterialNavbar className=""> */}
         <div className="container mx-auto flex items-center justify-between">
           <div className="hidden lg:block">{navList}</div>
           <IconButton
