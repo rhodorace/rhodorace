@@ -11,7 +11,7 @@ export default function VideoHeading() {
                 <video id="cbb795d9-1a70-23c9-0010-fccc2a385aa6-video" autoPlay loop muted playsInline data-wf-ignore="true" data-object-fit="cover" >
                     <source src="/videos/intro-video.mp4" data-wf-ignore="true" />
                 </video>
-                <div className="max-w-8xl container relative mt-96">
+                {/* <div className="max-w-8xl container relative mt-96">
                     <div>
                         <div className="rhodo-stripe blue grid gap-2 grid-cols-2">
                             <div className="text-right">
@@ -32,7 +32,7 @@ export default function VideoHeading() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );
