@@ -58,3 +58,10 @@ video {
   width: 100%;
   color: white;
 }
+
+.responsiveLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}

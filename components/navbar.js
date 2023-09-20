@@ -18,7 +18,7 @@ export function Navbar() {
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 ? setOpenNav(false) : setOpenNav(true),
+      () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
 
@@ -51,7 +51,7 @@ export function Navbar() {
           НОВИНИ
         </Button>
       </Link>
-   
+
       <Image
         priority
         src={bgLogo}
@@ -95,82 +95,107 @@ export function Navbar() {
     </ul>
   );
 
+  const navListWithoutLogo = (
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <Link href="/sign-up" passHref>
+        <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
+          РЕГИСТРАЦИЯ
+        </Button>
+      </Link>
+
+      <Menu allowHover>
+        <MenuHandler>
+          <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
+            ТРАСЕТА
+          </Button>
+        </MenuHandler>
+        <MenuList>
+          <Link href="/track1" passHref>
+            <MenuItem>21 KM</MenuItem>
+          </Link>
+          <Link href="/track2" passHref>
+            <MenuItem>42 KM</MenuItem>
+          </Link>
+        </MenuList>
+      </Menu>
+
+      <Link href="/news" passHref>
+        <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
+          НОВИНИ
+        </Button>
+      </Link>
+
+      <Link href="/sponsors" passHref>
+        <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
+          СПОНСОРИ
+        </Button>
+      </Link>
+      <Menu allowHover>
+        <MenuHandler>
+          <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
+            ИСТОРИЯ
+          </Button>
+        </MenuHandler>
+        <MenuList>
+          <Link href="/history" passHref>
+            <MenuItem>2024</MenuItem>
+          </Link>
+        </MenuList>
+      </Menu>
+      <Link href="/contact" passHref>
+        <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
+          КОНТАКТИ
+        </Button>
+      </Link>
+    </ul>
+  );
   return (
-      <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
+    <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
 
-          <div className="hidden lg:block">{navList}</div>
-          <IconButton
-            variant="text"
-            className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-            ripple={false}
-            onClick={() => setOpenNav(!openNav)}
+      <div className="hidden lg:block">{navList}</div>
+      <IconButton
+        variant="text"
+        className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+        ripple={false}
+        onClick={() => setOpenNav(!openNav)}
+      >
+        {openNav ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            className="h-6 w-6"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
           >
-            {openNav ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                className="h-6 w-6"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </IconButton>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        )}
+      </IconButton>
 
-        <MobileNav open={openNav}>
-          <div className="container mx-auto">
-            {navList}
-            {/* <Button variant="gradient" size="sm" fullWidth className="mb-2">
-              <span>Pages</span>
-            </Button>
-            <Button variant="gradient" size="sm" fullWidth className="mb-2">
-              <span>Buy Now</span>
-            </Button> */}
-          </div>
-        </MobileNav>
-        {/* </MaterialNavbar> */}
-        <div className="max-w-8xl container relative mt-0 lg:mt-80">
-                    <div>
-                        <div className="rhodo-stripe blue grid gap-2 grid-cols-2">
-                            <div className="text-right">
-                                <h1 class="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">RHODO&nbsp;RACE</h1>
-                            </div>
-
-                            <div className="lg:text-left sm:text-right">
-                                <h1 class="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">21 APRIL</h1>
-                            </div>
-                        </div>
-                        <div className="rhodo-stripe green grid gap-2 grid-cols-2">
-                            <div className="text-right">
-                                <h1 class="mb-4 mt-4  font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">MOMCHILGRAD</h1>
-                            </div>
-
-                            <div className="lg:text-left sm:text-right">
-                                <h1 class="mb-4 mt-4  font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">2024</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-      </div>
+      <MobileNav open={openNav}>
+        <div className="container mx-auto">
+          {navListWithoutLogo}
+        </div>
+      </MobileNav>
+    </div>
   );
 }
