@@ -48,15 +48,11 @@ video {
   grid-column-gap: 80px;
   grid-row-gap: 80px;
 }
+
 .rhodo-stripe.green {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #95c11f 50%, #95c11f 65%, rgba(0, 0, 0, 0) 103%);
   grid-column-gap: 80px;
   grid-row-gap: 80px;
-}
-
-.navbarButton {
-  width: 100%;
-  color: white;
 }
 
 .responsiveLogo {
@@ -64,4 +60,9 @@ video {
   justify-content: center;
   align-items: center;
   margin-bottom: 5rem;
+}
+
+.navbarBtn {
+  display: block;
+  width: 100%;
 }
