@@ -1,16 +1,10 @@
 import React from "react";
 import {
   MobileNav,
-  Button,
   IconButton,
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
 } from "@material-tailwind/react";
-import Link from "next/link";
-import Image from "next/image";
-import bgLogo from "../public/bgLogo.svg";
+
+import { getButtonsWithLogo, getButtonsWithoutLogo } from "@/lib/buttons";
 
 export function Navbar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -22,70 +16,11 @@ export function Navbar() {
     );
   }, []);
 
-  let myList = [];
-  myList.push(<Link href="/sign-up" passHref>
-    <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
-      РЕГИСТРАЦИЯ
-    </Button>
-  </Link>);
-  myList.push(<Menu allowHover>
-    <MenuHandler>
-      <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
-        ТРАСЕТА
-      </Button>
-    </MenuHandler>
-    <MenuList>
-      <Link href="/track1" passHref>
-        <MenuItem>21 KM</MenuItem>
-      </Link>
-      <Link href="/track2" passHref>
-        <MenuItem>42 KM</MenuItem>
-      </Link>
-    </MenuList>
-  </Menu>);
-  myList.push(<Link href="/news" passHref>
-    <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
-      НОВИНИ
-    </Button>
-  </Link>);
-  if (openNav === false) {
-    myList.push(<Image
-      priority
-      src={bgLogo}
-      width={200}
-      alt="RhodoRace Momchilgrad"
-    />);
-  }
-  myList.push(<Link href="/sponsors" passHref>
-    <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
-      СПОНСОРИ
-    </Button>
-  </Link>);
-  myList.push(<Menu allowHover>
-    <MenuHandler>
-      <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
-        ИСТОРИЯ
-      </Button>
-    </MenuHandler>
-    <MenuList>
-      <Link href="/history" passHref>
-        <MenuItem>2024</MenuItem>
-      </Link>
-    </MenuList>
-  </Menu>);
-  myList.push(<Link href="/contact" passHref>
-    <Button variant="gradient" className="navbarButton lg:inline-block" color="green">
-      КОНТАКТИ
-    </Button>
-  </Link>);
-
-
   return (
     <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
-
       <div className="hidden lg:block">
         <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-          {myList}
+          {getButtonsWithLogo()}
         </ul>
       </div>
       <IconButton
@@ -129,7 +64,7 @@ export function Navbar() {
       <MobileNav open={openNav}>
         <div className="container mx-auto">
           <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            {myList}
+            {getButtonsWithoutLogo()}
           </ul>
         </div>
       </MobileNav>
