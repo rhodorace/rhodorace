@@ -19,7 +19,6 @@ export function Navbar() {
   return (
     <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
       <div className="hidden lg:block">
-        {/* <div className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6"> */}
         <div className="grid grid-cols-7 gap-4" style={{alignItems: 'center'}}>
           {getButtonsWithLogo()}
         </div>

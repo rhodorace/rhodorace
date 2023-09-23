@@ -4,7 +4,8 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import PageTitle from "@/components/layout/page-title";
+
+import { Typography } from "@material-tailwind/react";
 
 export function FrequentlyAskedQuestions() {
   const [open, setOpen] = React.useState(1);
@@ -13,7 +14,11 @@ export function FrequentlyAskedQuestions() {
 
   return (
     <section className="relative bg-gray-50 py-24 px-4">
-      <PageTitle heading="Често задавани въпроси" />
+        <div className="mx-auto w-full px-4 text-center lg:w-6/12">
+      <Typography variant="h2" color="blue-gray" className="mb-3">
+        "Често задавани въпроси"
+      </Typography>
+    </div>
       <div className="container mx-auto">
         <Accordion open={open === 1}>
           <AccordionHeader onClick={() => handleOpen(1)}>Какъв е маршрутът на маратона в Родопите?</AccordionHeader>

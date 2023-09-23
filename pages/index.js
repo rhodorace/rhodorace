@@ -16,7 +16,6 @@ export default function Home() {
         <>
             <Navbar />
             <VideoHeading />
-            {/* <Stripes/> */}
             <RaceInfoCard />
             <AboutTheRaceSection />
             <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
@@ -29,7 +28,6 @@ export default function Home() {
                                     src={arda}
                                     className="rounded-2xl"
                                 />
-
                             </Card>
                         </div>
                         <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
