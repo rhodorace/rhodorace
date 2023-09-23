@@ -17,24 +17,23 @@ export default function Post() {
     fetchData();
   }, []);
 
-  //const searchParams = useSearchParams();
-  // const post_id = searchParams.get('post_id');
-  const post_id = 1020906541506637709;
-  console.log("post_id is " + post_id);
+  const searchParams = useSearchParams();
+  const post_id = searchParams.get('post_id');
+
   const fetchData = () => {
-    console.log("Requesting URL " + BLOGGER_API_URL + post_id + '?key=' + API_KEY);
-    setLoading(true);
-    fetch(BLOGGER_API_URL + post_id + '?key=' + API_KEY)
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-        console.log("Data is " + JSON.stringify(data));
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setLoading(false);
-      });
+    if (post_id !== null) {
+      setLoading(true);
+      fetch(BLOGGER_API_URL + post_id + '?key=' + API_KEY)
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+          setLoading(false);
+        });
+    }
   };
 
   // TODO do some input validation
@@ -43,8 +42,7 @@ export default function Post() {
     if (loading === true) {
       return <Loader />;
     } else if (data !== null && !data.error) {
-      console.log("Data is "+ data);
-      <>
+      return <>
         <Typography
           variant="h3"
           className="mb-3 font-bold"
@@ -61,6 +59,7 @@ export default function Post() {
           </div>
         </address>
         <Typography className="mb-8 font-normal text-blue-gray-500">
+
           <div dangerouslySetInnerHTML={{ __html: data.content }} />
         </Typography>
       </>
@@ -87,7 +86,7 @@ export default function Post() {
                   </div>
                 </div>
                 <div className="w-full px-4 ">
-                  <div className="flex justify-center py-4 pt-8 lg:pt-4">
+                  <div className="justify-center py-4 pt-8 lg:pt-4">
                     {generateContentToRender()}
                   </div>
                 </div>
