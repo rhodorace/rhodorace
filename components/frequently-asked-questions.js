@@ -14,11 +14,11 @@ export function FrequentlyAskedQuestions() {
 
   return (
     <section className="relative bg-gray-50 py-24 px-4">
-        <div className="mx-auto w-full px-4 text-center lg:w-6/12">
-      <Typography variant="h2" color="blue-gray" className="mb-3">
-        "Често задавани въпроси"
-      </Typography>
-    </div>
+      <div className="mx-auto w-full px-4 text-center lg:w-6/12">
+        <Typography variant="h2" color="blue-gray" className="mb-3">
+          "Често задавани въпроси"
+        </Typography>
+      </div>
       <div className="container mx-auto">
         <Accordion open={open === 1}>
           <AccordionHeader onClick={() => handleOpen(1)}>Какъв е маршрутът на маратона в Родопите?</AccordionHeader>
