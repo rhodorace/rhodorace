@@ -1,8 +1,9 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import Image from "next/image";
+import Link from "next/link";
 
-const BLOGGER_API_URL = "https://www.googleapis.com/blogger/v3/blogs/831062794583421474/posts?key=" + process.env.BLOGGER_API_KEY;
+const BLOGGER_API_URL = "https://www.googleapis.com/blogger/v3/blogs/831062794583421474/posts?key=" + process.env.NEXT_PUBLIC_BLOGGER_API_KEY;
 
 export const getServerSideProps = async () => {
   try {
@@ -39,7 +40,8 @@ export default function News({ news }) {
   function renderSingleArticle(article) {
     return (
       <div class="container my-24 mx-auto md:px-6">
-        <div class="mb-6 flex flex-wrap">
+        <Link href={{pathname: '/posts', query:{post_id: article.id}}}>
+        <div className="mb-6 flex flex-wrap">
           <div class="mb-6 ml-auto w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-3/12">
             <div class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
               data-te-ripple-init data-te-ripple-color="light">
@@ -64,7 +66,7 @@ export default function News({ news }) {
             </p><a href="#">Виж повече</a>
           </div>
         </div>
-
+        </Link>
       </div>);
   }
 
