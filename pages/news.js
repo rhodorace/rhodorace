@@ -61,9 +61,10 @@ export default function News({ news }) {
 
               <small>Публикувано на <u>{article.published}</u> от {article.author.displayName}</small>
             </p>
+            
             <p class="text-neutral-500 dark:text-neutral-300 line-clamp-3">
-              {article.content}
-            </p><a href="#">Виж повече</a>
+              <div dangerouslySetInnerHTML={{ __html: article.content }} />
+            </p>
           </div>
         </div>
         </Link>
