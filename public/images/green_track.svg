@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="1595.0667"
+   height="2238.812"
+   viewBox="0 0 1595.0667 2238.812"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="g1"
+     transform="translate(0,-5.6e-5)">
+    <path
+       id="path1"
+       d="M 11963,8381.52 V 883.711 C 11963,400.512 11571.4,8.91016 11088.2,8.91016 H 874.801 C 391.602,8.91016 0,400.512 0,883.711 V 8381.52 h 11963"
+       style="fill:#95c11f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0.13333333,0,0,-0.13333333,0,2240)" />
+    <path
+       id="path6"
+       d="M 5981.48,6921.6 3216.41,7781.21 H 0 v 646.17 H 11963 V 7781.21 H 8746.6 L 5981.48,6921.6"
+       style="fill:#79cb43;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0.13333333,0,0,-0.13333333,0,2240)" />
+    <path
+       id="path7"
+       d="M 11010,16800 H 953.012 C 426.719,16800 0,16373.3 0,15847 V 8427.38 H 11963 V 15847 c 0,526.3 -426.7,953 -953,953"
+       style="fill:#28292a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0.13333333,0,0,-0.13333333,0,2240)" />
+    <path
+       id="path20"
+       d="M 5981.48,6977.5 8746.6,8427.38 H 3216.41 Z"
+       style="fill:#28292a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0.13333333,0,0,-0.13333333,0,2240)" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:666.667px;font-family:'Tamil MN';-inkscape-font-specification:'Tamil MN Bold';text-align:center;text-anchor:middle;fill:#79cb43;fill-opacity:1;stroke:none;stroke-width:0.998"
+       x="849.29114"
+       y="1902.155"
+       id="text20"><tspan
+         id="tspan20"
+         x="849.29114"
+         y="1902.155"
+         style="font-size:666.667px;fill:#f9f9f9;stroke:none">21</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:266.667px;font-family:'Tamil MN';-inkscape-font-specification:'Tamil MN Bold';text-align:center;text-anchor:middle;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.998"
+       x="802.02551"
+       y="644.82843"
+       id="text21"><tspan
+         id="tspan21"
+         x="802.02551"
+         y="644.82843">620 D+</tspan></text>
+  </g>
+</svg>
