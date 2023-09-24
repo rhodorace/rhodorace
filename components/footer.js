@@ -37,7 +37,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
             </div>
           </div>
           <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">
-            {menus.map(({ name, items }) => (
+            {/* {menus.map(({ name, items }) => (
               <div key={name}>
                 <Typography
                   variant="small"
@@ -63,7 +63,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
                   ))}
                 </ul>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
         <hr className="my-6 border-gray-300" />
@@ -85,8 +85,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
 
 Footer.defaultProps = {
   title: "Община Момчилград",
-  description:
-    "Easy to use React components for Tailwind CSS and Material Design.",
+  description:"",
   socials: [
     {
       color: "blue",
