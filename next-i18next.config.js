@@ -7,4 +7,8 @@ module.exports = {
       // the default locale to be used when visiting a non-localized route
       defaultLocale: 'bg'
     },
+    localePath:
+    typeof window === 'undefined'
+      ? require('path').resolve('./public/locales')
+      : '/locales'
   }

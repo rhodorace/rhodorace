@@ -21,7 +21,7 @@ export default function Home() {
             <VideoHeading />
             <RaceInfoCard />
             <AboutTheRaceSection />
-            <h1>{t("HELLO_WORLD")}</h1>
+            {/* <h1>{t("HELLO_WORLD")}</h1> */}
             <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
                 <div className="container mx-auto">
                     <div className="mt-32 flex flex-wrap items-center">
