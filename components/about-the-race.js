@@ -4,6 +4,7 @@ import {
     Button,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutTheRaceSection() {
     return (
@@ -23,7 +24,9 @@ export default function AboutTheRaceSection() {
                             Маратонът представлява истинско приключение за всички любители на спорта, предизвикателствата на планинските маршрути и красотата на природата.
                             Готови ли сте да изпитате тази невероятна атмосфера?
                         </Typography>
-                        <Button variant="outlined">РЕГИСТРИРАЙ СЕ</Button>
+                        <Link href="/sign-up" className="" passHref>
+                            <Button variant="outlined">РЕГИСТРИРАЙ СЕ</Button>
+                        </Link>
                     </div>
                     <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
                         <Card className="shadow-lg shadow-gray-500/10">

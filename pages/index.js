@@ -10,14 +10,18 @@ import {
 } from "@material-tailwind/react";
 import Image from 'next/image'
 import arda from '../public/images/arda.jpg'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 export default function Home() {
+    const { t } = useTranslation();
     return (
         <>
             <Navbar />
             <VideoHeading />
             <RaceInfoCard />
             <AboutTheRaceSection />
+            <h1>{t("HELLO_WORLD")}</h1>
             <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
                 <div className="container mx-auto">
                     <div className="mt-32 flex flex-wrap items-center">
@@ -53,3 +57,15 @@ export default function Home() {
         </>
     );
 }
+
+export async function getStaticProps(context) {
+    // extract the locale identifier from the URL
+    const { locale } = context
+  
+    return {
+      props: {
+        // pass the translation props to the page component
+        ...(await serverSideTranslations(locale)),
+      },
+    }
+  }
