@@ -8,10 +8,11 @@ import {
     Card,
     Typography,
 } from "@material-tailwind/react";
-import Image from 'next/image'
-import arda from '../public/images/arda.jpg'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next'
+import Image from 'next/image';
+import arda from '../public/images/arda.jpg';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+
 
 export default function Home() {
     const { t } = useTranslation();

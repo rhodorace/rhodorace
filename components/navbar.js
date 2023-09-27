@@ -3,9 +3,10 @@ import {
   MobileNav,
   IconButton,
 } from "@material-tailwind/react";
-
 import { getButtonsWithLogo, getButtonsWithoutLogo } from "@/lib/buttons";
-
+import ReactCountryFlag from "react-country-flag";
+import Link
+ from "next/link";
 export function Navbar() {
   const [openNav, setOpenNav] = React.useState(false);
 
@@ -17,12 +18,13 @@ export function Navbar() {
   }, []);
 
   return (
-    <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
+    <>    <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
       <div className="hidden lg:block">
-        <div className="grid grid-cols-7 gap-4" style={{alignItems: 'center'}}>
+        <div className="grid grid-cols-9 gap-4" style={{ alignItems: 'center' }}>
           {getButtonsWithLogo()}
         </div>
       </div>
+      
       <IconButton
         variant="text"
         className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -69,5 +71,7 @@ export function Navbar() {
         </div>
       </MobileNav>
     </div>
+    </>
+
   );
 }
