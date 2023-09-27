@@ -21,7 +21,6 @@ export default function Home() {
             <VideoHeading />
             <RaceInfoCard />
             <AboutTheRaceSection />
-            {/* <h1>{t("HELLO_WORLD")}</h1> */}
             <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
                 <div className="container mx-auto">
                     <div className="mt-32 flex flex-wrap items-center">
@@ -40,13 +39,10 @@ export default function Home() {
                                 className="mb-3 font-bold"
                                 color="blue-gray"
                             >
-                                Изживейте природата на Родопите: Маратонът като никога преди
+                                {t("HOME_PAGE_ARTICLE_2_HEADER")}
                             </Typography>
                             <Typography className="mb-8 font-normal text-blue-gray-500">
-                                Маратонът в Родопите не е само състезание, това е възможност да се потопите в най-дивата и красива природа на Родопите.
-                                Събитието включва разнообразни маршрути, където ще преодолеете върхове и долини, реки и горски пътеки.
-                                Независимо дали сте професионален спортист или просто обичате приключенията на открито,
-                                този маратон ще ви предостави неповторимо опит за изживяване на природата.
+                                {t("HOME_PAGE_ARTICLE_2_BODY")}
                             </Typography>
                         </div>
                     </div>
@@ -61,11 +57,11 @@ export default function Home() {
 export async function getStaticProps(context) {
     // extract the locale identifier from the URL
     const { locale } = context
-  
+
     return {
-      props: {
-        // pass the translation props to the page component
-        ...(await serverSideTranslations(locale)),
-      },
+        props: {
+            // pass the translation props to the page component
+            ...(await serverSideTranslations(locale)),
+        },
     }
-  }
+}
