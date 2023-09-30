@@ -5,9 +5,12 @@ import {
     IconButton,
 } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRunning, faFlag, faFlagCheckered} from "@fortawesome/free-solid-svg-icons";
+import { faRunning, faFlag, faFlagCheckered } from "@fortawesome/free-solid-svg-icons";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 export default function RaceInfoCard() {
+    const { t } = useTranslation();
     return (<>
         <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
             <div className="container mx-auto">
@@ -24,7 +27,7 @@ export default function RaceInfoCard() {
                                 />
                             </IconButton>
                             <Typography variant="h5" className="mb-2" color="blue-gray">
-                                Дистанция
+                                {t("DISTANCE")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
                                 21 КМ
@@ -43,7 +46,7 @@ export default function RaceInfoCard() {
                                 />
                             </IconButton>
                             <Typography variant="h5" className="mb-2" color="blue-gray">
-                                Старт
+                                {t("START")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
                                 гр. Момчилград
@@ -62,7 +65,7 @@ export default function RaceInfoCard() {
                                 />
                             </IconButton>
                             <Typography variant="h5" className="mb-2" color="blue-gray">
-                                Финал
+                                {t("FINISH")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
                                 с. Татул
@@ -81,7 +84,7 @@ export default function RaceInfoCard() {
                                 />
                             </IconButton>
                             <Typography variant="h5" className="mb-2" color="blue-gray">
-                                Дистанция
+                            {t("DISTANCE")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
                                 42 КМ
@@ -100,7 +103,7 @@ export default function RaceInfoCard() {
                                 />
                             </IconButton>
                             <Typography variant="h5" className="mb-2" color="blue-gray">
-                                Старт
+                            {t("START")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
                                 гр. Момчилград
@@ -119,7 +122,7 @@ export default function RaceInfoCard() {
                                 />
                             </IconButton>
                             <Typography variant="h5" className="mb-2" color="blue-gray">
-                                Финал
+                            {t("FINISH")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
                                 с. Багрянка
@@ -132,4 +135,16 @@ export default function RaceInfoCard() {
     </>
 
     );
+}
+
+export async function getStaticProps(context) {
+    // extract the locale identifier from the URL
+    const { locale } = context
+
+    return {
+        props: {
+            // pass the translation props to the page component
+            ...(await serverSideTranslations(locale)),
+        },
+    }
 }

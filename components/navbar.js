@@ -3,10 +3,8 @@ import {
   MobileNav,
   IconButton,
 } from "@material-tailwind/react";
-import { getButtonsWithLogo, getButtonsWithoutLogo } from "@/lib/buttons";
-import ReactCountryFlag from "react-country-flag";
-import Link
- from "next/link";
+import HeaderButtons from "./header_buttons";
+
 export function Navbar() {
   const [openNav, setOpenNav] = React.useState(false);
 
@@ -21,7 +19,7 @@ export function Navbar() {
     <>    <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
       <div className="hidden lg:block">
         <div className="grid grid-cols-9 gap-4" style={{ alignItems: 'center' }}>
-          {getButtonsWithLogo()}
+          <HeaderButtons withLogo={true} />
         </div>
       </div>
       
@@ -66,7 +64,7 @@ export function Navbar() {
       <MobileNav open={openNav}>
         <div className="container mx-auto">
           <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            {getButtonsWithoutLogo()}
+          <HeaderButtons withLogo={false} />
           </ul>
         </div>
       </MobileNav>

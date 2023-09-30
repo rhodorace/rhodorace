@@ -5,8 +5,12 @@ import {
 } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 export default function AboutTheRaceSection() {
+    const { t } = useTranslation();
+
     return (
         <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
             <div className="container mx-auto">
@@ -17,15 +21,13 @@ export default function AboutTheRaceSection() {
                             className="mb-3 font-bold"
                             color="blue-gray"
                         >
-                            Старт на приключението: Маратонът в Родопите
+                            {t("HOME_PAGE_ARTICLE_1_HEADER")}
                         </Typography>
                         <Typography className="mb-8 font-normal text-blue-gray-500">
-                            Добре дошли на най-забележителния маратон в Родопите! Това уникално спортно събитие събира стотици участници от цял свят в сърцето на Родопите, близо до красивия град Момчилград.
-                            Маратонът представлява истинско приключение за всички любители на спорта, предизвикателствата на планинските маршрути и красотата на природата.
-                            Готови ли сте да изпитате тази невероятна атмосфера?
+                            {t("HOME_PAGE_ARTICLE_1_BODY")}
                         </Typography>
-                        <Link href="/sign-up" className="" passHref>
-                            <Button variant="outlined">РЕГИСТРИРАЙ СЕ</Button>
+                        <Link href="/sign-up" passHref>
+                            <Button variant="outlined">{t("SIGN_UP")}</Button>
                         </Link>
                     </div>
                     <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
@@ -43,4 +45,16 @@ export default function AboutTheRaceSection() {
             </div>
         </section>
     );
+}
+
+export async function getStaticProps(context) {
+    // extract the locale identifier from the URL
+    const { locale } = context
+
+    return {
+        props: {
+            // pass the translation props to the page component
+            ...(await serverSideTranslations(locale)),
+        },
+    }
 }
