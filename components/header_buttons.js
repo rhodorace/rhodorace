@@ -16,7 +16,6 @@ import { useRouter } from "next/router";
 export default function HeaderButtons({ withLogo }) {
     const router = useRouter();
 
-    console.log("Locale is " + router.locale);
     const { t } = useTranslation();
     // ========= REGISTRATION BUTTON =========
     const registration =
@@ -136,12 +135,10 @@ export default function HeaderButtons({ withLogo }) {
     );
 }
 export async function getStaticProps(context) {
-    // extract the locale identifier from the URL
     const { locale } = context
 
     return {
         props: {
-            // pass the translation props to the page component
             ...(await serverSideTranslations(locale)),
         },
     }

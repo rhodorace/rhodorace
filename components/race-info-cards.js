@@ -49,7 +49,7 @@ export default function RaceInfoCard() {
                                 {t("START")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
-                                гр. Момчилград
+                                {t("MOMCHILGRAD")}
                             </Typography>
                         </CardBody>
                     </Card>
@@ -68,7 +68,7 @@ export default function RaceInfoCard() {
                                 {t("FINISH")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
-                                с. Татул
+                                {t("TATUL")}
                             </Typography>
                         </CardBody>
                     </Card>
@@ -84,7 +84,7 @@ export default function RaceInfoCard() {
                                 />
                             </IconButton>
                             <Typography variant="h5" className="mb-2" color="blue-gray">
-                            {t("DISTANCE")}
+                                {t("DISTANCE")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
                                 42 КМ
@@ -103,10 +103,10 @@ export default function RaceInfoCard() {
                                 />
                             </IconButton>
                             <Typography variant="h5" className="mb-2" color="blue-gray">
-                            {t("START")}
+                                {t("START")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
-                                гр. Момчилград
+                                {t("MOMCHILGRAD")}
                             </Typography>
                         </CardBody>
                     </Card>
@@ -122,10 +122,10 @@ export default function RaceInfoCard() {
                                 />
                             </IconButton>
                             <Typography variant="h5" className="mb-2" color="blue-gray">
-                            {t("FINISH")}
+                                {t("FINISH")}
                             </Typography>
                             <Typography className="font-normal text-blue-gray-600">
-                                с. Багрянка
+                                {t("BAGRYANKA")}
                             </Typography>
                         </CardBody>
                     </Card>
@@ -138,12 +138,10 @@ export default function RaceInfoCard() {
 }
 
 export async function getStaticProps(context) {
-    // extract the locale identifier from the URL
     const { locale } = context
 
     return {
         props: {
-            // pass the translation props to the page component
             ...(await serverSideTranslations(locale)),
         },
     }
