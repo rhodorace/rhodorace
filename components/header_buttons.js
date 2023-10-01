@@ -11,8 +11,12 @@ import bgLogo from "../public/bgLogo.svg";
 import ReactCountryFlag from "react-country-flag";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from "next/router";
 
 export default function HeaderButtons({ withLogo }) {
+    const router = useRouter();
+
+    console.log("Locale is " + router.locale);
     const { t } = useTranslation();
     // ========= REGISTRATION BUTTON =========
     const registration =
@@ -95,28 +99,36 @@ export default function HeaderButtons({ withLogo }) {
             {t("CONTACTS_BUTTON")}
         </Button>
     </Link>;
-    // ========= SPONSORS BUTTON =========
-    const sponsors = <Link href="/sponsors" passHref>
-        <Button variant="gradient" className="navbarBtn lg:inline-block" color="green">
-            {t("SPONSORS_BUTTON")}
-        </Button>
-    </Link>;
     // ========= CHANGE LANGUAGE BUTTON =========
-    const changeLanguage = <Link href="/contact" passHref>
-        <ReactCountryFlag
-            className="emojiFlag"
-            countryCode="US"
-            style={{
-                fontSize: '2em',
-                lineHeight: '2em',
-            }}
-            aria-label="United States"
-        />
-    </Link>;
+    let changeLanguage;
+    if (router.locale === "en") {
+        changeLanguage = <Link href="/bg" passHref>
+            <ReactCountryFlag
+                className="emojiFlag"
+                countryCode="BG"
+                style={{
+                    fontSize: '2em',
+                    lineHeight: '2em',
+                }}
+                aria-label="Bulgaria"
+            />
+        </Link>;
+    } else if (router.locale === "bg") {
+        changeLanguage = <Link href="/en" passHref>
+            <ReactCountryFlag
+                className="emojiFlag"
+                countryCode="GB"
+                style={{
+                    fontSize: '2em',
+                    lineHeight: '2em',
+                }}
+                aria-label="United States"
+            />
+        </Link>;
+    }
 
-
-    const buttonsWithLogo = [registration, tracks, news, info, logo, history, contacts, sponsors, changeLanguage];
-    const buttonsWithoutLogo = [registration, tracks, news, info, history, contacts, sponsors, changeLanguage];
+    const buttonsWithLogo = [registration, tracks, news, info, logo, history, contacts, changeLanguage];
+    const buttonsWithoutLogo = [registration, tracks, news, info, history, contacts, changeLanguage];
     return (
         <>
             {withLogo ? buttonsWithLogo : buttonsWithoutLogo}
