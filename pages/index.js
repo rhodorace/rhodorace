@@ -12,6 +12,7 @@ import Image from 'next/image';
 import arda from '../public/images/arda.jpg';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import Sponsors from "@/components/sponsors";
 
 
 export default function Home() {
@@ -49,6 +50,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <Sponsors/>
             <FrequentlyAskedQuestions />
             <Footer />
         </>
