@@ -8,10 +8,9 @@ export default function Stripes() {
     const [openNav, setOpenNav] = React.useState(false);
 
     React.useEffect(() => {
-        window.addEventListener(
-            "resize",
-            () => window.innerWidth <= 960 && setOpenNav(true),
-        );
+        if(window.innerWidth <= 960) {
+            setOpenNav(true);
+        }
     }, []);
 
     return (
@@ -45,14 +44,14 @@ export default function Stripes() {
                 </div>
             </div>
             <div className="flex justify-center">
-                    <Image
-                        src={blue_track}
-                        width={80}
-                        alt="Track 1 info"
-                    />
+                <Image
+                    src={blue_track}
+                    width={80}
+                    alt="Track 1 info"
+                />
 
                 <div className="flex justify-center">
-                <Image
+                    <Image
                         src={green_track}
                         width={80}
                         alt="Track 1 info"
