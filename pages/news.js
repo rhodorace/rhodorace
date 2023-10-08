@@ -2,21 +2,22 @@ import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import Image from "next/image";
 import Link from "next/link";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+import { useState, useEffect } from 'react'
 
 const BLOGGER_API_URL = "https://www.googleapis.com/blogger/v3/blogs/831062794583421474/posts?key=" + process.env.NEXT_PUBLIC_BLOGGER_API_KEY;
 
-export const getServerSideProps = async () => {
-  try {
-    const res = await fetch(BLOGGER_API_URL);
-    const news = await res.json();
-    return { props: { news } }
-  } catch (e) {
-    return { props: {} };
-  }
-}
+export default function News() {
+  const [news, setNews] = useState(null)
 
-export default function News({ news }) {
-
+  useEffect(() => {
+    fetch(BLOGGER_API_URL)
+      .then((res) => res.json())
+      .then((data) => {
+        setNews(data)
+      })
+  }, [])
   function renderContent() {
     if (news && news.items && news.items.length > 0) {
       return renderNews(news.items);
@@ -46,22 +47,13 @@ export default function News({ news }) {
             <div class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
               data-te-ripple-init data-te-ripple-color="light">
               <Image src="/images/018.jpg" class="w-full" alt="Louvre" width={300} height={100} />
-              <a href="#!">
-                <div
-                  class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]">
-                </div>
-              </a>
             </div>
           </div>
-
           <div class="mb-6 mr-auto w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-9/12 xl:w-7/12">
             <h5 class="mb-3 text-lg font-bold">{article.title}</h5>
-
             <p class="mb-6 text-neutral-500 dark:text-neutral-300">
-
               <small>Публикувано на <u>{article.published}</u> от {article.author.displayName}</small>
             </p>
-            
             <p class="text-neutral-500 dark:text-neutral-300 line-clamp-3">
               <div dangerouslySetInnerHTML={{ __html: article.content }} />
             </p>
@@ -71,6 +63,8 @@ export default function News({ news }) {
       </div>);
   }
 
+  const { t } = useTranslation(); 
+  
   return (
     <>
       <section className="relative block h-[50vh]">
@@ -106,4 +100,14 @@ export default function News({ news }) {
       </div>
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  const { locale } = context
+
+  return {
+      props: {
+          ...(await serverSideTranslations(locale)),
+      },
+  }
 }

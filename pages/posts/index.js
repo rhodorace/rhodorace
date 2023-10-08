@@ -6,6 +6,9 @@ import { Loader } from "@/components/loader";
 import {
   Typography,
 } from "@material-tailwind/react";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+
 const BLOGGER_API_URL = "https://www.googleapis.com/blogger/v3/blogs/831062794583421474/posts/";
 const API_KEY = process.env.NEXT_PUBLIC_BLOGGER_API_KEY;
 
@@ -30,13 +33,10 @@ export default function Post() {
           setLoading(false);
         })
         .catch((error) => {
-          console.log(error);
           setLoading(false);
         });
     }
   };
-
-  // TODO do some input validation
 
   function generateContentToRender() {
     if (loading === true) {
@@ -59,14 +59,12 @@ export default function Post() {
           </div>
         </address>
         <Typography className="mb-8 font-normal text-blue-gray-500">
-
           <div dangerouslySetInnerHTML={{ __html: data.content }} />
         </Typography>
       </>
-    } else {
-      <></>
     }
   }
+  const { t } = useTranslation();
   return (
     <>
       <section className="relative block h-[50vh]">
@@ -102,3 +100,12 @@ export default function Post() {
   );
 }
 
+export async function getStaticProps(context) {
+  const { locale } = context
+
+  return {
+      props: {
+          ...(await serverSideTranslations(locale)),
+      },
+  }
+}

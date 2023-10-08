@@ -7,12 +7,16 @@ import {
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Typography } from "@material-tailwind/react";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 export default function History2024() {
     const [open, setOpen] = React.useState(1);
 
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
+    const { t } = useTranslation();
+    
     return (
         <>
             <section className="relative block h-[50vh]">
@@ -62,4 +66,14 @@ export default function History2024() {
             </div>
         </>
     );
+}
+
+export async function getStaticProps(context) {
+    const { locale } = context
+
+    return {
+        props: {
+            ...(await serverSideTranslations(locale)),
+        },
+    }
 }

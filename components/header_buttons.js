@@ -70,10 +70,10 @@ export default function HeaderButtons({ withLogo }) {
             </MenuHandler>
             <MenuList>
                 <Link href="/accomodation" passHref>
-                    <MenuItem>{t("ACCOMODATION_BUTTON")}</MenuItem>
+                    <MenuItem>{t("ACCOMODATION")}</MenuItem>
                 </Link>
                 <Link href="/volunteers" passHref>
-                    <MenuItem>{t("VOLUNTEERS_BUTTON")}</MenuItem>
+                    <MenuItem>{t("VOLUNTEERS")}</MenuItem>
                 </Link>
             </MenuList>
         </Menu>;
