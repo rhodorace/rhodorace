@@ -12,6 +12,8 @@ import ReactCountryFlag from "react-country-flag";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from "next/router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function HeaderButtons({ withLogo }) {
     const router = useRouter();
@@ -74,6 +76,9 @@ export default function HeaderButtons({ withLogo }) {
                 </Link>
                 <Link href="/volunteers" passHref>
                     <MenuItem>{t("VOLUNTEERS")}</MenuItem>
+                </Link>
+                <Link href="/participants" passHref>
+                    <MenuItem>{t("PARTICIPANTS")}</MenuItem>
                 </Link>
             </MenuList>
         </Menu>;
