@@ -5,8 +5,6 @@ import { Typography } from "@material-tailwind/react";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { ButtonGroup, Button } from "@material-tailwind/react";
-import { redirect } from 'next/navigation'
-
 
 export default function History(props) {
     const { t } = useTranslation();

@@ -33,11 +33,11 @@ export default function AboutTheRaceSection() {
                     <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
                         <Card className="shadow-lg shadow-gray-500/10">
                             <Image
-                                alt="Card Image"
-                                src="/images/rekke.jpg"
+                                alt="Athlets"
+                                src="/images/athlets.jpg"
                                 className="rounded-2xl"
-                                width={600}
-                                height={100}
+                                width={700}
+                                height={200}
                             />
                         </Card>
                     </div>

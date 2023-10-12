@@ -39,7 +39,7 @@ export default function Volunteers() {
                 <Card className="shadow-lg shadow-gray-500/10">
                   <Image
                     alt="Card Image"
-                    src="/images/rekke.jpg"
+                    src="/images/athlets.jpg"
                     className="rounded-2xl"
                     width={600}
                     height={100}
