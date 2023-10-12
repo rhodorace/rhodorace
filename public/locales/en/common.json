@@ -6,12 +6,7 @@
     "HISTORY_BUTTON": "HISTORY",
     "CONTACTS_BUTTON": "CONTACTS",
     "SPONSORS": "SPONSORS",
-    "DISTANCE": "Distance",
-    "START": "Start",
-    "FINISH": "Finish",
     "MOMCHILGRAD": "Momchilgrad",
-    "TATUL": "Tatul",
-    "BAGRYANKA": "Bagryanka",
     "HOME_PAGE_ARTICLE_1_HEADER": "Start of the adventure: the Marathon in the Rhodopes",
     "HOME_PAGE_ARTICLE_1_BODY": "Welcome to the most remarkable marathon in the Rhodopes! This unique sports event gathers hundreds of participants from all over the world in the heart of the Rhodopes, near the beautiful town of Momchilgrad. The marathon is a real adventure for all lovers of sports, the challenges of mountain routes and the beauty of nature. Are you ready to experience this incredible atmosphere?",
     "HOME_PAGE_ARTICLE_2_HEADER": "Experience the nature of the Rhodopes: the marathon like never before",
@@ -29,5 +24,8 @@
     "SIGN_UP": "Sign up",
     "VOLUNTEERS_HEADER": "Become a volunteer!",
     "VOLUNTEERS_BODY": "Are you passionate about supporting a great cause, meeting new people, and being part of an exciting event in the heart of nature? If so, we invite you to join our volunteer team and help us create a memorable marathon for all participants. As a volunteer, you'll have the chance to play a vital role in various aspects of the event, from assisting with registration and distributing race packets to providing support along the race route and helping with post-race activities. Your commitment and dedication will be highly valued, and you'll have the opportunity to contribute to the success of the marathon.To become a volunteer, please don't hesitate to reach out to us at +359887565021. We can't wait to hear from you and have you on board as a valued member of our volunteer team.",
-    "PARTICIPANTS": "Participants"
+    "PARTICIPANTS": "Participants",
+    "HISTORY": "History",
+    "RESULTS": "Results",
+    "GALLERY": "Gallery"
 }

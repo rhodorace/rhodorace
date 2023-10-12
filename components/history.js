@@ -1,22 +1,20 @@
 import React from "react";
-import {
-    Accordion,
-    AccordionHeader,
-    AccordionBody,
-} from "@material-tailwind/react";
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Typography } from "@material-tailwind/react";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { ButtonGroup, Button } from "@material-tailwind/react";
+import { redirect } from 'next/navigation'
 
-export default function History2024() {
-    const [open, setOpen] = React.useState(1);
 
-    const handleOpen = (value) => setOpen(open === value ? 0 : value);
-
+export default function History(props) {
     const { t } = useTranslation();
-    
+
+    function handleRedirectToGallery() {
+        window.open(props.galleryURL, "_blank")
+    }
+
     return (
         <>
             <section className="relative block h-[50vh]">
@@ -34,25 +32,13 @@ export default function History2024() {
                                         <section className="relative py-12 px-4">
                                             <div className="mx-auto w-full px-4 text-center lg:w-6/12">
                                                 <Typography variant="h2" color="blue-gray" className="mb-3">
-                                                    История 2024
+                                                    {t("HISTORY")} {props.year}
                                                 </Typography>
                                             </div>
-                                            <div className="container mx-auto">
-                                                <Accordion open={open === 1}>
-                                                    <AccordionHeader onClick={() => handleOpen(1)}>Резултати</AccordionHeader>
-                                                    <AccordionBody>
-                                                        Резултати ...
-                                                    </AccordionBody>
-                                                </Accordion>
-                                                <Accordion open={open === 2}>
-                                                    <AccordionHeader onClick={() => handleOpen(2)}>
-                                                        Снимки
-                                                    </AccordionHeader>
-                                                    <AccordionBody>
-                                                        Снимки
-                                                    </AccordionBody>
-                                                </Accordion>
-                                            </div>
+                                            <ButtonGroup fullWidth color="green">
+                                                <Button color="green" onClick={handleRedirectToGallery}>{t("GALLERY")}</Button>
+                                                <Button color="green">{t("RESULTS")}</Button>
+                                            </ButtonGroup>
                                         </section>
                                     </section>
                                 </div>
