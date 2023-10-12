@@ -1,7 +1,6 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { FrequentlyAskedQuestions } from "@/components/frequently-asked-questions";
-import RaceInfoCard from "@/components/race-info-cards";
 import VideoHeading from "@/components/video-heading";
 import AboutTheRaceSection from "@/components/about-the-race";
 import {
