@@ -78,6 +78,9 @@ export default function HeaderButtons({ withLogo }) {
                 <Link href="/participants" passHref>
                     <MenuItem>{t("PARTICIPANTS")}</MenuItem>
                 </Link>
+                <Link href="/momchilgrad" passHref>
+                    <MenuItem>{t("ABOUT_MOMCHILGRAD")}</MenuItem>
+                </Link>
             </MenuList>
         </Menu>;
 
