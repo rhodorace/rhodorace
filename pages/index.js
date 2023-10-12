@@ -20,7 +20,6 @@ export default function Home() {
         <>
             <Navbar />
             <VideoHeading />
-            <RaceInfoCard />
             <AboutTheRaceSection />
             <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
                 <div className="container mx-auto">
