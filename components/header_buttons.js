@@ -12,6 +12,7 @@ import ReactCountryFlag from "react-country-flag";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from "next/router";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 export default function HeaderButtons({ withLogo }) {
     const router = useRouter();
@@ -28,8 +29,15 @@ export default function HeaderButtons({ withLogo }) {
     // ========= TRACKS BUTTON =========
     const tracks = <Menu allowHover>
         <MenuHandler>
+
             <Button variant="gradient" className="lg:inline-block" color="green">
-                {t("TRACKS_BUTTON")}
+                <span className="menuButtonText">{t("TRACKS_BUTTON")}</span>
+                <span className="menuButtonSvg">
+                    <ChevronDownIcon
+                        strokeWidth={2.5}
+                        className="mx-auto h-4 w-4 transition-transform"
+                    />
+                </span>
             </Button>
         </MenuHandler>
         <MenuList>
@@ -65,7 +73,13 @@ export default function HeaderButtons({ withLogo }) {
         <Menu allowHover>
             <MenuHandler>
                 <Button variant="gradient" className="lg:inline-block" color="green">
-                    {t("INFO_BUTTON")}
+                    <span className="menuButtonText">{t("INFO_BUTTON")}</span>
+                    <span className="menuButtonSvg">
+                        <ChevronDownIcon
+                            strokeWidth={2.5}
+                            className="mx-auto h-4 w-4 transition-transform"
+                        />
+                    </span>
                 </Button>
             </MenuHandler>
             <MenuList>
@@ -88,7 +102,13 @@ export default function HeaderButtons({ withLogo }) {
     const history = <Menu allowHover>
         <MenuHandler>
             <Button variant="gradient" className="lg:inline-block" color="green">
-                {t("HISTORY_BUTTON")}
+                <span className="menuButtonText">{t("HISTORY_BUTTON")}</span>
+                <span className="menuButtonSvgHistory">
+                    <ChevronDownIcon
+                        strokeWidth={2.5}
+                        className="mx-auto h-4 w-4 transition-transform"
+                    />
+                </span>
             </Button>
         </MenuHandler>
         <MenuList>

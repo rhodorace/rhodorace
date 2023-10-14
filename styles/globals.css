@@ -78,3 +78,20 @@ video {
   --tw-gradient-to: #1488ca var(--tw-gradient-to-position);
   --tw-gradient-from: #1488ca var(--tw-gradient-from-position);
 }
+
+.menuButtonText {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menuButtonSvg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.menuButtonSvgHistory {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}

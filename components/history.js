@@ -5,12 +5,18 @@ import { Typography } from "@material-tailwind/react";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { ButtonGroup, Button } from "@material-tailwind/react";
+import { useRouter } from 'next/navigation'
 
 export default function History(props) {
+    const router = useRouter();
     const { t } = useTranslation();
 
     function handleRedirectToGallery() {
         window.open(props.galleryURL, "_blank")
+    }
+
+    function handleRedirectToResults() {
+        router.push('/')
     }
 
     return (
@@ -33,9 +39,9 @@ export default function History(props) {
                                                     {t("HISTORY")} {props.year}
                                                 </Typography>
                                             </div>
-                                            <ButtonGroup fullWidth color="green">
+                                            <ButtonGroup color="green" fullWidth>
                                                 <Button color="green" onClick={handleRedirectToGallery}>{t("GALLERY")}</Button>
-                                                <Button color="green">{t("RESULTS")}</Button>
+                                                <Button color="green" onClick={handleRedirectToResults}>{t("RESULTS")}</Button>
                                             </ButtonGroup>
                                         </section>
                                     </section>

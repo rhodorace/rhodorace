@@ -3,13 +3,18 @@ import { Navbar } from "@/components/navbar";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import {
-  Card,
-  Typography,
   Button,
+  Card,
+  Typography
 } from "@material-tailwind/react";
 import Image from "next/image";
+
 export default function Volunteers() {
   const { t } = useTranslation();
+
+  function handleRedirectToVolunteerForm() {
+    window.open("https://www.google.com", "_blank")
+}
 
   return (
     <>
@@ -33,7 +38,7 @@ export default function Volunteers() {
                 <Typography className="mb-8 font-normal text-blue-gray-500">
                   {t("VOLUNTEERS_BODY")}
                 </Typography>
-
+                <Button variant="outlined" className="mb-8" onClick={handleRedirectToVolunteerForm} color="green">{t("REGISTER_AS_VOLUNTEER")}</Button>
               </div>
               <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
                 <Card className="shadow-lg shadow-gray-500/10">

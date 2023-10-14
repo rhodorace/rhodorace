@@ -1,6 +1,5 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import Image from "next/image";
 import Link from "next/link";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
@@ -43,13 +42,7 @@ export default function News() {
       <div class="container my-24 mx-auto md:px-6">
         <Link href={{pathname: '/posts', query:{post_id: article.id}}}>
         <div className="mb-6 flex flex-wrap">
-          <div class="mb-6 ml-auto w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-3/12">
-            <div class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
-              data-te-ripple-init data-te-ripple-color="light">
-              <Image src="/images/018.jpg" class="w-full" alt="Louvre" width={300} height={100} />
-            </div>
-          </div>
-          <div class="mb-6 mr-auto w-full shrink-0 grow-0 basis-auto px-3 md:mb-0 md:w-9/12 xl:w-7/12">
+          <div class="mb-6  w-full shrink-0 grow-0 basis-auto px-3 md:mb-0">
             <h5 class="mb-3 text-lg font-bold">{article.title}</h5>
             <p class="mb-6 text-neutral-500 dark:text-neutral-300">
               <small>Публикувано на <u>{article.published}</u> от {article.author.displayName}</small>
@@ -83,7 +76,7 @@ export default function News() {
                     </div>
                   </div>
                 </div>
-                <div class="container my-24 mx-auto md:px-6">
+                <div class="container my-12 mx-auto md:px-6">
                   <section class="mb-32 text-center md:text-left">
                     <h2 class="mb-12 text-center text-3xl font-bold">Новини</h2>
                     {renderContent()}
