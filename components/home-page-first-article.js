@@ -8,7 +8,7 @@ import Link from "next/link";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
-export default function AboutTheRaceSection() {
+export default function HomePageFirstArticle() {
     const { t } = useTranslation();
 
     return (

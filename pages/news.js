@@ -1,4 +1,3 @@
-import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import Link from "next/link";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -40,24 +39,24 @@ export default function News() {
   function renderSingleArticle(article) {
     return (
       <div class="container my-24 mx-auto md:px-6">
-        <Link href={{pathname: '/posts', query:{post_id: article.id}}}>
-        <div className="mb-6 flex flex-wrap">
-          <div class="mb-6  w-full shrink-0 grow-0 basis-auto px-3 md:mb-0">
-            <h5 class="mb-3 text-lg font-bold">{article.title}</h5>
-            <p class="mb-6 text-neutral-500 dark:text-neutral-300">
-              <small>Публикувано на <u>{article.published}</u> от {article.author.displayName}</small>
-            </p>
-            <p class="text-neutral-500 dark:text-neutral-300 line-clamp-3">
-              <div dangerouslySetInnerHTML={{ __html: article.content }} />
-            </p>
+        <Link href={{ pathname: '/posts', query: { post_id: article.id } }}>
+          <div className="mb-6 flex flex-wrap">
+            <div class="mb-6  w-full shrink-0 grow-0 basis-auto px-3 md:mb-0">
+              <h5 class="mb-3 text-lg font-bold">{article.title}</h5>
+              <p class="mb-6 text-neutral-500 dark:text-neutral-300">
+                <small>Публикувано на <u>{article.published}</u> от {article.author.displayName}</small>
+              </p>
+              <p class="text-neutral-500 dark:text-neutral-300 line-clamp-3">
+                <div dangerouslySetInnerHTML={{ __html: article.content }} />
+              </p>
+            </div>
           </div>
-        </div>
         </Link>
       </div>);
   }
 
-  const { t } = useTranslation(); 
-  
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="relative block h-[50vh]">
@@ -83,14 +82,10 @@ export default function News() {
                   </section>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </section>
-      <div className="bg-blue-gray-50/50">
-        <Footer />
-      </div>
     </>
   );
 }
@@ -99,8 +94,8 @@ export async function getStaticProps(context) {
   const { locale } = context
 
   return {
-      props: {
-          ...(await serverSideTranslations(locale)),
-      },
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
   }
 }

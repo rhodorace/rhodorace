@@ -5,6 +5,7 @@ config.autoAddCss = false;
 import { appWithTranslation } from 'next-i18next'
 import { Analytics } from '@vercel/analytics/react';
 import Head from 'next/head';
+import Footer from '@/components/footer';
 const App = ({ Component, pageProps }) => (
     <>
       <Head>
@@ -12,6 +13,7 @@ const App = ({ Component, pageProps }) => (
       </Head>
       <Component {...pageProps} />
       <Analytics />
+      <Footer/>
     </>
 )
 

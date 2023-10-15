@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Typography } from "@material-tailwind/react";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -51,9 +50,6 @@ export default function History(props) {
                     </div>
                 </div>
             </section>
-            <div className="bg-blue-gray-50/50">
-                <Footer />
-            </div>
         </>
     );
 }

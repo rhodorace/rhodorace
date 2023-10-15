@@ -1,4 +1,3 @@
-import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
@@ -9,7 +8,7 @@ export default function Momchilgrad() {
   return (
     <>
       <section className="relative block h-[50vh]">
-      <Navbar/>
+        <Navbar />
         <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/images/mountain.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
       </section>
@@ -26,17 +25,14 @@ export default function Momchilgrad() {
                 </div>
                 <div className="w-full px-4 lg:order-1 lg:w-4/12">
                   <div className="flex justify-center py-4 pt-8 lg:pt-4">
-                    AboutMomchilgrad placeholder     
-                    </div>
+                    AboutMomchilgrad placeholder
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </section>
-      <div className="bg-blue-gray-50/50">
-        <Footer />
-      </div>
     </>
   );
 }
@@ -44,8 +40,8 @@ export async function getStaticProps(context) {
   const { locale } = context
 
   return {
-      props: {
-          ...(await serverSideTranslations(locale)),
-      },
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
   }
 }

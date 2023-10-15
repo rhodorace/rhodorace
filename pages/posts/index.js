@@ -1,4 +1,3 @@
-import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -93,9 +92,6 @@ export default function Post() {
           </div>
         </div>
       </section>
-      <div className="bg-blue-gray-50/50">
-        <Footer />
-      </div>
     </>
   );
 }
