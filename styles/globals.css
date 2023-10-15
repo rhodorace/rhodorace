@@ -68,15 +68,13 @@ video {
 }
 
 .trackOneButton {
-
-  --tw-gradient-to: #95c11f var(--tw-gradient-to-position);
-  --tw-gradient-from: #95c11f var(--tw-gradient-from-position);
+  --tw-gradient-to: #90bb18 var(--tw-gradient-to-position);
+  --tw-gradient-from: #90bb18 var(--tw-gradient-from-position);
 }
 
 .trackTwoButton {
-
-  --tw-gradient-to: #1488ca var(--tw-gradient-to-position);
-  --tw-gradient-from: #1488ca var(--tw-gradient-from-position);
+  --tw-gradient-to: #1986c5 var(--tw-gradient-to-position);
+  --tw-gradient-from: #1986c5 var(--tw-gradient-from-position);
 }
 
 .menuButtonText {
