@@ -20,8 +20,8 @@ export default function HeaderButtons({ withLogo }) {
     const { t } = useTranslation();
     // ========= REGISTRATION BUTTON =========
     const registration =
-        <Link href="/sign-up" className="" passHref>
-            <Button variant="gradient" className="navbarBtn lg:inline-block" color="green">
+        <Link href="/sign-up" passHref>
+            <Button className="navbarBtn lg:inline-block">
                 {t("REGISTRATION_BUTTON")}
             </Button>
         </Link>;
@@ -30,7 +30,7 @@ export default function HeaderButtons({ withLogo }) {
     const tracks = <Menu allowHover>
         <MenuHandler>
 
-            <Button variant="gradient" className="lg:inline-block" color="green">
+            <Button className="lg:inline-block navbarBtn">
                 <span className="menuButtonText">{t("TRACKS_BUTTON")}</span>
                 <span className="menuButtonSvg">
                     <ChevronDownIcon
@@ -52,7 +52,7 @@ export default function HeaderButtons({ withLogo }) {
 
     // ========= NEWS BUTTON =========
     const news = <Link href="/news" passHref>
-        <Button variant="gradient" className="navbarBtn lg:inline-block" color="green">
+        <Button className="navbarBtn lg:inline-block">
             {t("NEWS_BUTTON")}
         </Button>
     </Link>;
@@ -72,7 +72,7 @@ export default function HeaderButtons({ withLogo }) {
     const info =
         <Menu allowHover>
             <MenuHandler>
-                <Button variant="gradient" className="lg:inline-block" color="green">
+                <Button className="lg:inline-block navbarBtn">
                     <span className="menuButtonText">{t("INFO_BUTTON")}</span>
                     <span className="menuButtonSvg">
                         <ChevronDownIcon
@@ -101,7 +101,7 @@ export default function HeaderButtons({ withLogo }) {
     // ========= HISTORY BUTTON =========
     const history = <Menu allowHover>
         <MenuHandler>
-            <Button variant="gradient" className="lg:inline-block" color="green">
+            <Button className="lg:inline-block navbarBtn">
                 <span className="menuButtonText">{t("HISTORY_BUTTON")}</span>
                 <span className="menuButtonSvgHistory">
                     <ChevronDownIcon
@@ -120,7 +120,7 @@ export default function HeaderButtons({ withLogo }) {
 
     // ========= CONTACTS BUTTON =========
     const contacts = <Link href="/contact" passHref>
-        <Button variant="gradient" className="navbarBtn lg:inline-block" color="green">
+        <Button className="navbarBtn lg:inline-block">
             {t("CONTACTS_BUTTON")}
         </Button>
     </Link>;
