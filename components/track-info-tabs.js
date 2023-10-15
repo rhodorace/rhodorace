@@ -70,7 +70,7 @@ export default function TrackInfoTabs() {
     },
   ];
   return (
-    <Tabs value="dashboard">
+    <Tabs value="map">
       <TabsHeader className="trackInfoTabHeader">
         {data.map(({ label, value, icon }) => (
           <Tab key={value} value={value}>
