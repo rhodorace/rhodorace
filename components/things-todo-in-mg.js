@@ -7,7 +7,7 @@ export default function ThingsToDoInMg() {
     const { t } = useTranslation();
 
     return (
-        <div class="container mx-auto md:px-6">
+        <div>
             <section class="mb-16 text-center md:text-left">
                 <h2 class="mb-12 text-center text-3xl font-bold">Момчилград</h2>
                 <Typography>

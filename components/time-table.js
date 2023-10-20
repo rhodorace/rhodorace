@@ -42,8 +42,8 @@ export default function TimeTable() {
     ];
 
     return (
-        <div class="container mt-12 mx-auto md:px-6">
-            <section class="mb-32 text-center md:text-left">
+        
+            <section class="mb-16 text-center md:text-left">
                 <h2 class="mb-12 text-center text-3xl font-bold">Как да стигнем до Момчилград</h2>
                 <Card className="h-full w-full overflow-scroll">
                     <table className="w-full min-w-max table-auto text-left">
@@ -116,7 +116,7 @@ export default function TimeTable() {
                 </Card>
                 <div>Забележка: - Броя на автобусите и влаковете с прикачване за отбелязани „*“</div>
             </section>
-        </div>
+        
     );
 }
 
