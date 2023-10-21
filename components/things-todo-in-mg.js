@@ -1,4 +1,4 @@
-import { Card, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Image from "next/image";
@@ -9,14 +9,9 @@ export default function ThingsToDoInMg() {
     return (
         <div>
             <section class="mb-16 text-center md:text-left">
-                <h2 class="mb-12 text-center text-3xl font-bold">Момчилград</h2>
+                <h2 class="mb-12 text-center text-3xl font-bold">{t("MOMCHILGRAD")}</h2>
                 <Typography>
-                    Община Момчилград обхваща една сравнително малка част от Източнородопския масив и заема площ от 360 кв.км с многообразен и интересен релеф.
-                    Притежава висок природен потенциал и богата културна история, които са предпоставка за развитие на туризма, както и свързаните с него икономически дейности.
-                    Наличието на природни феномени и забележителности, съчетанието на различни релефни форми с благоприятни климатични условия,
-                    разнообразна горска растителност и срещани животни, са отлични условия за развитието на отдиха и туризма.
-                    Районът е достъпен и е с добри условия за почти всички видове и форми на алтернативен туризъм. Общината разполага с леглови фонд в съществуващите и новостроящи се хотели,
-                    места за хранене и има готовност да посрещне нарастващия туристически поток.
+                    {t("MOMCHILGRAD_INFO")}
                 </Typography>
                 <div className="flex items-center justify-center mt-5">
                     <Image
@@ -29,12 +24,9 @@ export default function ThingsToDoInMg() {
                 </div>
             </section>
             <section class="mb-16 text-center md:text-left">
-                <h2 class="mb-12 text-center text-3xl font-bold">Татул</h2>
+                <h2 class="mb-12 text-center text-3xl font-bold">{t("TATUL")}</h2>
                 <Typography>
-                    Татул е праисторическо култово място, на чиято територия е разположен един от най-озадачаващите мегалитни паметници на територията на България – саркофаг с форма на пресечена пирамида,
-                    който няма аналог сред множеството мегалитни паметници регистрирани от археолозите на територията на България и по света.
-                    Това е най-добре запазеният храмов комплекс изсечен в монолитен къс скала. Предполага се, че това е отдавна търсеният гроб на прочутия певец и тракийски владетел Орфей.
-                    Комплексът е разположен на 200 m от село Татул в местностите Кара дере и Кая башъ.(Археологическият обект е на разстояние около 15 km от гр.Момчилград).
+                    {t("TATUL_INFO")}
                 </Typography>
                 <div className="flex space-x-4 mt-5">
                     <Image
@@ -54,7 +46,7 @@ export default function ThingsToDoInMg() {
                 </div>
             </section>
             <section class="mb-16 text-center md:text-left">
-                <h2 class="mb-12 text-center text-3xl font-bold">Дамбалъ</h2>
+                <h2 class="mb-12 text-center text-3xl font-bold">{t("DAMBALA")}</h2>
                 <div class="flex items-center">
                     <div class="w-1/2 flex items-center justify-center">
                         <Image
@@ -67,20 +59,14 @@ export default function ThingsToDoInMg() {
                     </div>
                     <div class="w-1/2">
                         <Typography>
-
-                            Планинското възвишение, известно сред местното население като „Дамбалъ“ е на около 7-8 км североизточно от гр. Момчилград.
-                            До там се стига по обозначен черен път – през селата Груево и Летовник. Името на масива идва от турски език „дамла – капка”.
-                            Студената вода на Дамбалъ извира и се стича от самата скала. Красивата чешма сякаш придава допълнителна красота на това свещено място.
-                            Всички вярват, че на 5-ти срещу 6-ти май Гергьовден /Хъдърлез/ небето се отваря, дъбовата гора тайнствено зашумява и бистрата вода става жива, лековита.
+                            {t("DAMBALA_INFO_1")}
                         </Typography>
                     </div>
                 </div>
                 <div class="flex items-center">
                     <div class="w-1/2">
                         <Typography>
-                            От полунощ до изгрева на слънцето чудодейната вода на Дамбалъ е последна надежда и очаквано чудо за хиляди хора, дошли от различни части на страната и съседни държави.
-                            Родители потапят децата си в малкия басейн край двуетажната чешма. В местността Дамбалъ много хора си наливат вода направо от скалата.
-                            На тръгване те завързват част от дрехите си по дърветата – за да остане там болестта.
+                            {t("DAMBALA_INFO_2")}
                         </Typography>
                     </div>
                     <div class="w-1/2 flex items-center justify-center">
@@ -95,7 +81,7 @@ export default function ThingsToDoInMg() {
                 </div>
             </section>
             <section class="mb-16 text-center md:text-left">
-                <h2 class="mb-12 text-center text-3xl font-bold">Вкаменената гора</h2>
+                <h2 class="mb-12 text-center text-3xl font-bold">{t("PETRIFIED_FOREST")}</h2>
                 <div class="flex items-center">
                     <div class="w-1/2 flex items-center justify-center">
                         <Image
@@ -108,10 +94,7 @@ export default function ThingsToDoInMg() {
                     </div>
                     <div class="w-1/2">
                         <Typography>
-                            Вкаменената гора, намира се в землището на с. Равен, Община Момчилград. Преди милиони години, тук е имало древна гора и терциерно море.
-                            При започналата интензивна подводна вулканична дейност, част от гората е била засипана от вулканичния материал, а високата температура е овъглила цели дървета или части от тях.
-                            Вкаменени са дървета на възраст около 30 милиона години.
-                            Уникалното на Равенската вкаменена гора е, че дърветата са изправени. Феномен, който няма аналог в световната история.
+                            {t("PETRIFIED_FOREST_INFO")}
                         </Typography>
                     </div>
                 </div>

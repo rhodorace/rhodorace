@@ -4,39 +4,39 @@ import { useTranslation } from 'next-i18next';
 
 export default function TimeTable() {
     const { t } = useTranslation();
-    const TABLE_HEAD = ["Направление", "Автомобил", "Влак", "Автобус"];
+    const TABLE_HEAD = [t("FROM"), t("CAR"), t("TRAIN"), t("BUS")];
 
     const TABLE_ROWS = [
         {
-            from: "София",
-            distance: "(292 км.)2 ч. и 59 мин.",
+            from: t("SOFIA"),
+            distance: t("SOFIA_DISTANCE"),
             train: "2*",
-            bus: "Да"
+            bus: t("YES")
         }, {
-            from: "Пловдив",
-            distance: "(108 км.)1 ч. и 54 мин.",
+            from: t("PLOVDIV"),
+            distance: t("PLOVDIV_DISTANCE"),
             train: "1*",
-            bus: "Да"
+            bus: t("YES")
         }, {
-            from: "Варна",
-            distance: "(393 км.)5 ч. и 9 мин.",
+            from: t("VARNA"),
+            distance: t("VARNA_DISTANCE"),
             train: "1*",
-            bus: "Да*"
+            bus: t("YES") + "*"
         }, {
-            from: "Бургас",
-            distance: "(277 км.)3 ч. и 14 мин.",
+            from: t("BURGAS"),
+            distance: t("BURGAS_DISTANCE"),
             train: "0",
-            bus: "Да*"
+            bus: t("YES") + "*"
         }, {
-            from: "Русе",
-            distance: "(336 км.)4 ч. и 57 мин.",
+            from: t("RUSE"),
+            distance: t("RUSE_DISTANCE"),
             train: "1*",
-            bus: "Да"
+            bus: t("YES")
         }, {
-            from: "Истанбул",
-            distance: "(398 км.)5 ч. и 26 мин.",
+            from: t("ISTANBUL"),
+            distance: t("ISTANBUL_DISTANCE"),
             train: "0",
-            bus: "Да*"
+            bus: t("YES") + "*"
         },
 
     ];
@@ -44,7 +44,7 @@ export default function TimeTable() {
     return (
         
             <section class="mb-16 text-center md:text-left">
-                <h2 class="mb-12 text-center text-3xl font-bold">Как да стигнем до Момчилград</h2>
+                <h2 class="mb-12 text-center text-3xl font-bold">{t("HOW_TO_GET_TO_MOMCHILGRAD")}</h2>
                 <Card className="h-full w-full overflow-scroll">
                     <table className="w-full min-w-max table-auto text-left">
                         <thead>
@@ -114,7 +114,7 @@ export default function TimeTable() {
                         </tbody>
                     </table>
                 </Card>
-                <div>Забележка: - Броя на автобусите и влаковете с прикачване за отбелязани „*“</div>
+                <div>{t("REACHING_NOTE")} <b>*</b></div>
             </section>
         
     );
