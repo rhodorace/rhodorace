@@ -20,9 +20,8 @@ export default function Momchilgrad() {
             <div className="px-6">
               <div className="flex flex-wrap justify-center">
                 <div className="w-full px-4 lg:order-1">
-                {/* class="container mx-auto md:px-6" */}
                 <div class="container mt-12 mx-auto md:px-6">
-                <TimeTable />
+                  <TimeTable />
                   <ThingsToDoInMg />
                 </div>
                 </div>
