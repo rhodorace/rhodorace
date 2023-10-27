@@ -233,6 +233,22 @@ export default function Accomodation() {
                       <li>{t("PLACES_TO_EAT_FLYBAR")}</li>
                     </ul>
                   </section>
+                  <section class="mb-16 text-center md:text-left">
+                    <h2 class="mb-12 text-center text-3xl font-bold">{t("MUSEUMS")}</h2>
+                    <Typography>
+                      {t("MUSEUMS_BODY")}
+                    </Typography>
+                    <div className="mt-5">
+                      <div>
+                        <Link href={"https://www.google.com/maps/place/Community+center+%22New+Life%22/@41.5268177,25.4112533,18.7z/data=!4m6!3m5!1s0x14ad76598ef0c521:0x2b62d3e5ad1e9bcc!8m2!3d41.5261106!4d25.4114402!16s%2Fg%2F11dfpc9tz_?entry=ttu"}
+                          target="_blank" passHref>
+                          <FontAwesomeIcon icon={faMapLocation}
+                            style={{ color: "#90bb18", fontSize: 20 }}
+                          />{" " + t("LOCATION")}
+                        </Link>
+                      </div>
+                    </div>
+                  </section>
                 </div>
               </div>
             </div>
