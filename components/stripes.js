@@ -31,7 +31,7 @@ export default function Stripes() {
                 </div>
 
                 <div className="lg:text-left sm:text-right">
-                    <h1 className="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">21 APRIL</h1>
+                    <h1 className="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">6 AUGUST</h1>
                 </div>
             </div>
             <div className="rhodo-stripe green grid gap-2 grid-cols-2">
@@ -54,7 +54,7 @@ export default function Stripes() {
                     <Image
                         src={track_22}
                         width={80}
-                        alt="Track 1 info"
+                        alt="Track 2 info"
                     />
                 </div>
             </div>
