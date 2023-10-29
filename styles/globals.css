@@ -67,7 +67,9 @@ video {
   width: 100%;
   background-color: #90bb18;
 }
-
+.backGroundGreen {
+  background-color: #90bb18;
+}
 .trackOneButton {
   --tw-gradient-to: #90bb18 var(--tw-gradient-to-position);
   --tw-gradient-from: #90bb18 var(--tw-gradient-from-position);

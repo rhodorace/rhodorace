@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { Button } from '@material-tailwind/react';
 
 export default function DownloadTrackInfoButton({ trackInfoFileName }) {
     const router = useRouter();
@@ -18,7 +19,7 @@ export default function DownloadTrackInfoButton({ trackInfoFileName }) {
     };
 
     return (
-        <button onClick={handleDownload}>{t("DOWNLOAD")} GPX</button>
+        <Button className='backGroundGreen mb-5' onClick={handleDownload}>{t("DOWNLOAD")} GPX</Button>
     );
 };
 export async function getStaticProps(context) {

@@ -41,10 +41,10 @@ export default function HeaderButtons({ withLogo }) {
             </Button>
         </MenuHandler>
         <MenuList>
-            <Link href="/track1" passHref>
+            <Link href="/track22" passHref>
                 <MenuItem>22 KM</MenuItem>
             </Link>
-            <Link href="/track2" passHref>
+            <Link href="/track50" passHref>
                 <MenuItem>50 KM</MenuItem>
             </Link>
         </MenuList>

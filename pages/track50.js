@@ -12,8 +12,9 @@ import {
 } from "@heroicons/react/24/solid";
 import DownloadTrackInfoButton from "@/components/download-track-info-button";
 
-export default function Track1() {
+export default function Track50() {
   const { t } = useTranslation();
+
   const data = [
     {
       label: t("MAP"),
@@ -21,11 +22,9 @@ export default function Track1() {
       icon: MapIcon,
       desc:
         <>
-          <DownloadTrackInfoButton trackInfoFileName="rhodoRock22.gpx"/>
-          <iframe src="https://tracedetrail.fr/en/trace/trace/236503" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"
+          <DownloadTrackInfoButton trackInfoFileName="rhodoRock48.gpx" /><iframe src="https://tracedetrail.fr/en/trace/trace/236502" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"
             width="100%" height="630" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
         </>
-
     },
     {
       label: t("TECHNICAL_DETAILS"),
@@ -93,6 +92,7 @@ export default function Track1() {
     </>
   );
 }
+
 export async function getStaticProps(context) {
   const { locale } = context
 
