@@ -126,5 +126,13 @@
     "AVG_ELEVATION": "Average elevation",	
     "MAX_DIFF": "Maximum difference",	
     "START_ELEVATION": "Start elevation",	
-    "END_ELEVATION": "End elevation"
+    "END_ELEVATION": "End elevation",
+    "AID_INFO": "AID / Info",
+    "KM_START_FROM": "Km From Start",
+    "SUPPLIES": "Supplies",
+    "GPS_COORDINATES": "GPS Coordinates",
+    "TO_NEXT_STATION": "To Next Station",
+    "CUT_OFF": "Cut off",
+    "FOOD": "Food",
+    "BEVERAGES": "Beverages"
 }

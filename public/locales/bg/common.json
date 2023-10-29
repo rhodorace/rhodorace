@@ -126,5 +126,13 @@
     "AVG_ELEVATION": "Средна надморска височина",	
     "MAX_DIFF": "Максимална разлика",	
     "START_ELEVATION": "Надморска височина на старта",	
-    "END_ELEVATION": "Надморска височина на финала"
+    "END_ELEVATION": "Надморска височина на финала",
+    "AID_INFO": "Пункт",
+    "KM_START_FROM": "КМ от старта",
+    "SUPPLIES": "Припаси",
+    "GPS_COORDINATES": "GPS Координати",
+    "TO_NEXT_STATION": "До следващ пункт",
+    "CUT_OFF": "Контролно време",
+    "FOOD": "Храни",
+    "BEVERAGES": "Напитки"
 }
