@@ -18,9 +18,8 @@ export default function Track1() {
       label: t("MAP"),
       value: "map",
       icon: MapIcon,
-      desc: `It really matters and then like it really doesn't matter.
-      What matters is the people who are sparked by it. And the people
-      who are like offended by it, it doesn't matter.`,
+      desc: <iframe src="https://tracedetrail.fr/en/trace/trace/236503" scrolling="no" marginheight="0" marginwidth="0" frameborder="0" 
+      width="100%" height="630" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
     },
     {
       label: t("TECHNICAL_DETAILS"),
