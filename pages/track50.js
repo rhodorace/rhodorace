@@ -10,7 +10,12 @@ import {
   UserGroupIcon,
   CurrencyDollarIcon
 } from "@heroicons/react/24/solid";
-import DownloadTrackInfoButton from "@/components/download-track-info-button";
+import Map from "@/components/track50/map";
+import TechnicalDetails from "@/components/track50/technical_details";
+import AidStations from "@/components/track50/aid_stations";
+import RequiredEquipment from "@/components/track50/required_equipment";
+import Teams from "@/components/track50/teams";
+import Price from "@/components/track50/price";
 
 export default function Track50() {
   const { t } = useTranslation();
@@ -20,50 +25,38 @@ export default function Track50() {
       label: t("MAP"),
       value: "map",
       icon: MapIcon,
-      desc:
-        <>
-          <DownloadTrackInfoButton trackInfoFileName="rhodoRock48.gpx" /><iframe src="https://tracedetrail.fr/en/trace/trace/236502" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"
-            width="100%" height="630" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-        </>
+      desc: <Map/>
+
     },
     {
       label: t("TECHNICAL_DETAILS"),
       value: "techdetails",
       icon: InformationCircleIcon,
-      desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
+      desc: <TechnicalDetails/>
     },
     {
       label: t("AID_STATIONS"),
       value: "aidstations",
       icon: LifebuoyIcon,
-      desc: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
+      desc: <AidStations/>
     },
     {
       label: t("REQUIRED_EQUIPMENT"),
       value: "equipment",
       icon: Cog8ToothIcon,
-      desc: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
+      desc: <RequiredEquipment/>
     },
     {
       label: t("TEAMS"),
       value: "teams",
       icon: UserGroupIcon,
-      desc: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
+      desc: <Teams/>
     },
     {
       label: t("PRICE_AND_SIGN_UP"),
       value: "price",
       icon: CurrencyDollarIcon,
-      desc: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
+      desc: <Price/>
     },
   ];
 

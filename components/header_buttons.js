@@ -29,7 +29,6 @@ export default function HeaderButtons({ withLogo }) {
     // ========= TRACKS BUTTON =========
     const tracks = <Menu allowHover>
         <MenuHandler>
-
             <Button className="lg:inline-block navbarBtn">
                 <span className="menuButtonText">{t("TRACKS_BUTTON")}</span>
                 <span className="menuButtonSvg">
