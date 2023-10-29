@@ -134,5 +134,20 @@
     "TO_NEXT_STATION": "To Next Station",
     "CUT_OFF": "Cut off",
     "FOOD": "Food",
-    "BEVERAGES": "Beverages"
+    "BEVERAGES": "Beverages",
+    "MANDATORY_EQUIPMENT": "Mandatory equipment",
+    "MANDATORY_LIST_ITEM_1": "containers for liquids (bottle, bladder, etc.) with a capacity of at least 0.5 liters (without a water container you will not be able to get water from the refreshment points!)",
+    "MANDATORY_LIST_ITEM_2": "mobile phone with charged battery + HIGHLY RECOMMENDED additional charged battery or power bank (using GPS as well as loss of range drains the battery faster)",
+    "MANDATORY_FOOTER": "Mandatory equipment will be checked at the start or when the start packs are given. Each competitor must carry their own mandatory equipment and may be checked at any point OR at the finish line when they finish the race. in the presence of containers for liquids with a capacity of less than 0.5 liters will carry a penalty of one hour. Anything else missing the mandatory gear (including without any liquid containers) will result in immediate disqualification.",
+    "RECOMMENDED_EQUIPMENT": "Recommended equipment",
+    "RECOMMENDED_LIST_ITEM_1": "First aid kit (bandage, gauze, plaster/tape, analgesic, antihistamine tablets, disinfectant)",
+    "RECOMMENDED_LIST_ITEM_2": "whistle (for signaling in case of an accident);",
+    "RECOMMENDED_LIST_ITEM_3": "aluminum foil (survival blanket)",
+    "RECOMMENDED_LIST_ITEM_4": "jacket (windproof, waterproof)",
+    "RECOMMENDED_LIST_ITEM_5": "food with an energy equivalent of at least 500 kcal",
+    "RECOMMENDED_LIST_ITEM_6": "container for water and other liquids (soups, etc.) - cups will not be offered at the points",
+    "RECOMMENDED_LIST_ITEM_7": "a hat with a visor or other means of sun protection (attention - the 23 km run starts at 08:00 and it is very likely that a large part of the journey will be during strong sun);",
+    "RECOMMENDED_LIST_ITEM_8": "polyester clothes, comfortable sports shoes for running - recommended with trail gripper;",
+    "RECOMMENDED_LIST_ITEM_9": "insect repellents; sunscreen cosmetics",
+    "RECOMMENDED_FOOTER": "There are no penalties for missing recommended gear."
 }
