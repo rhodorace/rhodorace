@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import bgLogo from "../public/bgLogo.svg";
-import blue_track from "../public/images/blue_track.svg";
-import green_track from "../public/images/green_track.svg";
+import track_50 from "../public/images/track_50.png";
+import track_22 from "../public/images/track_22.png";
 
 export default function Stripes() {
     const [openNav, setOpenNav] = React.useState(false);
@@ -45,14 +45,14 @@ export default function Stripes() {
             </div>
             <div className="flex justify-center">
                 <Image
-                    src={blue_track}
+                    src={track_50}
                     width={80}
                     alt="Track 1 info"
                 />
 
                 <div className="flex justify-center">
                     <Image
-                        src={green_track}
+                        src={track_22}
                         width={80}
                         alt="Track 1 info"
                     />
