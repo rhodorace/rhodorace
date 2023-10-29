@@ -10,6 +10,7 @@ import {
   UserGroupIcon,
   CurrencyDollarIcon
 } from "@heroicons/react/24/solid";
+import DownloadTrackInfoButton from "@/components/download-track-info-button";
 
 export default function Track1() {
   const { t } = useTranslation();
@@ -18,8 +19,13 @@ export default function Track1() {
       label: t("MAP"),
       value: "map",
       icon: MapIcon,
-      desc: <iframe src="https://tracedetrail.fr/en/trace/trace/236503" scrolling="no" marginheight="0" marginwidth="0" frameborder="0" 
-      width="100%" height="630" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      desc:
+        <>
+          <DownloadTrackInfoButton trackInfoFileName="rhodoRock22.gpx"/>
+          <iframe src="https://tracedetrail.fr/en/trace/trace/236503" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"
+            width="100%" height="630" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        </>
+
     },
     {
       label: t("TECHNICAL_DETAILS"),
@@ -76,7 +82,7 @@ export default function Track1() {
               <div className="flex flex-wrap justify-center">
                 <div className="w-full px-4 lg:order-1">
                   <div className="justify-center py-4 pt-8 lg:pt-4">
-                    <TrackInfoTabs tabs={data}/>
+                    <TrackInfoTabs tabs={data} />
                   </div>
                 </div>
               </div>
