@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import bgLogo from "../public/bgLogo.svg";
+import rhodo_race from "../public/rhodo_race.jpg";
 import track_50 from "../public/images/track_50.png";
 import track_22 from "../public/images/track_22.png";
 
@@ -19,7 +19,7 @@ export default function Stripes() {
                 <div className="responsiveLogo">
                     <Image
                         priority
-                        src={bgLogo}
+                        src={rhodo_race}
                         width={200}
                         alt="RhodoRace Momchilgrad"
                     />
