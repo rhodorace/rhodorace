@@ -7,8 +7,11 @@ export default function Map() {
 
     return (
         <>
-            <DownloadTrackInfoButton trackInfoFileName="rhodoRock48.gpx" /><iframe src="https://tracedetrail.fr/en/trace/trace/236502" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"
-                width="100%" height="630" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+            <DownloadTrackInfoButton trackInfoFileName="rhodoRock48.gpx" />
+            <div className='flex justify-center items-center h-screen'>
+                <iframe className='w-full max-w-screen-xl' src="https://iframe.tracedetrail.fr/en/trace/output2/236502/osm/135181144" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"
+                    width="600" height="800" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
         </>
     );
 }

@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 import Link from "next/link";
 import Image from "next/image";
-import bgLogo from "../public/bgLogo.svg";
+import rhodo_race from "../public/rhodo_race.jpg";
 import ReactCountryFlag from "react-country-flag";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
@@ -60,8 +60,9 @@ export default function HeaderButtons({ withLogo }) {
     const logo = <Link href="/" passHref>
         <Image
             priority
-            src={bgLogo}
+            src={rhodo_race}
             width={200}
+            className="rounded-lg"
             alt="RhodoRace Momchilgrad"
         />
     </Link>;
