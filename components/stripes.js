@@ -20,6 +20,7 @@ export default function Stripes() {
                     <Image
                         priority
                         src={rhodo_race}
+                        className="rounded-lg"
                         width={200}
                         alt="RhodoRace Momchilgrad"
                     />
