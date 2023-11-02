@@ -16,7 +16,7 @@ export default function ThingsToDoInMg() {
                 <div className="flex items-center justify-center mt-5">
                     <Image
                         alt="Athlets"
-                        src="/images/mg.png"
+                        src="/images/nuri_adali.jpg"
                         className="rounded-xl"
                         width={700}
                         height={200}
@@ -28,17 +28,10 @@ export default function ThingsToDoInMg() {
                 <Typography>
                     {t("TATUL_INFO")}
                 </Typography>
-                <div className="flex space-x-4 mt-5">
+                <div className="flex items-center justify-center mt-8">
                     <Image
                         alt="Athlets"
-                        src="/images/tatul1.png"
-                        className="w-1/2 rounded-xl"
-                        width={600}
-                        height={200}
-                    />
-                    <Image
-                        alt="Athlets"
-                        src="/images/tatul2.png"
+                        src="/images/tatul.jpg"
                         className="w-1/2 rounded-xl"
                         width={600}
                         height={200}
@@ -47,44 +40,32 @@ export default function ThingsToDoInMg() {
             </section>
             <section class="mb-16 text-center md:text-left">
                 <h2 class="mb-12 text-center text-3xl font-bold">{t("DAMBALA")}</h2>
-                <div class="flex items-center">
-                    <div class="w-1/2 flex items-center justify-center">
-                        <Image
-                            alt="Athlets"
-                            src="/images/dambali1.png"
-                            className="rounded-xl"
-                            width={400}
-                            height={100}
-                        />
-                    </div>
-                    <div class="w-1/2">
-                        <Typography>
-                            {t("DAMBALA_INFO_1")}
-                        </Typography>
-                    </div>
+                <div class="flex items-center justify-center">
+                    <Image
+                        alt="Athlets"
+                        src="/images/dambali.jpg"
+                        className="rounded-xl"
+                        width={400}
+                        height={100}
+                    />
                 </div>
-                <div class="flex items-center">
-                    <div class="w-1/2">
-                        <Typography>
-                            {t("DAMBALA_INFO_2")}
-                        </Typography>
-                    </div>
-                    <div class="w-1/2 flex items-center justify-center">
-                        <Image
-                            alt="Athlets"
-                            src="/images/dambali2.png"
-                            className="rounded-xl"
-                            width={400}
-                            height={100}
-                        />
-                    </div>
+                <div className="mt-8">
+                    <Typography>
+                        {t("DAMBALA_INFO_1")}
+                        {t("DAMBALA_INFO_2")}
+                    </Typography>
                 </div>
             </section>
             <section class="mb-16 text-center md:text-left">
                 <h2 class="mb-12 text-center text-3xl font-bold">{t("PETRIFIED_FOREST")}</h2>
                 <div class="flex items-center">
+                    <div class="w-1/2">
+                         <Typography>
+                            {t("PETRIFIED_FOREST_INFO")}
+                        </Typography>
+                    </div>
                     <div class="w-1/2 flex items-center justify-center">
-                        <Image
+                    <Image
                             alt="Athlets"
                             src="/images/vkamenenagora.png"
                             className="rounded-xl"
@@ -92,44 +73,25 @@ export default function ThingsToDoInMg() {
                             height={100}
                         />
                     </div>
-                    <div class="w-1/2">
-                        <Typography>
-                            {t("PETRIFIED_FOREST_INFO")}
-                        </Typography>
-                    </div>
                 </div>
 
             </section>
             <section class="mb-16 text-center md:text-left">
                 <h2 class="mb-12 text-center text-3xl font-bold">{t("HARMAN_KAYA")}</h2>
                 <div class="flex items-center">
-                    <div class="w-1/2 flex items-center justify-center">
+                    <div className="w-1/2 flex items-center justify-center">
                         <Image
                             alt="Athlets"
-                            src="/images/harmankaya1.png"
+                            src="/images/harman_kaya.jpg"
                             className="rounded-xl"
                             width={400}
                             height={100}
                         />
                     </div>
-                    <div class="w-1/2">
+                    <div className="w-1/2">
                         <Typography>
                             {t("HARMAN_KAYA_INFO")}
                         </Typography>
-                    </div>
-                </div>
-                <div class="flex items-center">
-                    <div class="w-1/2">
-
-                    </div>
-                    <div class="w-1/2 flex items-center justify-center">
-                        <Image
-                            alt="Athlets"
-                            src="/images/harmankaya2.png"
-                            className="rounded-xl"
-                            width={400}
-                            height={100}
-                        />
                     </div>
                 </div>
             </section>
@@ -144,7 +106,7 @@ export default function ThingsToDoInMg() {
                     <div class="w-1/2 flex items-center justify-center">
                         <Image
                             alt="Athlets"
-                            src="/images/elmali.png"
+                            src="/images/elmalibaba.jpg"
                             className="rounded-xl"
                             width={400}
                             height={100}
@@ -158,7 +120,7 @@ export default function ThingsToDoInMg() {
                     <div className="w-1/2 flex items-center justify-center">
                         <Image
                             alt="Athlets"
-                            src="/images/lesopark.png"
+                            src="/images/lesopark_mg.jpg"
                             className="rounded-xl"
                             width={400}
                             height={100}
@@ -182,7 +144,7 @@ export default function ThingsToDoInMg() {
                     <div className="w-1/2 flex items-center justify-center">
                         <Image
                             alt="Athlets"
-                            src="/images/lili.png"
+                            src="/images/vodni_lili.jpg"
                             className="rounded-xl"
                             width={400}
                             height={100}
@@ -257,7 +219,7 @@ export default function ThingsToDoInMg() {
                     <div class="w-1/2 flex items-center justify-center">
                         <Image
                             alt="Athlets"
-                            src="/images/curch1.png"
+                            src="/images/church.jpg"
                             className="rounded-xl"
                             width={400}
                             height={100}
@@ -281,7 +243,7 @@ export default function ThingsToDoInMg() {
                     <div class="w-1/2 flex items-center justify-center">
                         <Image
                             alt="Mosque"
-                            src="/images/mosque1.png"
+                            src="/images/mosque.jpg"
                             className="rounded-xl"
                             width={400}
                             height={100}
@@ -297,17 +259,17 @@ export default function ThingsToDoInMg() {
                 <div className="flex space-x-4 mt-5">
                     <Image
                         alt="Stadium"
-                        src="/images/stad1.png"
+                        src="/images/hasan_semerdji.jpg"
                         className="w-1/2 rounded-xl"
-                        width={600}
-                        height={200}
+                        width={300}
+                        height={100}
                     />
                     <Image
                         alt="Stadium"
-                        src="/images/stad2.png"
+                        src="/images/naim_suleymanoglu.jpg"
                         className="w-1/2 rounded-xl"
-                        width={600}
-                        height={200}
+                        width={300}
+                        height={100}
                     />
                 </div>
             </section>
