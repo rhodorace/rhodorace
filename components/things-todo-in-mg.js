@@ -180,7 +180,7 @@ export default function ThingsToDoInMg() {
                     <div class="w-1/2 flex items-center justify-center">
                         <Image
                             alt="Athlets"
-                            src="/images/studen1.png"
+                            src="/images/studen1.jpg"
                             className="rounded-xl"
                             width={400}
                             height={100}
@@ -196,7 +196,7 @@ export default function ThingsToDoInMg() {
                     <div class="w-1/2 flex items-center justify-center">
                         <Image
                             alt="Athlets"
-                            src="/images/studen2.png"
+                            src="/images/studen2.jpg"
                             className="rounded-xl"
                             width={400}
                             height={100}
@@ -205,7 +205,7 @@ export default function ThingsToDoInMg() {
                     <div class="w-1/2 flex items-center justify-center">
                         <Image
                             alt="Athlets"
-                            src="/images/studen3.png"
+                            src="/images/studen3.jpg"
                             className="rounded-xl"
                             width={400}
                             height={100}

@@ -37,6 +37,11 @@ export default function TimeTable() {
             distance: t("ISTANBUL_DISTANCE"),
             train: "0",
             bus: t("YES") + "*"
+        }, {
+            from: t("KOMOTINI"),
+            distance: t("KOMOTINI_DISTANCE"),
+            train: "0",
+            bus: t("NO") + "*"
         },
 
     ];
