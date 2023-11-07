@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import Link from "next/link";
 
 const year = new Date().getFullYear();
 
@@ -32,11 +33,14 @@ export default function Footer({ copyright }) {
                     style={{ color: "red", fontSize: 50 }}
                   />
                 </button>
-                <button className="duration-500 rounded-full transform hover:-translate-y-3">
-                  <FontAwesomeIcon icon={faFacebook}
-                    style={{ color: "blue", fontSize: 50 }}
-                  />
-                </button>
+                <Link href={"https://www.facebook.com/rhodo.rock"}
+                  target="_blank" passHref>
+                  <button className="duration-500 rounded-full transform hover:-translate-y-3">
+                    <FontAwesomeIcon icon={faFacebook}
+                      style={{ color: "blue", fontSize: 50 }}
+                    />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
