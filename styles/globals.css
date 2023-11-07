@@ -44,13 +44,13 @@ video {
 }
 
 .rhodo-stripe.blue {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #1488ca 50%, #1488ca 65%, rgba(0, 0, 0, 0) 103%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #ae9e8e 50%, #ae9e8e 65%, rgba(0, 0, 0, 0) 103%);
   grid-column-gap: 80px;
   grid-row-gap: 80px;
 }
 
 .rhodo-stripe.green {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #95c11f 50%, #95c11f 65%, rgba(0, 0, 0, 0) 103%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #5e9397 50%, #5e9397 65%, rgba(0, 0, 0, 0) 103%);
   grid-column-gap: 80px;
   grid-row-gap: 80px;
 }
@@ -65,19 +65,10 @@ video {
 .navbarBtn {
   display: block;
   width: 100%;
-  background-color: #90bb18;
+  background-color: #5e9397;
 }
 .backGroundGreen {
-  background-color: #90bb18;
-}
-.trackOneButton {
-  --tw-gradient-to: #90bb18 var(--tw-gradient-to-position);
-  --tw-gradient-from: #90bb18 var(--tw-gradient-from-position);
-}
-
-.trackTwoButton {
-  --tw-gradient-to: #1986c5 var(--tw-gradient-to-position);
-  --tw-gradient-from: #1986c5 var(--tw-gradient-from-position);
+  background-color: #5e9397;
 }
 
 .menuButtonText {

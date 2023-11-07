@@ -38,9 +38,9 @@ export default function History(props) {
                                                     {t("HISTORY")} {props.year}
                                                 </Typography>
                                             </div>
-                                            <ButtonGroup color="green" fullWidth>
-                                                <Button color="green" onClick={handleRedirectToGallery}>{t("GALLERY")}</Button>
-                                                <Button color="green" onClick={handleRedirectToResults}>{t("RESULTS")}</Button>
+                                            <ButtonGroup fullWidth>
+                                                <Button  style={{"background-color": "#5e9397"}} onClick={handleRedirectToGallery}>{t("GALLERY")}</Button>
+                                                <Button style={{"background-color": "#5e9397"}} onClick={handleRedirectToResults}>{t("RESULTS")}</Button>
                                             </ButtonGroup>
                                         </section>
                                     </section>
