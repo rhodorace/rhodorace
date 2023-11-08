@@ -1,8 +1,8 @@
-import { Navbar } from "@/components/navbar";
 import Link from "next/link";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useState, useEffect } from 'react'
+import Container from "@/components/container";
 
 const BLOGGER_API_URL = "https://www.googleapis.com/blogger/v3/blogs/831062794583421474/posts?key=" + process.env.NEXT_PUBLIC_BLOGGER_API_KEY;
 
@@ -56,31 +56,22 @@ export default function News() {
   }
 
   const { t } = useTranslation();
-
-  return (
-    <>
-      <section className="relative block h-[50vh]">
-        <Navbar />
-        <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/images/mountain.jpg')] bg-cover bg-center" />
-        <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
-      </section>
-      <section className="relative bg-blue-gray-50/50 py-16 px-4">
-        <div className="container mx-auto">
-          <div className="relative mb-6 -mt-64 flex w-full min-w-0 flex-col break-words rounded-3xl bg-white shadow-xl shadow-gray-500/5">
-            <div className="px-6">
-              <div className="flex flex-wrap justify-center">
-                <div class="container my-12 mx-auto md:px-6">
-                  <section class="mb-32 text-center md:text-left">
-                    <h2 class="mb-12 text-center text-3xl font-bold">Новини</h2>
-                    {renderContent()}
-                  </section>
-                </div>
-              </div>
-            </div>
+  const content = <>
+    <div className="relative mb-6 -mt-64 flex w-full min-w-0 flex-col break-words rounded-3xl bg-white shadow-xl shadow-gray-500/5">
+      <div className="px-6">
+        <div className="flex flex-wrap justify-center">
+          <div class="container my-12 mx-auto md:px-6">
+            <section class="mb-32 text-center md:text-left">
+              <h2 class="mb-12 text-center text-3xl font-bold">Новини</h2>
+              {renderContent()}
+            </section>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
+  </>;
+  return (
+    <Container content={content} />
   );
 }
 

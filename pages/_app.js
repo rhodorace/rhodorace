@@ -9,7 +9,7 @@ import Footer from '@/components/footer';
 const App = ({ Component, pageProps }) => (
     <>
       <Head>
-        <title>RhodoRace Momchilgrad</title>
+        <title>RhodoRock Momchilgrad</title>
       </Head>
       <Component {...pageProps} />
       <Analytics />

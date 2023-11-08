@@ -67,11 +67,12 @@ video {
   width: 100%;
   background-color: #5e9397;
 }
+
 .backGroundGreen {
   background-color: #5e9397;
 }
 
-.btnColor{
+.btnColor {
   background-color: #5e9397;
 }
 
@@ -94,4 +95,14 @@ video {
 
 .trackInfoTabHeader {
   overflow-x: auto;
+}
+
+.accomodationIcon {
+  color: #90bb18;
+  font-size: 20;
+}
+
+.contactsIcon {
+  color: #90bb18;
+  font-size: 15;
 }
