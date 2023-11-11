@@ -80,9 +80,21 @@ export default function Accomodation() {
                 </div>
               </section>
               <section class="mb-16 text-center md:text-left">
-                <h2 class="mb-12 text-center text-3xl font-bold">{t("KROYACITE_HEADER")}</h2>
+                <h2 class="mb-12 text-center text-3xl font-bold">{t("KROYACITE_AND_STUDEN_KLADENEC")}</h2>
                 <Typography>
-                  {t("KROYACITE_BODY")}
+                  {t("KROYACITE_AND_STUDEN_KLADENEC_BODY_1")}
+                </Typography>
+                <div className="flex items-center justify-center mt-5">
+                  <Image
+                    alt="Athlets"
+                    src="/images/kroyacite_1.jpg"
+                    className="rounded-xl"
+                    width={700}
+                    height={200}
+                  />
+                </div>
+                <Typography className='mt-5'>
+                  {t("KROYACITE_AND_STUDEN_KLADENEC_BODY_2")}
                 </Typography>
                 <div className="flex items-center justify-center mt-5">
                   <Image
@@ -107,6 +119,15 @@ export default function Accomodation() {
                 <Typography>
                   {t("HOTEL_KONAK_BODY")}
                 </Typography>
+                <div className="flex items-center justify-center mt-5">
+                  <Image
+                    alt="Athlets"
+                    src="/images/hotel_konak.jpg"
+                    className="rounded-xl"
+                    width={700}
+                    height={200}
+                  />
+                </div>
                 <div className="mt-5">
                   <div>
                     <Link href={"https://konak.bg/"} target="_blank" passHref>
@@ -192,6 +213,15 @@ export default function Accomodation() {
                 <Typography>
                   {t("HOTEL_OSETIA_BODY")}
                 </Typography>
+                <div className="flex items-center justify-center mt-5">
+                  <Image
+                    alt="Athlets"
+                    src="/images/hotel_osetia.jpg"
+                    className="rounded-xl"
+                    width={700}
+                    height={200}
+                  />
+                </div>
                 <div className="mt-5">
                   <div>
                     <FontAwesomeIcon icon={faPhone}
@@ -199,7 +229,47 @@ export default function Accomodation() {
                     /> +359 888 861 373
                   </div>
                   <div>
+                    <FontAwesomeIcon icon={faGlobe}
+                      className="accomodationIcon"
+                    />{" " + "info@osetiahotel.com"}
+                  </div>
+                  <div>
                     <Link href={"https://www.google.com/maps/place/Hotel+Osetia+Garden/@41.5264005,25.4100982,17.55z/data=!4m9!3m8!1s0x14ad77c77ce3000f:0xee5e382e3d896a24!5m2!4m1!1i2!8m2!3d41.5273698!4d25.4095535!16s%2Fg%2F11l1q8ngnl?entry=ttu"}
+                      target="_blank" passHref>
+                      <FontAwesomeIcon icon={faMapLocation}
+                        className="accomodationIcon"
+                      />{" " + t("LOCATION")}
+                    </Link>
+                  </div>
+                </div>
+              </section>
+              <section class="mb-16 text-center md:text-left">
+                <h2 class="mb-12 text-center text-3xl font-bold">{t("HOTEL_CENTRAL_HEADER")}</h2>
+                <Typography>
+                  {t("HOTEL_CENTRAL_BODY")}
+                </Typography>
+                <div className="flex items-center justify-center mt-5">
+                  <Image
+                    alt="Athlets"
+                    src="/images/hotel_central.jpg"
+                    className="rounded-xl"
+                    width={700}
+                    height={200}
+                  />
+                </div>
+                <div className="mt-5">
+                  <div>
+                    <FontAwesomeIcon icon={faPhone}
+                      className="accomodationIcon"
+                    /> +359 887 998899
+                  </div>
+                  <div>
+                    <FontAwesomeIcon icon={faGlobe}
+                      className="accomodationIcon"
+                    />{" " + "info@aparthotelcentral.com"}
+                  </div>
+                  <div>
+                    <Link href={"https://www.google.com/maps/place/Aparthotel+Central/@41.5268619,25.4099599,17.69z/data=!4m9!3m8!1s0x14ad7659719cd5ff:0x5830b58071ac32a6!5m2!4m1!1i2!8m2!3d41.5267484!4d25.4108493!16s%2Fg%2F11crzwl5qs?entry=ttu"}
                       target="_blank" passHref>
                       <FontAwesomeIcon icon={faMapLocation}
                         className="accomodationIcon"

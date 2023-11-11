@@ -15,7 +15,7 @@ export default function Home() {
             <VideoHeading />
             <HomePageFirstArticle />
             <HomePageSecondArticle />
-            <Sponsors/>
+            {/* <Sponsors/> */}
             <FrequentlyAskedQuestions />
         </>
     );
