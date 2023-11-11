@@ -279,6 +279,33 @@ export default function Accomodation() {
                 </div>
               </section>
               <section class="mb-16 text-center md:text-left">
+                <h2 class="mb-12 text-center text-3xl font-bold">{t("HOTEL_BULGARIA_HEADER")}</h2>
+                <div className="flex items-center justify-center mt-5">
+                  <Image
+                    alt="Athlets"
+                    src="/images/hotel_bulgaria.jpg"
+                    className="rounded-xl"
+                    width={700}
+                    height={200}
+                  />
+                </div>
+                <div className="mt-5">
+                  <div>
+                    <FontAwesomeIcon icon={faPhone}
+                      className="accomodationIcon"
+                    /> +359 889 778 948
+                  </div>
+                  <div>
+                    <Link href={"https://www.google.com/maps/place/ul.+%22Giumiurdzhinska%22+69,+6800+Momchilgrad,+Bulgaria/@41.529407,25.4034032,17z/data=!3m1!4b1!4m5!3m4!1s0x14ad765f03027377:0xf6802077b11442d8!8m2!3d41.529407!4d25.4059781?entry=ttu"}
+                      target="_blank" passHref>
+                      <FontAwesomeIcon icon={faMapLocation}
+                        className="accomodationIcon"
+                      />{" " + t("LOCATION")}
+                    </Link>
+                  </div>
+                </div>
+              </section>
+              <section class="mb-16 text-center md:text-left">
                 <h2 class="mb-12 text-center text-3xl font-bold">{t("PLACES_TO_EAT_HEADER")}</h2>
                 <ul className="list-disc">
                   <li>{t("HOTEL_MG_HEADER")}</li>
