@@ -23,7 +23,7 @@ export default function SignUp() {
                 <a href="#" id="irun_link2" target="_blank">Регистрация (натиснете тук)</a>
               </iframe>
               <iframe src="https://www.irun.bg/cookies/start.html" style={{display: "none"}}></iframe>
-              <Script type="text/javascript">
+              <Script type="text/javascript" id="show-signup">
                 {` var linkIrun = "https://www.irun.bg/external.php/competition/sign/name/rhodo-rock-2024?s_lang=bg_BG";
                 var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
                 var ua = navigator.userAgent.toLowerCase();
