@@ -23,16 +23,6 @@ export default function Footer({ copyright }) {
 
               </Typography>
               <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
-                <button className="duration-500 rounded-full transform hover:-translate-y-3">
-                  <FontAwesomeIcon icon={faYoutube}
-                    style={{ color: "red", fontSize: 50 }}
-                  />
-                </button>
-                <button className="duration-500 rounded-full transform hover:-translate-y-3">
-                  <FontAwesomeIcon icon={faInstagram}
-                    style={{ color: "red", fontSize: 50 }}
-                  />
-                </button>
                 <Link href={"https://www.facebook.com/rhodo.rock"}
                   target="_blank" passHref>
                   <button className="duration-500 rounded-full transform hover:-translate-y-3">
