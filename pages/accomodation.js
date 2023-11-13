@@ -306,6 +306,22 @@ export default function Accomodation() {
                 </div>
               </section>
               <section class="mb-16 text-center md:text-left">
+                <h2 class="mb-12 text-center text-3xl font-bold">{t("CAMPING_HEADER")}</h2>
+                <Typography>
+                  {t("CAMPING_BODY")}
+                </Typography>
+                <div className="mt-5">
+                  <div>
+                    <Link href={"https://maps.app.goo.gl/zi8EzmqPJ2APuK7b8"}
+                      target="_blank" passHref>
+                      <FontAwesomeIcon icon={faMapLocation}
+                        className="accomodationIcon"
+                      />{" " + t("LOCATION")}
+                    </Link>
+                  </div>
+                </div>
+              </section>
+              <section class="mb-16 text-center md:text-left">
                 <h2 class="mb-12 text-center text-3xl font-bold">{t("PLACES_TO_EAT_HEADER")}</h2>
                 <ul className="list-disc">
                   <li>{t("HOTEL_MG_HEADER")}</li>
