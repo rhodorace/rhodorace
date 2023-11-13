@@ -18,7 +18,7 @@ export default function HomePageSecondArticle() {
                         <Card className="shadow-lg shadow-gray-500/10">
                             <Image
                                 alt="Arda river"
-                                src="/images/nuri_adali.jpg"
+                                src="/images/dji.jpg"
                                 className="rounded-2xl"
                                 width={700}
                                 height={200}
