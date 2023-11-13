@@ -21,12 +21,9 @@ export default function RequiredEquipment() {
       <Typography variant="h3" color='black'>{t("RECOMMENDED_EQUIPMENT")}</Typography>
       <div className='ml-10'>
         <ul className="list-disc">
-          <li>{t("RECOMMENDED_LIST_ITEM_1")}</li>
-          <li>{t("RECOMMENDED_LIST_ITEM_2")}</li>
           <li>{t("RECOMMENDED_LIST_ITEM_3")}</li>
           <li>{t("RECOMMENDED_LIST_ITEM_4")}</li>
           <li>{t("RECOMMENDED_LIST_ITEM_5")}</li>
-          <li>{t("RECOMMENDED_LIST_ITEM_6")}</li>
           <li>{t("RECOMMENDED_LIST_ITEM_7")}</li>
           <li>{t("RECOMMENDED_LIST_ITEM_8")}</li>
           <li>{t("RECOMMENDED_LIST_ITEM_9")}</li>

@@ -3,7 +3,6 @@ import { useTranslation } from 'next-i18next';
 import TrackInfoTabs from "@/components/track-info-tabs";
 import {
   MapIcon,
-  LifebuoyIcon,
   InformationCircleIcon,
   Cog8ToothIcon,
   UserGroupIcon,
@@ -11,7 +10,6 @@ import {
 } from "@heroicons/react/24/solid";
 import Map from "@/components/track22/map";
 import TechnicalDetails from "@/components/track22/technical_details";
-import AidStations from "@/components/track22/aid_stations";
 import RequiredEquipment from "@/components/track22/required_equipment";
 import Teams from "@/components/track22/teams";
 import Price from "@/components/track22/price";
@@ -34,22 +32,10 @@ export default function Track22() {
       desc: <TechnicalDetails />
     },
     {
-      label: t("AID_STATIONS"),
-      value: "aidstations",
-      icon: LifebuoyIcon,
-      desc: <AidStations />
-    },
-    {
       label: t("REQUIRED_EQUIPMENT"),
       value: "equipment",
       icon: Cog8ToothIcon,
       desc: <RequiredEquipment />
-    },
-    {
-      label: t("TEAMS"),
-      value: "teams",
-      icon: UserGroupIcon,
-      desc: <Teams />
     },
     {
       label: t("PRICE_AND_SIGN_UP"),

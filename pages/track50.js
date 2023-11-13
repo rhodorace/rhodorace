@@ -3,7 +3,6 @@ import { useTranslation } from 'next-i18next';
 import TrackInfoTabs from "@/components/track-info-tabs";
 import {
   MapIcon,
-  LifebuoyIcon,
   InformationCircleIcon,
   Cog8ToothIcon,
   UserGroupIcon,
@@ -11,7 +10,6 @@ import {
 } from "@heroicons/react/24/solid";
 import Map from "@/components/track50/map";
 import TechnicalDetails from "@/components/track50/technical_details";
-import AidStations from "@/components/track50/aid_stations";
 import RequiredEquipment from "@/components/track50/required_equipment";
 import Teams from "@/components/track50/teams";
 import Price from "@/components/track50/price";
@@ -35,22 +33,10 @@ export default function Track50() {
       desc: <TechnicalDetails />
     },
     {
-      label: t("AID_STATIONS"),
-      value: "aidstations",
-      icon: LifebuoyIcon,
-      desc: <AidStations />
-    },
-    {
       label: t("REQUIRED_EQUIPMENT"),
       value: "equipment",
       icon: Cog8ToothIcon,
       desc: <RequiredEquipment />
-    },
-    {
-      label: t("TEAMS"),
-      value: "teams",
-      icon: UserGroupIcon,
-      desc: <Teams />
     },
     {
       label: t("PRICE_AND_SIGN_UP"),

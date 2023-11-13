@@ -23,7 +23,7 @@ export default function TechnicalDetails() {
       tech_value: TECHNICAL_DETAILS_TABLE_INFO.TIME_LIMIT + " " + t("HOURS")
     }, {
       tech_key: t("ITRA_CATEGORY"),
-      tech_value: TECHNICAL_DETAILS_TABLE_INFO.ITRA_CATEGORY + " " + t("POINTS")
+      tech_value: TECHNICAL_DETAILS_TABLE_INFO.ITRA_CATEGORY
     }, {
       tech_key: t("MIN_ELEVATION"),
       tech_value: TECHNICAL_DETAILS_TABLE_INFO.MIN_ELEVATION + " " + t("M_S_L")
@@ -33,15 +33,10 @@ export default function TechnicalDetails() {
     }, {
       tech_key: t("AVG_ELEVATION"),
       tech_value: TECHNICAL_DETAILS_TABLE_INFO.AVG_ELEVATION + " " + t("M_S_L")
-    }, {
-      tech_key: t("MAX_DIFF"),
-      tech_value: TECHNICAL_DETAILS_TABLE_INFO.MAX_DIFF + " " + t("METERS")
-    }, {
-      tech_key: t("START_ELEVATION"),
-      tech_value: TECHNICAL_DETAILS_TABLE_INFO.START_ELEVATION + " " + t("M_S_L")
-    }, {
-      tech_key: t("END_ELEVATION"),
-      tech_value: TECHNICAL_DETAILS_TABLE_INFO.END_ELEVATION + " " + t("M_S_L")
+    },
+    {
+      tech_key: t("NUMBER_OF_AID_STATIONS"),
+      tech_value: TECHNICAL_DETAILS_TABLE_INFO.AID_STATIONS
     },
   ];
   return (
