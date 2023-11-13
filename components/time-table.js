@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 
 export default function TimeTable() {
     const { t } = useTranslation();
-    const TABLE_HEAD = [t("FROM"), t("CAR"), t("TRAIN"), t("BUS")];
+    const TABLE_HEAD = [t("DIRECTION"), t("CAR"), t("TRAIN"), t("BUS")];
 
     const TABLE_ROWS = [
         {

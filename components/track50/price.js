@@ -1,12 +1,13 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import Fees from '../fees';
 
 export default function Price() {
   const { t } = useTranslation();
 
   return (
     <>
-  
+      <Fees/>
     </>
   );
 }
