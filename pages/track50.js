@@ -5,13 +5,11 @@ import {
   MapIcon,
   InformationCircleIcon,
   Cog8ToothIcon,
-  UserGroupIcon,
   CurrencyDollarIcon
 } from "@heroicons/react/24/solid";
 import Map from "@/components/track50/map";
 import TechnicalDetails from "@/components/track50/technical_details";
 import RequiredEquipment from "@/components/track50/required_equipment";
-import Teams from "@/components/track50/teams";
 import Price from "@/components/track50/price";
 import Container from "@/components/container";
 
