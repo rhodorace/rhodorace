@@ -1,7 +1,9 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import FeeBenefits from '../fee_benefits';
-import { Card, Typography } from "@material-tailwind/react";
+import { Button, Card, Typography } from "@material-tailwind/react";
+import Link from 'next/link';
+
 
 export default function Price() {
   const { t } = useTranslation();
@@ -87,6 +89,11 @@ export default function Price() {
           </tbody>
         </table>
       </Card>
+      <div className='mt-5'>
+        <Link href="/sign-up" passHref>
+          <Button variant="outlined">{t("SIGN_UP")}</Button>
+        </Link>
+      </div>
     </>
   );
 }

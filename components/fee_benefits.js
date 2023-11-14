@@ -22,6 +22,12 @@ export default function FeeBenefits() {
                         />{t("FEE_INCLUDES_1")}</li>
                         <li><FontAwesomeIcon icon={faCheck}
                             className="accomodationIcon"
+                        />{t("FEE_INCLUDES_10")}</li>
+                        <li><FontAwesomeIcon icon={faCheck}
+                            className="accomodationIcon"
+                        />{t("FEE_INCLUDES_11")}</li>
+                        <li><FontAwesomeIcon icon={faCheck}
+                            className="accomodationIcon"
                         />{t("FEE_INCLUDES_2")}</li>
                         <li><FontAwesomeIcon icon={faCheck}
                             className="accomodationIcon"
@@ -44,12 +50,6 @@ export default function FeeBenefits() {
                         <li><FontAwesomeIcon icon={faCheck}
                             className="accomodationIcon"
                         />{t("FEE_INCLUDES_9")}</li>
-                        <li><FontAwesomeIcon icon={faCheck}
-                            className="accomodationIcon"
-                        />{t("FEE_INCLUDES_10")}</li>
-                        <li><FontAwesomeIcon icon={faCheck}
-                            className="accomodationIcon"
-                        />{t("FEE_INCLUDES_11")}</li>
                         <li><FontAwesomeIcon icon={faCheck}
                             className="accomodationIcon"
                         />{t("FEE_INCLUDES_12")}</li>
