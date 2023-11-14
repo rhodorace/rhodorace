@@ -5,13 +5,11 @@ import {
   MapIcon,
   InformationCircleIcon,
   Cog8ToothIcon,
-  UserGroupIcon,
   CurrencyDollarIcon
 } from "@heroicons/react/24/solid";
 import Map from "@/components/track22/map";
 import TechnicalDetails from "@/components/track22/technical_details";
 import RequiredEquipment from "@/components/track22/required_equipment";
-import Teams from "@/components/track22/teams";
 import Price from "@/components/track22/price";
 import Container from "@/components/container";
 
@@ -47,6 +45,11 @@ export default function Track22() {
   const content = <>
     <div className="relative mb-6 -mt-64 flex w-full min-w-0 flex-col break-words rounded-3xl bg-white shadow-xl shadow-gray-500/5">
       <div className="px-6">
+        <div className="rhodo-stripe green">
+          <div className="text-center">
+            <h1 className="mb-4 mt-4  font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">22KM</h1>
+          </div>
+        </div>
         <div className="flex flex-wrap justify-center">
           <div className="w-full px-4 lg:order-1">
             <div className="justify-center py-4 pt-8 lg:pt-4">
