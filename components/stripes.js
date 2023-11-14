@@ -22,13 +22,13 @@ export default function Stripes() {
                         src={rhodo_race}
                         className="rounded-lg"
                         width={200}
-                        alt="RhodoRace Momchilgrad"
+                        alt="RhodoRock Momchilgrad"
                     />
                 </div>
             }
             <div className="rhodo-stripe blue grid gap-2 grid-cols-2">
                 <div className="text-right">
-                    <h1 className="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">RHODO&nbsp;RACE</h1>
+                    <h1 className="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">RHODO&nbsp;ROCK</h1>
                 </div>
 
                 <div className="lg:text-left sm:text-right">
