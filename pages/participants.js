@@ -1,7 +1,6 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Container from "@/components/container";
-import { useEffect } from 'react';
 import { useRouter } from "next/router";
 
 export default function Participants() {
