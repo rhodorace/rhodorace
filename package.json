@@ -10,9 +10,9 @@
     "build:local": "APP_ENV=local next build",
     "build:dev": "APP_ENV=dev next build",
     "build:prod": "APP_ENV=prod next build",
-    "deploy:local": "npm run build:local && pm2 start pm2.config.js --env local",
-    "deploy:dev": "npm run build:dev && pm2 start pm2.config.js --env dev",
-    "deploy:prod": "npm run build:prod && pm2 start pm2.config.js --env prod"
+    "deploy:local": "npm run build:local && NODE_PORT=3002 pm2 start pm2.config.js --env local",
+    "deploy:dev": "npm run build:dev && NODE_PORT=3002 pm2 start pm2.config.js --env dev",
+    "deploy:prod": "npm run build:prod && NODE_PORT=3002 pm2 start pm2.config.js --env prod"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -35,6 +35,7 @@
     "react-country-flag": "^3.1.0",
     "react-dom": "18.2.0",
     "react-i18next": "^13.2.2",
+    "sharp": "^0.32.6",
     "tailwindcss": "3.3.3"
   }
 }
