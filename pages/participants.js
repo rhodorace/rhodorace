@@ -20,7 +20,7 @@ export default function Participants() {
                 <div className="flex flex-wrap justify-center">
                     <div className="w-full px-4 lg:order-1">
                         <div className="flex justify-center py-4 pt-8 lg:pt-4">
-                            <iframe className='w-full max-w-screen-xl' src={participantsURL} scrolling="no" marginheight="0" marginwidth="0"
+                            <iframe className='w-full min-w-max' src={participantsURL} marginheight="0" marginwidth="0"
                                 frameborder="0" width="600" height="800" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         </div>
                     </div>
