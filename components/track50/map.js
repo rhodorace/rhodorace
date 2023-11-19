@@ -7,9 +7,9 @@ export default function Map() {
 
     return (
         <>
-            <DownloadTrackInfoButton trackInfoFileName="rhodoRock48.gpx" />
+            <DownloadTrackInfoButton trackInfoFileName="RhodoRock50.gpx" />
             <div className='flex justify-center items-center h-screen'>
-                <iframe className='w-full max-w-screen-xl' src="https://iframe.tracedetrail.fr/en/trace/output2/236502/osm/135181144" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"
+                <iframe className='w-full max-w-screen-xl' src="https://iframe.tracedetrail.fr/en/trace/output2/239071/osm/135183452" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"
                     width="600" height="800" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
         </>

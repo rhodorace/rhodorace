@@ -13,7 +13,7 @@ export default function DownloadTrackInfoButton({ trackInfoFileName }) {
 
         const link = document.createElement('a');
         link.href = downloadUrl;
-        link.download = 'rhodoRock22.gpx';
+        link.download = trackInfoFileName;
 
         link.click();
     };
