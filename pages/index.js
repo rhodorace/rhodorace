@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next';
 import Sponsors from "@/components/sponsors";
 import HomePageFirstArticle from "@/components/home-page-first-article";
 import HomePageSecondArticle from "@/components/home-page-second-article";
+import Counter from "@/components/counter";
 
 export default function Home() {
     const { t } = useTranslation();
@@ -13,9 +14,11 @@ export default function Home() {
         <>
             <Navbar />
             <VideoHeading />
+            <Counter/>
             <HomePageFirstArticle />
             <HomePageSecondArticle />
             {/* <Sponsors/> */}
+
             <FrequentlyAskedQuestions />
         </>
     );
