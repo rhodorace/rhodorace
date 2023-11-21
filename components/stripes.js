@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import rhodo_race from "../public/rhodo_race.jpg";
 import track_50 from "../public/images/track_50.png";
-import track_22 from "../public/images/track_22.png";
+import track_23 from "../public/images/track_23.png";
+import track_9 from "../public/images/track_9.png";
 
 export default function Stripes() {
     const [openNav, setOpenNav] = React.useState(false);
@@ -45,15 +46,20 @@ export default function Stripes() {
                 </div>
             </div>
             <div className="flex justify-center">
-                <Image
+            <Image
                     src={track_50}
+                    width={80}
+                    alt="Track 1 info"
+                />
+                <Image
+                    src={track_23}
                     width={80}
                     alt="Track 1 info"
                 />
 
                 <div className="flex justify-center">
                     <Image
-                        src={track_22}
+                        src={track_9}
                         width={80}
                         alt="Track 2 info"
                     />
