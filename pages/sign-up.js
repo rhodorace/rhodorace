@@ -53,24 +53,27 @@ export default function SignUp() {
     }
   });
 
-  const TABLE_HEAD = [t("FROM"), t("TILL"), "22KM", "50KM"];
+  const TABLE_HEAD = [t("FROM"), t("TILL"), "9KM", "23KM", "50KM"];
 
   const TABLE_ROWS = [
     {
       from: "-",
       till: "31.01.2024",
+      price9KM: "50 " + t("BGN"),
       price22KM: "55 " + t("BGN"),
       price50KM: "65 " + t("BGN"),
     },
     {
       from: "01.02.2024",
       till: "15.04.2024",
+      price9KM: "60 " + t("BGN"),
       price22KM: "65 " + t("BGN"),
       price50KM: "75 " + t("BGN"),
     },
     {
       from: "16.04.2024",
       till: "19.05.2024",
+      price9KM: "70 " + t("BGN"),
       price22KM: "80 " + t("BGN"),
       price50KM: "90 " + t("BGN"),
     },
@@ -106,7 +109,7 @@ export default function SignUp() {
                         </tr>
                       </thead>
                       <tbody>
-                        {TABLE_ROWS.map(({ from, till, price22KM, price50KM }, index) => {
+                        {TABLE_ROWS.map(({ from, till, price9KM, price22KM, price50KM }, index) => {
                           const isLast = index === TABLE_ROWS.length - 1;
                           const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
 
@@ -128,6 +131,15 @@ export default function SignUp() {
                                   className="font-normal"
                                 >
                                   {till}
+                                </Typography>
+                              </td>
+                              <td className={classes}>
+                                <Typography
+                                    variant="small"
+                                    color="blue-gray"
+                                    className="font-normal"
+                                >
+                                  {price9KM}
                                 </Typography>
                               </td>
                               <td className={classes}>

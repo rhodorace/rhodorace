@@ -7,13 +7,13 @@ import {
   Cog8ToothIcon,
   CurrencyDollarIcon
 } from "@heroicons/react/24/solid";
-import Map from "@/components/track22/map";
-import TechnicalDetails from "@/components/track22/technical_details";
-import RequiredEquipment from "@/components/track22/required_equipment";
-import Price from "@/components/track22/price";
+import Map from "@/components/track9/map";
+import TechnicalDetails from "@/components/track9/technical_details";
+import RequiredEquipment from "@/components/track9/required_equipment";
+import Price from "@/components/track9/price";
 import Container from "@/components/container";
 
-export default function Track22() {
+export default function Track9() {
   const { t } = useTranslation();
   const data = [
     {
@@ -47,7 +47,7 @@ export default function Track22() {
       <div className="px-6">
         <div className="rhodo-stripe green">
           <div className="text-center">
-            <h1 className="mb-4 mt-4  font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">23KM</h1>
+            <h1 className="mb-4 mt-4  font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">9KM</h1>
           </div>
         </div>
         <div className="flex flex-wrap justify-center">

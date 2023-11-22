@@ -54,14 +54,14 @@ export default function Stripes() {
                 <Image
                     src={track_23}
                     width={80}
-                    alt="Track 1 info"
+                    alt="Track 2 info"
                 />
 
                 <div className="flex justify-center">
                     <Image
                         src={track_9}
                         width={80}
-                        alt="Track 2 info"
+                        alt="Track 3 info"
                     />
                 </div>
             </div>
