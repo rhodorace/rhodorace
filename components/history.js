@@ -11,7 +11,9 @@ export default function History(props) {
     const { t } = useTranslation();
 
     function handleRedirectToGallery() {
-        window.open(props.galleryURL, "_blank")
+        router.push('/')
+        // uncomment this once there is a URL for the gallery
+        //window.open(props.galleryURL, "_blank")
     }
 
     function handleRedirectToResults() {
@@ -31,7 +33,7 @@ export default function History(props) {
                         <div className="px-6 ">
                             <div className="flex flex-wrap justify-center">
                                 <div class="container mx-auto md:px-6">
-                                    <section class="mb-32 text-center md:text-left">
+                                    <section className="mb-32 text-center md:text-left">
                                         <section className="relative py-12 px-4">
                                             <div className="mx-auto w-full px-4 text-center lg:w-6/12">
                                                 <Typography variant="h2" color="blue-gray" className="mb-3">
