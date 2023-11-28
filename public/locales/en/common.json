@@ -187,5 +187,7 @@
     "HOUR": "Hours",
     "MINUTES": "Minutes",
     "SECONDS": "Seconds",
-    "COUNTDOWN_HEADER": "Until event starts"
+    "COUNTDOWN_HEADER": "Until event starts",
+    "GENERAL_SPONSOR": "General sponsor",
+    "SPONSORS_AND_PARTNERS": "Sponsors and partners"
 }

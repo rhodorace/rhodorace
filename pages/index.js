@@ -17,7 +17,7 @@ export default function Home() {
             <Counter/>
             <HomePageFirstArticle />
             <HomePageSecondArticle />
-            {/* <Sponsors/> */}
+            <Sponsors/>
 
             <FrequentlyAskedQuestions />
         </>

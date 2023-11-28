@@ -187,5 +187,7 @@
     "HOUR": "Часa",
     "MINUTES": "Минути",
     "SECONDS": "Секунди",
-    "COUNTDOWN_HEADER": "До събитието остават"
+    "COUNTDOWN_HEADER": "До събитието остават",
+    "GENERAL_SPONSOR": "Генерален спонсор",
+    "SPONSORS_AND_PARTNERS": "Спонсори и партньори"
 }
