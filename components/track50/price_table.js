@@ -9,11 +9,11 @@ export default function PriceTable() {
     const TABLE_ROWS = [
       {
         from: "-",
-        till: "31.01.2024",
+        till: "02.02.2024",
         price: "65 " + t("BGN"),
       },
       {
-        from: "01.02.2024",
+        from: "03.02.2024",
         till: "15.04.2024",
         price: "75 " + t("BGN"),
       },
