@@ -58,13 +58,13 @@ export default function SignUp() {
   const TABLE_ROWS = [
     {
       from: "-",
-      till: "31.01.2024",
+      till: "02.02.2024",
       price9KM: "50 " + t("BGN"),
       price22KM: "55 " + t("BGN"),
       price50KM: "65 " + t("BGN"),
     },
     {
-      from: "01.02.2024",
+      from: "03.02.2024",
       till: "15.04.2024",
       price9KM: "60 " + t("BGN"),
       price22KM: "65 " + t("BGN"),
