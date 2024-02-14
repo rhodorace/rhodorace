@@ -6,6 +6,7 @@ import Link from "next/link";
 
 export default function Sponsors() {
   const DBANK_LINK = "https://www.dbank.bg/bg"
+  const DEVIN_LINK = "https://devin-bg.com/"
 
   const { t } = useTranslation();
   const imageSize = 500;
@@ -33,7 +34,23 @@ export default function Sponsors() {
                   <div className="flex justify-center py-4 pt-8 lg:pt-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <Link href={DBANK_LINK} target="_blank" passHref>
-                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/dbank-logo.svg" alt="" />
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/dbank-logo.svg"
+                               alt=""/>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-full px-4 lg:order-1 ">
+                  <Typography variant="h2" color="blue-gray" className="mb-3">
+                    {t("MAIN_SPONSOR")}
+                  </Typography>
+                  <hr/>
+                  <div className="flex justify-center py-4 pt-8 lg:pt-4">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <Link href={DEVIN_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/devin-logo.png"
+                               alt=""/>
                       </Link>
                     </div>
                   </div>
@@ -46,8 +63,9 @@ export default function Sponsors() {
     </>
   );
 }
+
 export async function getStaticProps(context) {
-  const { locale } = context
+  const {locale} = context
 
   return {
     props: {
