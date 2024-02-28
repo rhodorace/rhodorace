@@ -104,20 +104,19 @@ export default function Post({ post_id }) {
   );
 }
 
-export async function getStaticProps(context) {
-  const { locale } = context
-
-  return {
-      props: {
-          ...(await serverSideTranslations(locale)),
-      },
-  }
-}
-
-export async function getServerSideProps({ query }) {
-  // Извличане на post_id от query параметрите
+export async function getServerSideProps(context) {
+  const { locale, query } = context;
   const post_id = query.post_id;
 
-  // Връщане на post_id като prop на страницата
-  return { props: { post_id } };
+  // Тук добавяш логиката за зареждане на локализационни данни
+  const localizationProps = await serverSideTranslations(locale, ["common", "home"]);
+
+  // Връщаш post_id и локализационните props
+  return {
+    props: {
+      post_id,
+      ...localizationProps,
+    }
+  };
 }
+
