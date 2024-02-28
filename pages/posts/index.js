@@ -11,16 +11,24 @@ import { useTranslation } from 'next-i18next';
 const BLOGGER_API_URL = "https://www.googleapis.com/blogger/v3/blogs/831062794583421474/posts/";
 const API_KEY = process.env.NEXT_PUBLIC_BLOGGER_API_KEY;
 
-export default function Post() {
+export default function Post({ post_id }) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (!post_id) return;
 
-  const searchParams = useSearchParams();
-  const post_id = searchParams.get('post_id');
+    fetch(`${BLOGGER_API_URL}${post_id}?key=${API_KEY}`)
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          setLoading(false);
+        });
+  }, [post_id]);
 
   const fetchData = () => {
     if (post_id !== null) {
@@ -104,4 +112,12 @@ export async function getStaticProps(context) {
           ...(await serverSideTranslations(locale)),
       },
   }
+}
+
+export async function getServerSideProps({ query }) {
+  // Извличане на post_id от query параметрите
+  const post_id = query.post_id;
+
+  // Връщане на post_id като prop на страницата
+  return { props: { post_id } };
 }
