@@ -7,6 +7,7 @@ import Link from "next/link";
 export default function Sponsors() {
   const DBANK_LINK = "https://www.dbank.bg/bg"
   const DEVIN_LINK = "https://devin-bg.com/"
+  const TERRA_TANGRA_LINK = "https://terratangra.com/"
 
   const { t } = useTranslation();
   const imageSize = 500;
@@ -50,6 +51,10 @@ export default function Sponsors() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <Link href={DEVIN_LINK} target="_blank" passHref>
                         <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/devin-logo.png"
+                               alt=""/>
+                      </Link>
+                      <Link href={TERRA_TANGRA_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/terra-tangra-log.png"
                                alt=""/>
                       </Link>
                     </div>
