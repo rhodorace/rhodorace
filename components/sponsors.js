@@ -37,7 +37,7 @@ export default function Sponsors() {
                   <div className="flex justify-center py-4 pt-8 lg:pt-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <Link href={DBANK_LINK} target="_blank" passHref>
-                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/dbank-logo.svg"
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/dbank-logo.svg"
                                alt=""/>
                       </Link>
                     </div>
@@ -52,11 +52,11 @@ export default function Sponsors() {
                   <div className="flex justify-center py-4 pt-8 lg:pt-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <Link href={DEVIN_LINK} target="_blank" passHref>
-                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/devin-logo.png"
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/devin-logo.png"
                                alt=""/>
                       </Link>
                       <Link href={TERRA_TANGRA_LINK} target="_blank" passHref>
-                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/terra-tangra-log.png"
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/terra-tangra-log.png"
                                alt=""/>
                       </Link>
                       <Link href={MAXI_MARKET_LINK} target="_blank" passHref>
