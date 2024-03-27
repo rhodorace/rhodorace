@@ -8,6 +8,8 @@ export default function Sponsors() {
   const DBANK_LINK = "https://www.dbank.bg/bg"
   const DEVIN_LINK = "https://devin-bg.com/"
   const TERRA_TANGRA_LINK = "https://terratangra.com/"
+  const MAXI_MARKET_LINK = "https://www.facebook.com/MAXI.MOMCHILGRAD"
+  const BALLISTIC_LINK = "https://ballistic-sport.com/"
 
   const { t } = useTranslation();
   const imageSize = 500;
@@ -55,6 +57,14 @@ export default function Sponsors() {
                       </Link>
                       <Link href={TERRA_TANGRA_LINK} target="_blank" passHref>
                         <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/terra-tangra-log.png"
+                               alt=""/>
+                      </Link>
+                      <Link href={MAXI_MARKET_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/maxi-market-logo.jpeg"
+                               alt=""/>
+                      </Link>
+                      <Link href={BALLISTIC_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/ballistic.png"
                                alt=""/>
                       </Link>
                     </div>
