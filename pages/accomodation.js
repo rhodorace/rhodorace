@@ -305,7 +305,7 @@ export default function Accomodation() {
                   <div>
                     <FontAwesomeIcon icon={faPhone}
                                      className="accomodationIcon"
-                    /> +359 887 998899
+                    /> +359 882 17 78 78
                   </div>
                   <div>
                     <FontAwesomeIcon icon={faGlobe}
