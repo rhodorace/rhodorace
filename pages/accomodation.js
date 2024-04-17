@@ -40,6 +40,11 @@ export default function Accomodation() {
                     </Link>
                   </div>
                   <div>
+                    <FontAwesomeIcon icon={faPhone}
+                                     className="accomodationIcon"
+                    /> +359888342641
+                  </div>
+                  <div>
                     <Link
                         href={"https://www.google.com/maps/place/Hotel+%22Mg%22/@41.538345,25.4119735,18.05z/data=!4m9!3m8!1s0x14ad76f06b595ecf:0xd295f1fd21d46804!5m2!4m1!1i2!8m2!3d41.5382068!4d25.4129688!16s%2Fg%2F11b6dp26kt?entry=ttu"}
                         target="_blank" passHref>
@@ -145,6 +150,11 @@ export default function Accomodation() {
                     </Link>
                   </div>
                   <div>
+                    <FontAwesomeIcon icon={faPhone}
+                                     className="accomodationIcon"
+                    /> +359887227979
+                  </div>
+                  <div>
                     <Link
                         href={"https://www.google.com/maps/place/Hotel+Konak/@41.5379405,25.4134003,16.57z/data=!4m9!3m8!1s0x14ad76f6f839e247:0xd4485d6e6ce8c88a!5m2!4m1!1i2!8m2!3d41.5340771!4d25.4096031!16s%2Fg%2F11fm78h1y7?entry=ttu"}
                         target="_blank" passHref>
@@ -176,6 +186,11 @@ export default function Accomodation() {
                                        className="accomodationIcon"
                       />{" " + "www.berito.com"}
                     </Link>
+                  </div>
+                  <div>
+                    <FontAwesomeIcon icon={faPhone}
+                                     className="accomodationIcon"
+                    /> +359888885121
                   </div>
                   <div>
                     <Link
