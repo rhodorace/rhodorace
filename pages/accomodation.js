@@ -72,6 +72,11 @@ export default function Accomodation() {
                   </Link>
                 </div>
                 <div>
+                  <FontAwesomeIcon icon={faPhone}
+                                   className="accomodationIcon"
+                  /> +359899057350
+                </div>
+                <div>
                   <Link
                       href={"https://www.google.com/maps/place/Complex+Makaza/@41.5603982,25.3845942,14z/data=!4m9!3m8!1s0x14ad76afbaca3bc3:0xe68eebd48b91025b!5m2!4m1!1i2!8m2!3d41.5655577!4d25.3879113!16s%2Fg%2F12hwgnprt?entry=ttu"}
                       target="_blank" passHref>
