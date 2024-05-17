@@ -72,7 +72,7 @@ export default function SignUp() {
     },
     {
       from: "16.04.2024",
-      till: "19.05.2024",
+      till: "20.05.2024",
       price9KM: "70 " + t("BGN"),
       price22KM: "80 " + t("BGN"),
       price50KM: "90 " + t("BGN"),
