@@ -9,6 +9,7 @@ export default function Map() {
         <>
             <DownloadTrackInfoButton trackInfoFileName="RhodoRock50.gpx"/>
             <p>&nbsp;</p>
+            <p>&nbsp;</p>
             <div className='flex justify-center items-center h-screen'>
                 <iframe className='w-full max-w-screen-xl'
                         src="https://iframe.tracedetrail.fr/en/trace/output2/239192/osm/135185886" scrolling="no"
