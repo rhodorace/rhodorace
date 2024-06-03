@@ -7,10 +7,13 @@ export default function Map() {
 
     return (
         <>
-            <DownloadTrackInfoButton trackInfoFileName="RhodoRock50.gpx" />
+            <DownloadTrackInfoButton trackInfoFileName="RhodoRock50.gpx"/>
+            <p>&nbsp;</p>
             <div className='flex justify-center items-center h-screen'>
-                <iframe className='w-full max-w-screen-xl' src="https://iframe.tracedetrail.fr/en/trace/output2/239192/osm/135185886" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"
-                    width="600" height="800" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe className='w-full max-w-screen-xl'
+                        src="https://iframe.tracedetrail.fr/en/trace/output2/239192/osm/135185886" scrolling="no"
+                        marginheight="0" marginwidth="0" frameborder="0"
+                        width="600" height="800" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
         </>
     );
