@@ -11,6 +11,14 @@ export default function Sponsors() {
   const MAXI_MARKET_LINK = "https://www.facebook.com/MAXI.MOMCHILGRAD"
   const BALLISTIC_LINK = "https://ballistic-sport.com/"
 
+  const ABOPHARMA_LINK = "https://abopharma.info/"
+  const BOWEN_LINK = "https://bowen.bg/"
+  const ENERVIT_LINK = "https://www.facebook.com/profile.php?id=100094393892114"
+  const ORIFLAME_LINK = "https://bg.oriflame.com/"
+  const PIRIN_HILL_LINK = "https://pirinhill.com/bg/"
+  const VARBITSA_MILK_LINK = "https://www.facebook.com/p/%D0%9A%D1%80%D0%B0%D0%B2%D0%B5%D1%84%D0%B5%D1%80%D0%BC%D0%B0-%D0%92%D1%8A%D1%80%D0%B1%D0%B8%D1%86%D0%B0-%D0%9C%D0%B8%D0%BB%D0%BA-%D0%95%D0%9E%D0%9E%D0%94-%D0%B3%D1%80%D0%9C%D0%BE%D0%BC%D1%87%D0%B8%D0%BB%D0%B3%D1%80%D0%B0%D0%B4-100064717603838/"
+  const WOOLONA_LINK = "https://woolona.com/"
+
   const { t } = useTranslation();
   const imageSize = 500;
   return (
@@ -67,6 +75,36 @@ export default function Sponsors() {
                         <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/ballistic.png"
                                alt=""/>
                       </Link>
+
+                      <Link href={ABOPHARMA_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/abopharma.png"
+                               alt=""/>
+                      </Link>
+                      <Link href={BOWEN_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/bowen.png"
+                               alt=""/>
+                      </Link>
+                      <Link href={ENERVIT_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/enervit.png"
+                               alt=""/>
+                      </Link>
+                      <Link href={ORIFLAME_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/oriflame.png"
+                               alt=""/>
+                      </Link>
+                      <Link href={PIRIN_HILL_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/pirin_hill.png"
+                               alt=""/>
+                      </Link>
+                      <Link href={VARBITSA_MILK_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/vyrbitsa_milk.png"
+                               alt=""/>
+                      </Link>
+                      <Link href={WOOLONA_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/woolona.png"
+                               alt=""/>
+                      </Link>
+
                     </div>
                   </div>
                 </div>
