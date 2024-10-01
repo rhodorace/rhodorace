@@ -11,7 +11,7 @@ import {
 
 export default function Counter() {
     const { t } = useTranslation();
-    const time = Date.parse("2024-06-08");
+    const time = Date.parse("2025-06-07");
 
     const renderer = ({ days, hours, minutes, seconds, completed }) => {
         return <>

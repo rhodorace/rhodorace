@@ -5,10 +5,12 @@ import {
   MapIcon,
   InformationCircleIcon,
   Cog8ToothIcon,
-  CurrencyDollarIcon
+  CurrencyDollarIcon,
+    ShoppingBagIcon
 } from "@heroicons/react/24/solid";
 import Map from "@/components/track9/map";
 import TechnicalDetails from "@/components/track9/technical_details";
+import Stations from "@/components/track9/stations";
 import RequiredEquipment from "@/components/track9/required_equipment";
 import Price from "@/components/track9/price";
 import Container from "@/components/container";
@@ -28,6 +30,12 @@ export default function Track9() {
       value: "techdetails",
       icon: InformationCircleIcon,
       desc: <TechnicalDetails />
+    },
+    {
+      label: t("AID_STATIONS"),
+      value: "stations",
+      icon: ShoppingBagIcon,
+      desc: <Stations />
     },
     {
       label: t("REQUIRED_EQUIPMENT"),

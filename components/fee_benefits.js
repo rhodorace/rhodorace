@@ -17,6 +17,7 @@ export default function FeeBenefits() {
                 <AccordionBody>
                     <ul className="list-disc">
                         <li><span style={{color: "#FFD700"}} className="pr-1">🏅</span>{t("FEE_INCLUDES_1")}</li>
+                        <li><span style={{color: "#FFD700"}} className="pr-1">🏅</span>{t("FEE_INCLUDES_13")}</li>
                         <li><span style={{color: "#008CBA"}} className="pr-1">👕</span>{t("FEE_INCLUDES_10")}</li>
                         <li><span style={{color: "#FF5733"}} className="pr-1">🎁</span>{t("FEE_INCLUDES_11")}</li>
                         <li><span style={{color: "#4CAF50"}} className="pr-1">🌄</span>{t("FEE_INCLUDES_2")}</li>

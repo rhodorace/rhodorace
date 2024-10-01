@@ -53,29 +53,32 @@ export default function SignUp() {
     }
   });
 
-  const TABLE_HEAD = [t("FROM"), t("TILL"), "9KM", "23KM", "50KM"];
+  const TABLE_HEAD = [t("FROM"), t("TILL"), "9KM", "21KM", "42KM", "60KM"];
 
   const TABLE_ROWS = [
     {
       from: "-",
-      till: "02.02.2024",
-      price9KM: "50 " + t("BGN"),
-      price22KM: "55 " + t("BGN"),
-      price50KM: "65 " + t("BGN"),
+      till: "03.02.2025",
+      price9KM: "30 eur",
+      price21KM: "35 eur",
+      price42KM: "40 eur",
+      price60KM: "45 eur",
     },
     {
-      from: "03.02.2024",
-      till: "15.04.2024",
-      price9KM: "60 " + t("BGN"),
-      price22KM: "65 " + t("BGN"),
-      price50KM: "75 " + t("BGN"),
+      from: "04.02.2025",
+      till: "14.04.2025",
+      price9KM: "35 eur",
+      price21KM: "40 eur",
+      price42KM: "45 eur",
+      price60KM: "50 eur",
     },
     {
-      from: "16.04.2024",
-      till: "20.05.2024",
-      price9KM: "70 " + t("BGN"),
-      price22KM: "80 " + t("BGN"),
-      price50KM: "90 " + t("BGN"),
+      from: "15.04.2025",
+      till: "19.05.2025",
+      price9KM: "45 eur",
+      price21KM: "50 eur",
+      price42KM: "55 eur",
+      price60KM: "60 eur",
     },
   ];
   const content = <>
@@ -109,67 +112,77 @@ export default function SignUp() {
                         </tr>
                       </thead>
                       <tbody>
-                        {TABLE_ROWS.map(({ from, till, price9KM, price22KM, price50KM }, index) => {
+                        {TABLE_ROWS.map(({ from, till, price9KM, price21KM, price42KM, price60KM }, index) => {
                           const isLast = index === TABLE_ROWS.length - 1;
                           const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
 
                           return (
-                            <tr key={from}>
-                              <td className={classes}>
-                                <Typography
-                                  variant="small"
-                                  color="blue-gray"
-                                  className="font-normal"
-                                >
-                                  {from}
-                                </Typography>
-                              </td>
-                              <td className={classes}>
-                                <Typography
-                                  variant="small"
-                                  color="blue-gray"
-                                  className="font-normal"
-                                >
-                                  {till}
-                                </Typography>
-                              </td>
-                              <td className={classes}>
-                                <Typography
-                                    variant="small"
-                                    color="blue-gray"
-                                    className="font-normal"
-                                >
-                                  {price9KM}
-                                </Typography>
-                              </td>
-                              <td className={classes}>
-                                <Typography
-                                  variant="small"
-                                  color="blue-gray"
-                                  className="font-normal"
-                                >
-                                  {price22KM}
-                                </Typography>
-                              </td>
-                              <td className={classes}>
-                                <Typography
-                                  variant="small"
-                                  color="blue-gray"
-                                  className="font-normal"
-                                >
-                                  {price50KM}
-                                </Typography>
-                              </td>
-                            </tr>
+                              <tr key={from}>
+                                <td className={classes}>
+                                  <Typography
+                                      variant="small"
+                                      color="blue-gray"
+                                      className="font-normal"
+                                  >
+                                    {from}
+                                  </Typography>
+                                </td>
+                                <td className={classes}>
+                                  <Typography
+                                      variant="small"
+                                      color="blue-gray"
+                                      className="font-normal"
+                                  >
+                                    {till}
+                                  </Typography>
+                                </td>
+                                <td className={classes}>
+                                  <Typography
+                                      variant="small"
+                                      color="blue-gray"
+                                      className="font-normal"
+                                  >
+                                    {price9KM}
+                                  </Typography>
+                                </td>
+                                <td className={classes}>
+                                  <Typography
+                                      variant="small"
+                                      color="blue-gray"
+                                      className="font-normal"
+                                  >
+                                    {price21KM}
+                                  </Typography>
+                                </td>
+                                <td className={classes}>
+                                  <Typography
+                                      variant="small"
+                                      color="blue-gray"
+                                      className="font-normal"
+                                  >
+                                    {price42KM}
+                                  </Typography>
+                                </td>
+                                <td className={classes}>
+                                  <Typography
+                                      variant="small"
+                                      color="blue-gray"
+                                      className="font-normal"
+                                  >
+                                    {price60KM}
+                                  </Typography>
+                                </td>
+                              </tr>
                           );
                         })}
                       </tbody>
                     </table>
                   </Card>
                   <div className='mt-5'>
-                    
-                      <div id="irun_register">
-                        <div style={{ width: "80%", textAlign: "center" }}>Вашият браузър е ограничил функционалността за записване. За да продължите натиснете бутона по-долу и ще ви се
+
+                    <div id="irun_register">
+                      <div style={{width: "80%", textAlign: "center"}}>Вашият браузър е ограничил функционалността за
+                        записване. За да продължите натиснете бутона по-долу и ще ви се
                           зареди регистрационната форма в нов прозорец, където ще можете да завършите процеса.
                           <a id="irun_link" href="#" target="_blank">Регистрация (натиснете тук)</a>
                         </div>

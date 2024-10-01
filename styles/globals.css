@@ -138,3 +138,56 @@ video {
   background-color: white;
   color: black;
 }
+
+.container-distance {
+  display: inline-block;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+  margin-right: 5px;
+}
+.top-distance {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px 15px 0 0;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+.bottom-distance {
+  color: white;
+  padding: 5px 10px;
+  border-radius: 0 0 15px 15px;
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+}
+.triangle-distance {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 12px solid #2c2c2c;
+  z-index: 2;
+}
+
+.background-blue {
+  background-color: #ff6600;
+}
+
+.background-green {
+  background-color: #00a000;
+}
+
+.background-yellow {
+  background-color: #f0c000;
+}
+
+.background-purple {
+  background-color: #bd00bd;
+}

@@ -33,7 +33,7 @@ export default function Stripes() {
                 </div>
 
                 <div className="lg:text-left sm:text-right">
-                    <h1 className="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">8-9 JUNE</h1>
+                    <h1 className="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">7-8 JUNE</h1>
                 </div>
             </div>
             <div className="rhodo-stripe green grid gap-2 grid-cols-2">
@@ -42,27 +42,29 @@ export default function Stripes() {
                 </div>
 
                 <div className="lg:text-left sm:text-right">
-                    <h1 className="mb-4 mt-4  font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">2024</h1>
+                    <h1 className="mb-4 mt-4  font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">2025</h1>
                 </div>
             </div>
             <div className="flex justify-center">
-            <Image
-                    src={track_50}
-                    width={80}
-                    alt="Track 1 info"
-                />
-                <Image
-                    src={track_23}
-                    width={80}
-                    alt="Track 2 info"
-                />
-
-                <div className="flex justify-center">
-                    <Image
-                        src={track_9}
-                        width={80}
-                        alt="Track 3 info"
-                    />
+                <div className="container-distance">
+                    <div className="top-distance">2400 D+</div>
+                    <div className="triangle-distance"></div>
+                    <div className="bottom-distance background-blue">60</div>
+                </div>
+                <div className="container-distance">
+                    <div className="top-distance">1730 D+</div>
+                    <div className="triangle-distance"></div>
+                    <div className="bottom-distance background-green">42</div>
+                </div>
+                <div className="container-distance">
+                    <div className="top-distance">900 D+</div>
+                    <div className="triangle-distance"></div>
+                    <div className="bottom-distance background-yellow">21</div>
+                </div>
+                <div className="container-distance">
+                    <div className="top-distance">410 D+</div>
+                    <div className="triangle-distance"></div>
+                    <div className="bottom-distance background-purple">9</div>
                 </div>
             </div>
         </div>
