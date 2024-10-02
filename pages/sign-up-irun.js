@@ -12,9 +12,9 @@ export default function SignUpIrun() {
   useEffect(() => {
     var linkIrun;
     if (router.locale === "en") {
-      linkIrun = "https://www.irun.bg/external.php/competition/sign/name/rhodo-rock-2024?s_lang=en_GB";
+      linkIrun = "https://www.irun.bg/external.php/competition/sign/name/rhodo-rock-2025?s_lang=en_GB";
     } else {
-      linkIrun = "https://www.irun.bg/external.php/competition/sign/name/rhodo-rock-2024?s_lang=bg_BG";
+      linkIrun = "https://www.irun.bg/external.php/competition/sign/name/rhodo-rock-2025?s_lang=bg_BG";
     }
 
     var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);

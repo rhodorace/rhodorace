@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 export default function Participants() {
     const { t } = useTranslation();
     const router = useRouter();
-    let participantsURL = "https://race-tracking.com/rhodorock2024/"
+    let participantsURL = "https://www.irun.bg/external.php/competition/runners/name/rhodo-rock-2025"
 
     if (router.locale === "en") {
         participantsURL += "?s_lang=en_GB";
