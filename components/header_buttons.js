@@ -101,6 +101,9 @@ export default function HeaderButtons({ withLogo }) {
                 <Link href="/momchilgrad" passHref>
                     <MenuItem>{t("ABOUT_MOMCHILGRAD")}</MenuItem>
                 </Link>
+                <Link href="/ultra-slam" passHref>
+                    <MenuItem>{t("ULTRA_SLAM")}</MenuItem>
+                </Link>
             </MenuList>
         </Menu>;
 
