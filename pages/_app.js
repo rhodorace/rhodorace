@@ -22,7 +22,7 @@ const App = ({ Component, pageProps }) => (
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
             
-              gtag('config', 'G-PGQCTN7M7Y');
+              gtag('config', 'G-8Y7WH9M53W');
             `}
         </Script>
         <Script id="facebook-pixel" strategy="afterInteractive">
