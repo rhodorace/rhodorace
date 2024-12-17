@@ -13,7 +13,7 @@ const App = ({ Component, pageProps }) => (
         <title>RhodoRock Momchilgrad</title>
       </Head>
         <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-PGQCTN7M7Y"
+            src="https://www.googletagmanager.com/gtag/js?id=G-8Y7WH9M53W"
             strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
