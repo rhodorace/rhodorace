@@ -89,6 +89,9 @@ export default function HeaderButtons({ withLogo }) {
                 </Button>
             </MenuHandler>
             <MenuList>
+                <Link href="/schedule" passHref>
+                    <MenuItem>{t("SCHEDULE")}</MenuItem>
+                </Link>
                 <Link href="/accomodation" passHref>
                     <MenuItem>{t("ACCOMODATION")}</MenuItem>
                 </Link>
