@@ -12,7 +12,7 @@ export default function Map() {
             <p>&nbsp;</p>
             <div className='flex justify-center items-center h-screen'>
                 <iframe className='w-full max-w-screen-xl'
-                        src="https://iframe.tracedetrail.fr/en/trace/output2/239195/osm/135185661" scrolling="no"
+                        src="https://tracedetrail.fr/en/iframe/6756" scrolling="no"
                         marginheight="0" marginwidth="0"
                         frameborder="0" width="600" height="800" webkitallowfullscreen mozallowfullscreen
                         allowfullscreen></iframe>
