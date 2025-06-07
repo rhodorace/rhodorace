@@ -138,11 +138,11 @@ export default function HeaderButtons({ withLogo }) {
     </Menu>;
 
     // ========= CONTACTS BUTTON =========
-    const contacts = <Link href="/contact" passHref>
-        <Button className="navbarBtn lg:inline-block">
-            {t("CONTACTS_BUTTON")}
-        </Button>
-    </Link>;
+    // const contacts = <Link href="/contact" passHref>
+    //     <Button className="navbarBtn lg:inline-block">
+    //         {t("CONTACTS_BUTTON")}
+    //     </Button>
+    // </Link>;
     // ========= CHANGE LANGUAGE BUTTON =========
     let changeLanguage;
     if (router.locale === "en") {
@@ -171,8 +171,8 @@ export default function HeaderButtons({ withLogo }) {
         </Link>;
     }
 
-    const buttonsWithLogo = [registration, tracks, news, info, logo, history, contacts, changeLanguage];
-    const buttonsWithoutLogo = [registration, tracks, news, info, history, contacts, changeLanguage];
+    const buttonsWithLogo = [registration, tracks, news, info, logo, history, changeLanguage];
+    const buttonsWithoutLogo = [registration, tracks, news, info, history, changeLanguage];
     return (
         <>
             {withLogo ? buttonsWithLogo : buttonsWithoutLogo}
