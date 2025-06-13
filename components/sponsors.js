@@ -67,6 +67,15 @@ export default function Sponsors() {
                   <hr/>
                   <div className="flex justify-center py-4 pt-8 lg:pt-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <Link href={DBANK_LINK} target="_blank" passHref>
+                        <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/dbank-logo.svg"
+                               alt=""/>
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center py-4 pt-8 lg:pt-4">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <Link href={MOMCHILGRAD_LINK} target="_blank" passHref>
                         <Image width={imageSize} height={imageSize} className="rounded-lg" src="/images/sponsors/momchilgrad.jpg"
                                alt=""/>
