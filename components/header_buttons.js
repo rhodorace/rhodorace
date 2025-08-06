@@ -19,19 +19,19 @@ export default function HeaderButtons({ withLogo }) {
 
     const { t } = useTranslation();
     // ========= REGISTRATION BUTTON =========
-    // const registration =
-    //     <Link href="/sign-up" passHref>
-    //         <Button className="navbarBtn lg:inline-block">
-    //             {t("REGISTRATION_BUTTON")}
-    //         </Button>
-    //     </Link>;
-
     const registration =
-        <Link href="https://race-tracking.com/rhodorock2025/" passHref>
+        <Link href="/sign-up" passHref>
             <Button className="navbarBtn lg:inline-block">
-                {t("LIVE_BUTTON")}
+                {t("REGISTRATION_BUTTON")}
             </Button>
         </Link>;
+
+    // const registration =
+    //     <Link href="https://race-tracking.com/rhodorock2025/" passHref>
+    //         <Button className="navbarBtn lg:inline-block">
+    //             {t("LIVE_BUTTON")}
+    //         </Button>
+    //     </Link>;
 
     // ========= TRACKS BUTTON =========
     const tracks = <Menu allowHover>
@@ -131,6 +131,9 @@ export default function HeaderButtons({ withLogo }) {
             </Button>
         </MenuHandler>
         <MenuList>
+            <Link href="/history/2025" passHref>
+                <MenuItem>2025</MenuItem>
+            </Link>
             <Link href="/history/2024" passHref>
                 <MenuItem>2024</MenuItem>
             </Link>
@@ -138,11 +141,11 @@ export default function HeaderButtons({ withLogo }) {
     </Menu>;
 
     // ========= CONTACTS BUTTON =========
-    // const contacts = <Link href="/contact" passHref>
-    //     <Button className="navbarBtn lg:inline-block">
-    //         {t("CONTACTS_BUTTON")}
-    //     </Button>
-    // </Link>;
+    const contacts = <Link href="/contact" passHref>
+        <Button className="navbarBtn lg:inline-block">
+            {t("CONTACTS_BUTTON")}
+        </Button>
+    </Link>;
     // ========= CHANGE LANGUAGE BUTTON =========
     let changeLanguage;
     if (router.locale === "en") {
@@ -171,8 +174,8 @@ export default function HeaderButtons({ withLogo }) {
         </Link>;
     }
 
-    const buttonsWithLogo = [registration, tracks, news, info, logo, history, changeLanguage];
-    const buttonsWithoutLogo = [registration, tracks, news, info, history, changeLanguage];
+    const buttonsWithLogo = [registration, tracks, news, info, logo, history, contacts, changeLanguage];
+    const buttonsWithoutLogo = [registration, tracks, news, info, history, contacts, changeLanguage];
     return (
         <>
             {withLogo ? buttonsWithLogo : buttonsWithoutLogo}

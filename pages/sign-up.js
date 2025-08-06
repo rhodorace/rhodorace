@@ -19,9 +19,9 @@ export default function SignUp() {
   useEffect(() => {
     var linkIrun;
     if (router.locale === "en") {
-      linkIrun = "https://www.irun.bg/external.php/competition/sign/name/rhodo-rock-2025?s_lang=en_GB";
+      linkIrun = "https://www.irun.bg/external.php/competition/sign/name/rhodo-rock-2026?s_lang=en_GB";
     } else {
-      linkIrun = "https://www.irun.bg/external.php/competition/sign/name/rhodo-rock-2025?s_lang=bg_BG";
+      linkIrun = "https://www.irun.bg/external.php/competition/sign/name/rhodo-rock-2026?s_lang=bg_BG";
     }
 
     var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -58,27 +58,27 @@ export default function SignUp() {
   const TABLE_ROWS = [
     {
       from: "-",
-      till: "03.02.2025",
-      price9KM: "30 eur",
-      price21KM: "35 eur",
-      price42KM: "40 eur",
-      price60KM: "45 eur",
-    },
-    {
-      from: "04.02.2025",
-      till: "14.04.2025",
-      price9KM: "35 eur",
-      price21KM: "40 eur",
+      till: "02.02.2026",
+      price9KM: "32 eur",
+      price21KM: "38 eur",
       price42KM: "45 eur",
       price60KM: "50 eur",
     },
     {
-      from: "15.04.2025",
-      till: "19.05.2025",
-      price9KM: "45 eur",
-      price21KM: "50 eur",
-      price42KM: "55 eur",
-      price60KM: "60 eur",
+      from: "03.02.2026",
+      till: "13.04.2026",
+      price9KM: "38 eur",
+      price21KM: "43 eur",
+      price42KM: "50 eur",
+      price60KM: "55 eur",
+    },
+    {
+      from: "14.04.2026",
+      till: "18.05.2026",
+      price9KM: "48 eur",
+      price21KM: "53 eur",
+      price42KM: "60 eur",
+      price60KM: "65 eur",
     },
   ];
   const content = <>
