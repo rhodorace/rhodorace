@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 import React from "react";
 import Container from "@/components/container";
 import FeeBenefits from '@/components/fee_benefits';
+import MedicalCertificate from '@/components/medical-certificate';
 import {
   Accordion,
   AccordionHeader,
@@ -88,6 +89,7 @@ export default function SignUp() {
           <div className="w-full px-4 lg:order-1">
             <>
               <FeeBenefits />
+              <MedicalCertificate />
               <Accordion open={true}>
                 <AccordionHeader>{t("FEES")}</AccordionHeader>
                 <AccordionBody>
@@ -183,18 +185,20 @@ export default function SignUp() {
                     <div id="irun_register">
                       <div style={{width: "80%", textAlign: "center"}}>Вашият браузър е ограничил функционалността за
                         записване. За да продължите натиснете бутона по-долу и ще ви се
-                          зареди регистрационната форма в нов прозорец, където ще можете да завършите процеса.
-                          <a id="irun_link" href="#" target="_blank">Регистрация (натиснете тук)</a>
-                        </div>
-                      </div>
-                      <iframe id="irun_iframe" style={{ display: "none" }} src="" width="100%" height="900px" frameborder="0">
-                        Вашият браузър е ограничил функционалността за записване. За да продължите натиснете линка по-долу и ще ви се
                         зареди регистрационната форма в нов прозорец, където ще можете да завършите процеса.
-                        <a href="#" id="irun_link2" target="_blank">Регистрация (натиснете тук)</a>
-                      </iframe>
-                      <iframe src="https://www.irun.bg/cookies/start.html" style={{ display: "none" }}></iframe>
+                        <a id="irun_link" href="#" target="_blank">Регистрация (натиснете тук)</a>
+                      </div>
                     </div>
-                  
+                    <iframe id="irun_iframe" style={{display: "none"}} src="" width="100%" height="900px"
+                            frameBorder="0">
+                      Вашият браузър е ограничил функционалността за записване. За да продължите натиснете линка по-долу
+                      и ще ви се
+                      зареди регистрационната форма в нов прозорец, където ще можете да завършите процеса.
+                      <a href="#" id="irun_link2" target="_blank">Регистрация (натиснете тук)</a>
+                    </iframe>
+                    <iframe src="https://www.irun.bg/cookies/start.html" style={{display: "none"}}></iframe>
+                  </div>
+
                 </AccordionBody>
               </Accordion>
             </>
@@ -204,12 +208,12 @@ export default function SignUp() {
     </div>
   </>;
   return (
-    <Container content={content} />
+      <Container content={content}/>
   );
 }
 
 export async function getStaticProps(context) {
-  const { locale } = context
+  const {locale} = context
 
   return {
     props: {
