@@ -6,6 +6,8 @@
     <option name="modulesDirectoryPath" value="Modules" />
     <option name="projectDirectoryPath" value="" />
     <option name="projectType" value="Standard Application" />
+    <option name="routeNotFoundAnnotatorWarning" value="true" />
     <option name="suppressRealTimeFacadeWarnings" value="true" />
+    <option name="translationKeyNotFoundAnnotatorWarning" value="true" />
   </component>
 </project>

@@ -11,37 +11,12 @@ export default function MedicalCertificate() {
       </Typography>
       
       <div className="space-y-4 text-sm">
-        <div className="flex items-start">
-          <Typography color="blue-gray" className="font-normal leading-relaxed">
-            {t("MEDICAL_CERTIFICATE_IMPORTANT")}
-            <a 
-              href={t("MEDICAL_CERTIFICATE_FORM_LINK")} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 underline ml-1"
-            >
-              {t("MEDICAL_CERTIFICATE_FORM_LINK")}
-            </a>
-          </Typography>
-        </div>
-
-        <div className="flex items-start">
-          <Typography color="blue-gray" className="font-normal leading-relaxed">
-            {t("MEDICAL_CERTIFICATE_CLUB_MEMBER")}
-          </Typography>
-        </div>
-
-        <div className="flex items-start">
-          <Typography color="blue-gray" className="font-normal leading-relaxed">
-            {t("MEDICAL_CERTIFICATE_ON_SITE")}
-          </Typography>
-        </div>
-
-        <div className="flex items-start">
-          <Typography color="red" className="font-semibold leading-relaxed">
-            {t("MEDICAL_CERTIFICATE_WARNING")}
-          </Typography>
-        </div>
+        <Typography color="blue-gray" className="font-normal leading-relaxed">
+          {t("MEDICAL_CERTIFICATE_BODY_1")}
+        </Typography>
+        <Typography color="blue-gray" className="font-normal leading-relaxed">
+          {t("MEDICAL_CERTIFICATE_BODY_2")}
+        </Typography>
       </div>
     </Card>
   );

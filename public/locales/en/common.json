@@ -237,10 +237,7 @@
     "GENERAL_SPONSOR": "General sponsor",
     "MAIN_SPONSOR": "Main Sponsors",
     "SPONSORS_AND_PARTNERS": "Sponsors and partners",
-    "MEDICAL_CERTIFICATE_HEADER": "Medical Certificate Required",
-    "MEDICAL_CERTIFICATE_IMPORTANT": "Important: For participation in the competition, it is mandatory to present a valid medical certificate when receiving your start package before the competition, confirming that the participant is fit to participate in competitions with physical exertion of the type of mountain running or cycling. The certificate must be issued no earlier than 6 months before the start. You can download the form here:",
-    "MEDICAL_CERTIFICATE_FORM_LINK": "https://e.pcloud.link/publink/show?code=XZWwJ6Z5BsW2pKPHYYUAVFues3PALbDBfvk",
-    "MEDICAL_CERTIFICATE_CLUB_MEMBER": "If you are a member of a sports club under a licensed federation and have already passed an annual medical examination, it is not necessary to present a separate certificate. It is sufficient to provide a document from the respective club or federation that you have passed your regular medical control.",
-    "MEDICAL_CERTIFICATE_ON_SITE": "If you do not have a valid medical certificate or document from club/federation, you can undergo a medical examination on site when receiving the start package for a fee of 12 BGN.",
-    "MEDICAL_CERTIFICATE_WARNING": "Participants without a provided medical certificate or document from club/federation will not be admitted to the start, and the participation fee will not be refunded."
+    "MEDICAL_CERTIFICATE_HEADER": "Medical Examination at Bib Pickup",
+    "MEDICAL_CERTIFICATE_BODY_1": "All participants will undergo a medical examination when picking up their bib numbers. The medical exam is included in the participation fee.",
+    "MEDICAL_CERTIFICATE_BODY_2": "If the medical team does not allow a participant to start, the participation fee will be refunded."
 }
