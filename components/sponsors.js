@@ -16,13 +16,15 @@ export default function Sponsors() {
     { name: "Airhouse", link: "https://salepointbg.com/", image: "/images/sponsors/airhouse.png" },
     { name: "Osetia Garden", link: "https://osetiahotel.com/bg/", image: "/images/sponsors/osetiagarden.jpg" },
     { name: "Sponser", link: "https://sponser.bg/", image: "/images/sponsors/sponser.jpg" },
+    { name: "Top Rent A Car", link: "https://toprentacar.bg/", image: "/images/sponsors/top_rent.png" },
     // { name: "Enervit", link: "https://www.facebook.com/profile.php?id=100094393892114", image: "/images/sponsors/enervit.png" },
     { name: "Pirin Hill", link: "https://pirinhill.com/bg/", image: "/images/sponsors/pirin_hill.png" },
+    { name: "Персонално Лазерно Гравиране", link: "https://personalizirai.me/", image: "/images/sponsors/personal_lazer.jpg" },
     { name: "Varbitsa Milk", link: "https://www.facebook.com/p/%D0%9A%D1%80%D0%B0%D0%B2%D0%B5%D1%84%D0%B5%D1%80%D0%BC%D0%B0-%D0%92%D1%8A%D1%80%D0%B1%D0%B8%D1%86%D0%B0-%D0%9C%D0%B8%D0%BB%D0%BA-%D0%95%D0%9E%D0%9E%D0%94-%D0%B3%D1%80%D9%9F%D0%9C%D0%BE%D0%BC%D1%87%D0%B8%D0%BB%D0%B3%D1%80%D0%B0%D0%B4-100064717603838/", image: "/images/sponsors/vyrbitsa_milk.png" },
-    { name: "Woolona", link: "https://woolona.com/", image: "/images/sponsors/woolona.png" },
+    // { name: "Woolona", link: "https://woolona.com/", image: "/images/sponsors/woolona.png" },
     { name: "Abopharma", link: "https://abopharma.info/", image: "/images/sponsors/abopharma.png" },
     { name: "Terra Tangra", link: "https://terratangra.com/", image: "/images/sponsors/terra-tangra-log.png" },
-    { name: "Oriflame", link: "https://bg.oriflame.com/", image: "/images/sponsors/oriflame.png" },
+    // { name: "Oriflame", link: "https://bg.oriflame.com/", image: "/images/sponsors/oriflame.png" },
     { name: "Bowen", link: "https://bowen.bg/", image: "/images/sponsors/bowen.png" }
   ];
   const DEVIN_LINK = "https://devin-bg.com/"
