@@ -13,7 +13,7 @@ export default function Sponsors() {
     { name: "Maxi Market", link: "https://www.facebook.com/MAXI.MOMCHILGRAD", image: "/images/sponsors/maxi-market-logo.jpeg" },
     // { name: "Ballistic Sport", link: "https://ballistic-sport.com/", image: "/images/sponsors/ballistic.png" },
     { name: "Nutrino Lab", link: "https://nutrinolab.com/en/", image: "/images/sponsors/nutrino.jpg" },
-    { name: "Airhouse", link: "https://salepointbg.com/", image: "/images/sponsors/airhouse.png" },
+    // { name: "Airhouse", link: "https://salepointbg.com/", image: "/images/sponsors/airhouse.png" },
     { name: "Osetia Garden", link: "https://osetiahotel.com/bg/", image: "/images/sponsors/osetiagarden.jpg" },
     { name: "Sponser", link: "https://sponser.bg/", image: "/images/sponsors/sponser.jpg" },
     { name: "Top Rent A Car", link: "https://toprentacar.bg/", image: "/images/sponsors/top_rent.png" },
@@ -24,6 +24,7 @@ export default function Sponsors() {
     // { name: "Woolona", link: "https://woolona.com/", image: "/images/sponsors/woolona.png" },
     { name: "Abopharma", link: "https://abopharma.info/", image: "/images/sponsors/abopharma.png" },
     { name: "Terra Tangra", link: "https://terratangra.com/", image: "/images/sponsors/terra-tangra-log.png" },
+    { name: "First Aid Academy", link: "https://academyfirstaid.com/", image: "/images/sponsors/first_aid_academy.jpg" },
     // { name: "Oriflame", link: "https://bg.oriflame.com/", image: "/images/sponsors/oriflame.png" },
     { name: "Bowen", link: "https://bowen.bg/", image: "/images/sponsors/bowen.png" }
   ];

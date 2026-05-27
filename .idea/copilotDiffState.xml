@@ -12,14 +12,6 @@
             </PendingDiffInfo>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/pm2.config.js">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/pm2.config.js" />
-              <option name="updatedContent" value="module.exports = {&#10;  apps: [&#10;    {&#10;      name: 'rhodorace',&#10;      script: 'node_modules/next/dist/bin/next',&#10;      args: 'start -p ' + (process.env.NODE_PORT || 3002),&#10;      instances: 'max',&#10;      exec_mode: 'cluster',&#10;      env_local: {&#10;        APP_ENV: 'local'&#10;      },&#10;      env_dev: {&#10;        APP_ENV: 'dev'&#10;      },&#10;      env_prod: {&#10;        APP_ENV: 'prod'&#10;      }&#10;    }&#10;  ]&#10;}&#10;" />
-            </PendingDiffInfo>
-          </value>
-        </entry>
       </map>
     </option>
   </component>
