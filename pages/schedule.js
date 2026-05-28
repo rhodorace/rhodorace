@@ -43,6 +43,7 @@ export default function Schedule() {
                   <li>{t("SATURDAY_KIDS_START")}</li>
                   <li>{t("SATURDAY_9KM_FINISH")}</li>
                   <li>{t("SATURDAY_21KM_FINISH")}</li>
+                  <li>{t("SATURDAY_AWARD_CEREMONY_9K_21K")}</li>
                   <li>{t("SATURDAY_42KM_FINISH")}</li>
                   <li>{t("SATURDAY_60KM_FINISH")}</li>
                   <li>{t("SATURDAY_AWARD_CEREMONY")}</li>
