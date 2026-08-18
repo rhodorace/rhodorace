@@ -8,19 +8,19 @@ export default function PriceTable() {
 
     const TABLE_ROWS = [
         {
-            from: "-",
-            till: "03.02.2025",
-            price: "45 eur",
+            from: "18.08.2026",
+            till: "05.02.2027",
+            price: "59 eur",
         },
         {
-            from: "04.02.2025",
-            till: "14.04.2025",
-            price: "50 eur",
+            from: "06.02.2027",
+            till: "09.04.2027",
+            price: "66 eur",
         },
         {
-            from: "15.04.2025",
-            till: "19.05.2025",
-            price: "60 eur",
+            from: "10.04.2027",
+            till: "07.05.2027",
+            price: "76 eur",
         },
     ];
 

@@ -33,7 +33,7 @@ export default function Stripes() {
                 </div>
 
                 <div className="lg:text-left sm:text-right">
-                    <h1 className="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">6 JUNE</h1>
+                    <h1 className="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">22 MAY</h1>
                 </div>
             </div>
             <div className="rhodo-stripe green grid gap-2 grid-cols-2">
@@ -42,10 +42,15 @@ export default function Stripes() {
                 </div>
 
                 <div className="lg:text-left sm:text-right">
-                    <h1 className="mb-4 mt-4  font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">2026</h1>
+                    <h1 className="mb-4 mt-4  font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">2027</h1>
                 </div>
             </div>
-            <div className="flex justify-center">
+            <div className="flex flex-wrap justify-center gap-y-2">
+                <div className="container-distance">
+                    <div className="top-distance">3240 D+</div>
+                    <div className="triangle-distance"></div>
+                    <div className="bottom-distance background-red">88</div>
+                </div>
                 <div className="container-distance">
                     <div className="top-distance">2400 D+</div>
                     <div className="triangle-distance"></div>

@@ -29,6 +29,7 @@ export default function Schedule() {
               <div>
                 <h3 className="text-lg font-bold">{t("SATURDAY")}</h3>
                 <ul className="list-disc list-inside">
+                  <li>{t("SATURDAY_88KM_START")}</li>
                   <li>{t("SATURDAY_60KM_PACKAGE_COLLECTION")}</li>
                   <li>{t("SATURDAY_NOTICE_DECLARATION")}</li>
                   <li>{t("SATURDAY_60KM_START")}</li>
@@ -47,6 +48,7 @@ export default function Schedule() {
                   <li>{t("SATURDAY_42KM_FINISH")}</li>
                   <li>{t("SATURDAY_60KM_FINISH")}</li>
                   <li>{t("SATURDAY_AWARD_CEREMONY")}</li>
+                  <li>{t("SATURDAY_88KM_FINISH")}</li>
                 </ul>
               </div>
             </div>

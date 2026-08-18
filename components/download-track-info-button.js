@@ -4,7 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { Button } from '@material-tailwind/react';
 
-export default function DownloadTrackInfoButton({ trackInfoFileName }) {
+export default function DownloadTrackInfoButton({ trackInfoFileName, downloadFileName = trackInfoFileName }) {
     const router = useRouter();
     const { t } = useTranslation();
 
@@ -13,7 +13,7 @@ export default function DownloadTrackInfoButton({ trackInfoFileName }) {
 
         const link = document.createElement('a');
         link.href = downloadUrl;
-        link.download = trackInfoFileName;
+        link.download = downloadFileName;
 
         link.click();
     };

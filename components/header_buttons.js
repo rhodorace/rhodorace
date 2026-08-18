@@ -19,17 +19,10 @@ export default function HeaderButtons({ withLogo }) {
 
     const { t } = useTranslation();
     // ========= REGISTRATION BUTTON =========
-    // const registration =
-    //     <Link href="/sign-up" passHref>
-    //         <Button className="navbarBtn lg:inline-block">
-    //             {t("REGISTRATION_BUTTON")}
-    //         </Button>
-    //     </Link>;
-
     const registration =
-        <Link href="https://race-tracking.com/rhodorock2026/" passHref>
+        <Link href="/sign-up" passHref>
             <Button className="navbarBtn lg:inline-block">
-                {t("LIVE_BUTTON")}
+                {t("REGISTRATION_BUTTON")}
             </Button>
         </Link>;
 
@@ -47,6 +40,9 @@ export default function HeaderButtons({ withLogo }) {
             </Button>
         </MenuHandler>
         <MenuList>
+            <Link href="/track88" passHref>
+                <MenuItem>88 KM</MenuItem>
+            </Link>
             <Link href="/track9" passHref>
                 <MenuItem>9 KM</MenuItem>
             </Link>

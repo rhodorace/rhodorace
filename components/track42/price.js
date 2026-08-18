@@ -14,7 +14,7 @@ export default function Price() {
       <FeeBenefits />
       <PriceTable />
       <div className='mt-5'>
-        <Link href="/sign-up-irun" passHref>
+        <Link href="/sign-up" passHref>
           <Button variant="outlined">{t("SIGN_UP")}</Button>
         </Link>
       </div>
