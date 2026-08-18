@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 import Container from "@/components/container";
 import FeeBenefits from '@/components/fee_benefits';
 import MedicalCertificate from '@/components/medical-certificate';
+import IrunRegistrationFrame from '@/components/irun-registration-frame';
 import {
   Accordion,
   AccordionHeader,
@@ -151,9 +152,7 @@ export default function SignUp() {
                       </tbody>
                     </table>
                   </Card>
-                  <Typography variant="paragraph" className="mt-5 text-center">
-                    {t("REGISTRATION_2027_TBA")}
-                  </Typography>
+                  <IrunRegistrationFrame />
 
                 </AccordionBody>
               </Accordion>

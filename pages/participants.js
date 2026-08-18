@@ -1,10 +1,11 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
 import Container from "@/components/container";
-import { Typography } from "@material-tailwind/react";
+import { useRouter } from "next/router";
 
 export default function Participants() {
-    const { t } = useTranslation();
+    const router = useRouter();
+    const isEnglish = router.locale === "en";
+    const participantsURL = `https://www.irun.bg/external.php/competition/runners/name/rhodo-rock-2027?s_lang=${isEnglish ? "en_GB" : "bg_BG"}`;
 
     const content = <>
         <div className="relative mb-6 -mt-64 flex w-full min-w-0 flex-col break-words rounded-3xl bg-white shadow-xl shadow-gray-500/5">
@@ -12,9 +13,15 @@ export default function Participants() {
                 <div className="flex flex-wrap justify-center">
                     <div className="w-full px-4 lg:order-1">
                         <div className="flex justify-center py-4 pt-8 lg:pt-4">
-                            <Typography variant="lead" color="blue-gray" className="py-10 text-center">
-                                {t("PARTICIPANTS_2027_TBA")}
-                            </Typography>
+                            <iframe
+                                title={isEnglish ? "Rhodo Rock 2027 participants" : "Участници в Rhodo Rock 2027"}
+                                className="w-full min-w-max"
+                                src={participantsURL}
+                                width="600"
+                                height="800"
+                                frameBorder="0"
+                                allowFullScreen
+                            />
                         </div>
                     </div>
                 </div>
