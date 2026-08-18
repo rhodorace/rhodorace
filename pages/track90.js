@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 import {
     Cog8ToothIcon,
     CurrencyDollarIcon,
+    ExclamationTriangleIcon,
     InformationCircleIcon,
     MapIcon,
     ShoppingBagIcon
@@ -58,6 +59,20 @@ export default function Track88() {
                         <h1 className="mb-4 mt-4 font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
                             88KM
                         </h1>
+                    </div>
+                </div>
+                <div
+                    className="mx-4 mt-6 flex items-start gap-3 rounded-xl border-2 border-amber-500 bg-amber-50 px-4 py-4 text-amber-950 shadow-sm sm:mx-8 sm:px-6"
+                    role="alert"
+                >
+                    <ExclamationTriangleIcon className="mt-0.5 h-7 w-7 shrink-0 text-amber-600" aria-hidden="true" />
+                    <div>
+                        <h2 className="text-lg font-extrabold uppercase tracking-wide">
+                            {t("TRACK_88_ENTRY_REQUIREMENT_TITLE")}
+                        </h2>
+                        <p className="mt-1 text-base font-semibold leading-relaxed sm:text-lg">
+                            {t("TRACK_88_ENTRY_REQUIREMENT_BODY")}
+                        </p>
                     </div>
                 </div>
                 <div className="flex flex-wrap justify-center">

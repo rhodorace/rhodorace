@@ -156,6 +156,8 @@
     "START_DATE": "Start date",	
     "TIME_LIMIT": "Time limit",	
     "ITRA_CATEGORY": "ITRA category",	
+    "TRACK_88_ENTRY_REQUIREMENT_TITLE": "Important entry requirement",
+    "TRACK_88_ENTRY_REQUIREMENT_BODY": "To be admitted to the 88 km race, participants must have earned at least 2 ITRA points from a single race.",
     "MIN_ELEVATION": "Minimum elevation",	
     "MAX_ELEVATION": "Maximum elevation",	
     "AVG_ELEVATION": "Average elevation",	
