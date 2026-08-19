@@ -17,6 +17,9 @@ export default function Schedule() {
         <div className="flex flex-wrap justify-center">
           <div className="w-full px-4 lg:order-1">
             <h2 className="text-xl font-semibold mb-4">{t("SCHEDULE")}</h2>
+            <p className="mb-6 rounded-lg border-l-4 border-green-600 bg-green-50 px-4 py-3 font-semibold text-green-900">
+              {t("SCHEDULE_TWO_DAY_NOTICE")}
+            </p>
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-bold">{t("FRIDAY")}</h3>
@@ -33,22 +36,28 @@ export default function Schedule() {
                   <li>{t("SATURDAY_60KM_PACKAGE_COLLECTION")}</li>
                   <li>{t("SATURDAY_NOTICE_DECLARATION")}</li>
                   <li>{t("SATURDAY_60KM_START")}</li>
-                  <li>{t("SATURDAY_OTHERS_PACKAGE_COLLECTION")}</li>
-                  <li>{t("SATURDAY_NOTICE_DECLARATION")}</li>
                   <li>{t("SATURDAY_42KM_START")}</li>
-                  <li>{t("SATURDAY_TECHNICAL_BRIEFING")}</li>
-                  <li>{t("SATURDAY_21KM_START")}</li>
-                  <li>{t("SATURDAY_9KM_START")}</li>
-                  <li>{t("SATURDAY_HIKE_START")}</li>
-                  <li>{t("SATURDAY_KIDS_REGISTRATION")}</li>
-                  <li>{t("SATURDAY_KIDS_START")}</li>
-                  <li>{t("SATURDAY_9KM_FINISH")}</li>
-                  <li>{t("SATURDAY_21KM_FINISH")}</li>
-                  <li>{t("SATURDAY_AWARD_CEREMONY_9K_21K")}</li>
+                  <li>{t("SATURDAY_21_9_PACKAGE_COLLECTION")}</li>
                   <li>{t("SATURDAY_42KM_FINISH")}</li>
                   <li>{t("SATURDAY_60KM_FINISH")}</li>
                   <li>{t("SATURDAY_AWARD_CEREMONY")}</li>
                   <li>{t("SATURDAY_88KM_FINISH")}</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold">{t("SUNDAY")}</h3>
+                <ul className="list-disc list-inside">
+                  <li>{t("SUNDAY_PACKAGE_COLLECTION")}</li>
+                  <li>{t("SUNDAY_NOTICE_DECLARATION")}</li>
+                  <li>{t("SUNDAY_KIDS_REGISTRATION")}</li>
+                  <li>{t("SUNDAY_TECHNICAL_BRIEFING")}</li>
+                  <li>{t("SUNDAY_21KM_START")}</li>
+                  <li>{t("SUNDAY_9KM_START")}</li>
+                  <li>{t("SUNDAY_HIKE_START")}</li>
+                  <li>{t("SUNDAY_KIDS_START")}</li>
+                  <li>{t("SUNDAY_9KM_FINISH")}</li>
+                  <li>{t("SUNDAY_21KM_FINISH")}</li>
+                  <li>{t("SUNDAY_AWARD_CEREMONY_9K_21K")}</li>
                 </ul>
               </div>
             </div>
