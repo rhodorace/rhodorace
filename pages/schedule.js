@@ -37,6 +37,9 @@ export default function Schedule() {
                   <li>{t("SATURDAY_NOTICE_DECLARATION")}</li>
                   <li>{t("SATURDAY_60KM_START")}</li>
                   <li>{t("SATURDAY_42KM_START")}</li>
+                  <li>{t("SATURDAY_KIDS_REGISTRATION")}</li>
+                  <li>{t("SATURDAY_KIDS_START")}</li>
+                  <li>{t("SATURDAY_KIDS_AWARD_CEREMONY")}</li>
                   <li>{t("SATURDAY_21_9_PACKAGE_COLLECTION")}</li>
                   <li>{t("SATURDAY_42KM_FINISH")}</li>
                   <li>{t("SATURDAY_60KM_FINISH")}</li>
@@ -49,12 +52,10 @@ export default function Schedule() {
                 <ul className="list-disc list-inside">
                   <li>{t("SUNDAY_PACKAGE_COLLECTION")}</li>
                   <li>{t("SUNDAY_NOTICE_DECLARATION")}</li>
-                  <li>{t("SUNDAY_KIDS_REGISTRATION")}</li>
                   <li>{t("SUNDAY_TECHNICAL_BRIEFING")}</li>
                   <li>{t("SUNDAY_21KM_START")}</li>
                   <li>{t("SUNDAY_9KM_START")}</li>
                   <li>{t("SUNDAY_HIKE_START")}</li>
-                  <li>{t("SUNDAY_KIDS_START")}</li>
                   <li>{t("SUNDAY_9KM_FINISH")}</li>
                   <li>{t("SUNDAY_21KM_FINISH")}</li>
                   <li>{t("SUNDAY_AWARD_CEREMONY_9K_21K")}</li>
