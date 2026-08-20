@@ -10,17 +10,17 @@ export default function PriceTable() {
         {
             from: "18.08.2026",
             till: "05.02.2027",
-            price: "47 eur",
+            price: "42 eur",
         },
         {
             from: "06.02.2027",
             till: "09.04.2027",
-            price: "54 eur",
+            price: "52 eur",
         },
         {
             from: "10.04.2027",
             till: "07.05.2027",
-            price: "64 eur",
+            price: "62 eur",
         },
     ];
 

@@ -256,7 +256,8 @@
     "GENERAL_SPONSOR": "General sponsor",
     "MAIN_SPONSOR": "Main Sponsors",
     "SPONSORS_AND_PARTNERS": "Sponsors and partners",
-    "MEDICAL_CERTIFICATE_HEADER": "Medical Examination at Bib Pickup",
-    "MEDICAL_CERTIFICATE_BODY_1": "All participants will undergo a medical examination when picking up their bib numbers. The medical exam is included in the participation fee.",
-    "MEDICAL_CERTIFICATE_BODY_2": "If the medical team does not allow a participant to start, the participation fee will be refunded."
+    "MEDICAL_CERTIFICATE_HEADER": "Medical examinations",
+    "MEDICAL_CERTIFICATE_BODY_1": "All participants must undergo a mandatory on-site medical examination before collecting their race pack.",
+    "MEDICAL_CERTIFICATE_BODY_2": "Only participants whose health is confirmed by the medical team as suitable for endurance trail running will be allowed to start.",
+    "MEDICAL_CERTIFICATE_BODY_3": "If the doctors determine that a participant is unfit due to an underlying health condition, regardless of their training, that contraindicates participation — such as an acute illness or cardiovascular or respiratory problems — their decision is final and the entry fee will be refunded in full."
 }
