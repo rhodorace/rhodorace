@@ -246,6 +246,8 @@ def backup_operation(state):
     destination = state / 'backups' / (stamp + '.tar.gz')
     candidates = [HELPERS, CONFIG.parent,
                   Path('/etc/systemd/system/rhodo-rock.service'),
+                  Path('/etc/systemd/system/rhodo-certbot.service'),
+                  Path('/etc/systemd/system/rhodo-certbot.timer'),
                   Path('/etc/nginx/snippets/rhodo-private-common.conf'),
                   Path('/etc/nginx/sites-available/rhodo-private-preview.conf'),
                   state / 'current.json', state / 'releases']

@@ -11,7 +11,7 @@ export default function Map() {
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <div className='flex justify-center items-center h-screen'>
-                <iframe className='w-full max-w-screen-xl'
+                <iframe loading="lazy" title={t("MAP") + " – 21 km"} className='w-full max-w-screen-xl'
                         src="https://tracedetrail.fr/en/iframe/4131" scrolling="no"
                         marginheight="0" marginwidth="0"
                         frameborder="0" width="600" height="800" webkitallowfullscreen mozallowfullscreen

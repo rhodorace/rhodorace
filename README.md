@@ -42,8 +42,10 @@ Build и development използват изрично webpack; lint изпол�
 Публичният Rhodo още работи на стария VPS. На новия VPS вече е инсталирана частна production репетиция с ограничена Node услуга, Nginx/HTTPS и deploy/rollback с една команда. DNS и публичното пускане не са активирани.
 
 - [Сървър и публикуване — човешко ръководство](docs/operations/production.md): SSH, местоположение на проекта, една deploy команда, проверки, rollback, архиви, права, логове и оставащи стъпки за HTTPS/DNS.
+- [HTTPS и автоматично подновяване](docs/operations/https.md): отделният Certbot на Rhodo, актуалният сертификат, безопасното активиране след DNS cutover и диагностиката.
 - [Версионирани deploy инструменти и конфигурации](scripts/production/): root контролер, ограничен build helper, systemd услуга и частни Nginx шаблони.
 - [Тестове на deploy транзакцията](tests/deployment/test_rhodo_deploy.py): автоматично връщане при неуспешен старт, health check или запис на state и контролирано ръчно връщане.
+- [Защити на сертификатното подновяване](tests/deployment/test_certificate_renewal.py): отказ при стар DNS/липсващ HTTP път и включване на timer само след успешни проверки.
 
 На новия VPS след push в `main`:
 
@@ -59,5 +61,5 @@ sudo /usr/local/libexec/rhodo-production/deploy-rhodo-production.sh
 - Material Tailwind предупреждава за бъдеща замяна на `MobileNav` с `Collapse`.
 - Запазеният npm audit отчита 3 moderate записа за `postcss-selector-parser` по един advisory. Избраният `6.1.5` е публикуван като поправен backport от поддържащия проекта; суровият advisory диапазон още го включва. Не са прилагани suppressions или overrides: [официална версия](https://github.com/postcss/postcss-selector-parser/releases/tag/6.1.5), [advisory](https://github.com/postcss/postcss-selector-parser/security/advisories/GHSA-rj75-hqrm-r3gf).
 - Публикациите запазват редакционния си текст от Blogger, включително когато се отварят през EN адреси.
-- При частната репетиция TraceDeTrail понякога остана празен след клиентска навигация и съобщи нулев размер на map контейнера; при ново отваряне картата се визуализира. Сценарият трябва да се отстрани/провери преди публичното прехвърляне; виж [наблюдението в ръководството](docs/operations/production.md#наблюдение-от-браузърната-репетиция).
+- Поправено е преждевременното зареждане на TraceDeTrail картите чрез `loading="lazy"`; проверени са менюто, табовете, BG/EN и mobile. Виж [проверките в ръководството](docs/operations/production.md#поправка-на-картите).
 - Картите и iRun са външни интеграции. Проверка на iframe URL не доказва успешна регистрация или плащане.

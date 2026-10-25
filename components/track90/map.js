@@ -8,7 +8,7 @@ export default function Map() {
                 downloadFileName="RhodoRock88.gpx"
             />
             <div className="mt-8 flex justify-center">
-                <iframe
+                <iframe loading="lazy"
                     title="Rhodo Rock 88 km route"
                     className="w-full max-w-screen-xl"
                     src="https://tracedetrail.fr/en/iframe/10486"

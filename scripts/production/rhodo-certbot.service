@@ -1,0 +1,21 @@
+[Unit]
+Description=Renew only Rhodo HTTPS certificates
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=/etc/rhodo-production/renewal-enabled
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/bin/python3 -I /usr/local/libexec/rhodo-production/certificate-renewal.py --assert-enabled
+ExecStart=/usr/bin/certbot renew --config-dir /etc/rhodo-production/acme --work-dir /var/lib/rhodo-production-deploy/certbot-work --logs-dir /var/log/rhodo-certbot --quiet --non-interactive
+TimeoutStartSec=900
+UMask=0077
+PrivateTmp=yes
+PrivateDevices=yes
+NoNewPrivileges=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/etc/rhodo-production/acme /var/lib/rhodo-production-deploy/certbot-work /var/log/rhodo-certbot /var/log/nginx /var/www/rhodo-acme /run/nginx.pid
+MemoryMax=512M
+CPUWeight=50
+TasksMax=128

@@ -1,0 +1,11 @@
+[Unit]
+Description=Twice-daily Rhodo certificate renewal checks
+
+[Timer]
+OnCalendar=*-*-* 03,15:00:00
+RandomizedDelaySec=1h
+Persistent=yes
+Unit=rhodo-certbot.service
+
+[Install]
+WantedBy=timers.target
