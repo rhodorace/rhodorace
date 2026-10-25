@@ -14,6 +14,7 @@ class FakeActivation(renewal.RenewalActivation):
         self.dns_ok = True
         self.http_ok = True
         self.events = []
+        self.commands = []
         self.fail = None
 
     def dns_ready(self):
@@ -26,6 +27,7 @@ class FakeActivation(renewal.RenewalActivation):
         self.events.append('backup')
 
     def run(self, args):
+        self.commands.append(args)
         operation = 'reconfigure' if 'reconfigure' in args else 'dry-run' if '--dry-run' in args else args[1]
         self.events.append(operation)
         if operation == self.fail:
@@ -84,6 +86,14 @@ class RenewalGuards(unittest.TestCase):
             changed = dict(good, **{'rhodo-rock.com': ['169.58.175.172', unwanted]})
             self.assertFalse(renewal.valid_dns(changed))
         self.assertFalse(renewal.valid_dns({}))
+
+    def test_manual_dns_preference_is_replaced_with_http_for_webroot(self):
+        self.a.activate()
+        for args in self.a.commands[:2]:
+            self.assertEqual(args[args.index('--preferred-challenges') + 1], 'http')
+        reconfigure = self.a.commands[0]
+        self.assertIn('--webroot', reconfigure)
+        self.assertEqual(reconfigure[reconfigure.index('--webroot-path') + 1], '/var/www/rhodo-acme')
 
 
 if __name__ == '__main__':

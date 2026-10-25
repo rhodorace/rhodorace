@@ -91,9 +91,10 @@ class RenewalActivation:
             raise RuntimeError('Renewal is already marked enabled; use --check instead')
         self.backup()
         self.run(CERTBOT + ['reconfigure', '--cert-name', 'rhodo-production', '--webroot',
-                           '--webroot-path', '/var/www/rhodo-acme', '--non-interactive'])
+                           '--webroot-path', '/var/www/rhodo-acme', '--preferred-challenges',
+                           'http', '--non-interactive'])
         self.run(CERTBOT + ['renew', '--cert-name', 'rhodo-production', '--dry-run',
-                           '--run-deploy-hooks', '--non-interactive'])
+                           '--preferred-challenges', 'http', '--run-deploy-hooks', '--non-interactive'])
         fd = os.open(self.marker, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
         with os.fdopen(fd, 'w') as output:
             output.write('HTTP validation and deployment hook verified\n')

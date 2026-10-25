@@ -6,6 +6,8 @@
 
 Новият VPS е `169.58.175.172`, hostname `vmi3690666`. BTR production и stage също работят на него и не бива да се прекъсват при работа по Rhodo. Старият Rhodo е на `173.212.247.104` и се запазва през DNS прехода за връщане.
 
+На **25.10.2026** публичните `rhodo-rock.com` и `www.rhodo-rock.com` са прехвърлени към новия VPS. Активният режим е `production`. Проверени са двата HTTPS адреса, HTTP пренасочването, Blogger новини/статия, iRun формата и мобилната навигация. Пощата е отделена към Jump.bg според [DNS ръководството](dns-and-mail.md), а пробното автоматично подновяване е успешно според [HTTPS ръководството](https.md). Не е рестартиран VPS и BTR конфигурациите са запазени.
+
 Rhodo Node слуша само на `127.0.0.1:3002`. Частният Nginx HTTPS listener на `127.0.0.1:8443` остава достъпен само локално за проверки. Публичният Rhodo използва отделни HTTP/HTTPS virtual hosts на портове 80/443, без промени по BTR файловете.
 
 Режимът е записан в root-only `/etc/rhodo-production/config.json`: `private-preview` обслужва репетицията; `production` се разрешава само с отделен root marker `public-ready`, създаден при одобреното публично активиране. Текущият режим, commit и release се виждат с `deploy-rhodo-production.sh --check`. DNS може още да се разпространява независимо от готовия публичен listener.
@@ -91,10 +93,10 @@ Rollback сменя `current`, рестартира **само Rhodo** и отн
 | `/srv/rhodo-rock/shared/runtime-cache/<release-id>` | Единствената записваема приложна област за съответната версия. |
 | `/srv/rhodo-rock/source` | По-старо подготвително Git копие; не е текущата версия и не е deploy цел. |
 | `/etc/rhodo-production/build.env` | Защитена build настройка за съществуващия Blogger API ключ; не е в Git. |
-| `/etc/rhodo-production/config.json` | Администраторско разрешение за текущия частен режим. |
+| `/etc/rhodo-production/config.json` | Администраторско разрешение за активния режим; след миграцията е `production`. |
 | `/etc/rhodo-production/acme/` | Отделна Certbot конфигурация, сертификат, частен ключ и renewal hook само за Rhodo. |
 | `/etc/rhodo-production/tls/` | Предишни TLS файлове, запазени частно за връщане. |
-| `/etc/systemd/system/rhodo-certbot.{service,timer}` | Подготвени unit-и за подновяване; timer остава изключен до успешната HTTP проверка след cutover. |
+| `/etc/systemd/system/rhodo-certbot.{service,timer}` | Автоматично подновяване; timer е включен след успешната HTTP проверка и dry-run при миграцията. |
 | `/usr/local/libexec/rhodo-production/` | Root-owned deploy контролер и build helper. Приложението не може да ги подменя. |
 | `/etc/systemd/system/rhodo-rock.service` | Ограничена Node услуга с автоматичен старт след boot. |
 | `/etc/nginx/sites-available/rhodo-private-preview.conf` | Трите localhost HTTPS server блока: два hostname-а и отказ за неизвестен SNI. |
