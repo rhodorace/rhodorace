@@ -1,0 +1,48 @@
+[Unit]
+Description=Rhodo Rock private Next.js production service
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=/srv/rhodo-rock/current/.next/BUILD_ID
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=rhodo-site
+Group=rhodo-site
+WorkingDirectory=/srv/rhodo-rock/current
+ExecStart=/opt/node-v24.22.1-linux-x64/bin/node --max-old-space-size=512 node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3002
+Environment=NODE_ENV=production APP_ENV=prod NEXT_TELEMETRY_DISABLED=1
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=30
+KillMode=control-group
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+LockPersonality=yes
+RestrictSUIDSGID=yes
+RestrictRealtime=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+InaccessiblePaths=/srv/my-btr /srv/my-btr-stage /srv/rhodo-rock/.ssh /srv/rhodo-rock/source /srv/rhodo-rock/builds /srv/rhodo-rock/shared/build-cache
+ReadWritePaths=/srv/rhodo-rock/shared/runtime-cache
+MemoryMax=1G
+CPUWeight=50
+TasksMax=256
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=rhodo-rock
+LogRateLimitIntervalSec=30s
+LogRateLimitBurst=200
+
+[Install]
+WantedBy=multi-user.target
