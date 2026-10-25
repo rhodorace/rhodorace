@@ -39,9 +39,9 @@ Build и development използват изрично webpack; lint изпол�
 
 ## Публикуване и статус на миграцията
 
-Публичният Rhodo още работи на стария VPS. На новия VPS вече е инсталирана частна production репетиция с ограничена Node услуга, Nginx/HTTPS и deploy/rollback с една команда. DNS и публичното пускане не са активирани.
-
+Новият Contabo VPS е `169.58.175.172`. Deploy инструментът поддържа частна репетиция и production; активният режим се вижда със `--check`. Публичното прехвърляне е отделна административна операция с архив, проверки, DNS и връщане. След активиран production режим нормалното публикуване остава една команда.
 - [Сървър и публикуване — човешко ръководство](docs/operations/production.md): SSH, местоположение на проекта, една deploy команда, проверки, rollback, архиви, права, логове и оставащи стъпки за HTTPS/DNS.
+- [DNS и отделна поща в Jump.bg](docs/operations/dns-and-mail.md): адресите за сайта и пощата, SPF, Email Routing и създаване на бъдещи кутии.
 - [HTTPS и автоматично подновяване](docs/operations/https.md): отделният Certbot на Rhodo, актуалният сертификат, безопасното активиране след DNS cutover и диагностиката.
 - [Версионирани deploy инструменти и конфигурации](scripts/production/): root контролер, ограничен build helper, systemd услуга и частни Nginx шаблони.
 - [Тестове на deploy транзакцията](tests/deployment/test_rhodo_deploy.py): автоматично връщане при неуспешен старт, health check или запис на state и контролирано ръчно връщане.
@@ -53,7 +53,7 @@ Build и development използват изрично webpack; lint изпол�
 sudo /usr/local/libexec/rhodo-production/deploy-rhodo-production.sh
 ```
 
-Засега командата обновява само частния preview. Старите `npm run deploy:local`, `deploy:dev` и `deploy:prod` са премахнати. `pm2.config.js` е останала конфигурация от стария сървър и не е процедура за публикуване на новия VPS.
+В режим `production` командата проверява едновременно частния и публичния HTTPS listener, HTTP пренасочването и ACME пътя. В `private-preview` проверява само частното копие. Старите `npm run deploy:local`, `deploy:dev` и `deploy:prod` са премахнати. `pm2.config.js` е останала конфигурация от стария сървър и не е процедура за публикуване на новия VPS.
 
 ## Известни ограничения
 

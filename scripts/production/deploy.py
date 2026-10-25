@@ -24,6 +24,8 @@ STATE = Path('/var/lib/rhodo-production-deploy')
 HELPERS = Path('/usr/local/libexec/rhodo-production')
 CONFIG = Path('/etc/rhodo-production/config.json')
 SERVICE = 'rhodo-rock.service'
+PUBLIC_GATE = Path('/etc/rhodo-production/public-ready')
+ACME_MARKER = b'rhodo-vmi3690666-acme-webroot\n'
 REPO = 'https://github.com/rhodorace/rhodorace.git'
 SHA = re.compile(r'^[0-9a-f]{40}$')
 RID = re.compile(r'^[0-9]{8}T[0-9]{12}Z-[0-9a-f]{12}$')
@@ -47,8 +49,9 @@ class LocalTLS(http.client.HTTPSConnection):
         self.sock = self._context.wrap_socket(raw, server_hostname=self.host)
 
 
-def request(host, path, tls=True):
-    connection = LocalTLS(host, 8443, timeout=10, context=ssl.create_default_context()) if tls else http.client.HTTPConnection('127.0.0.1', 3002, timeout=10)
+def request(host, path, tls=True, port=None):
+    port = port or (8443 if tls else 3002)
+    connection = LocalTLS(host, port, timeout=10, context=ssl.create_default_context()) if tls else http.client.HTTPConnection('127.0.0.1', port, timeout=10)
     try:
         connection.request('GET', path, headers={'Host': host, 'Accept-Encoding': 'identity'})
         result = connection.getresponse()
@@ -58,29 +61,57 @@ def request(host, path, tls=True):
         connection.close()
 
 
-def check_health(meta):
+def config_mode(config, public_ready=False):
+    if set(config) != {'mode', 'ready'} or config['ready'] is not True:
+        raise RuntimeError('Rhodo prerequisites are not ready')
+    mode = config['mode']
+    if mode not in {'private-preview', 'production'}:
+        raise RuntimeError('Unknown Rhodo deployment mode')
+    if mode == 'production' and not public_ready:
+        raise RuntimeError('Public Rhodo activation has not been approved and verified')
+    return mode
+
+
+def check_health(meta, mode='private-preview', public_https_port=443, public_http_port=80):
+    if mode not in {'private-preview', 'production'}:
+        raise RuntimeError('Unknown Rhodo health mode')
     result = []
-    for host in ['rhodo-rock.com', 'www.rhodo-rock.com']:
-        for path, language in [('/', 'bg'), ('/en', 'en'), ('/news', 'bg'), ('/posts?post_id=3275790685635843839', 'bg')]:
-            status, headers, body = request(host, path)
-            if status != 200:
-                raise RuntimeError(f'HTTPS health failed: {host}{path}: {status}')
-            match = re.search(rb'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', body, re.S)
-            data = json.loads(match.group(1)) if match else {}
-            if data.get('buildId') != meta['build_id'] or data.get('locale') != language:
-                raise RuntimeError('HTTPS release/locale mismatch')
-            result.append({'host': host, 'path': path, 'status': status})
+    for port in [8443] + ([public_https_port] if mode == 'production' else []):
+        for host in ['rhodo-rock.com', 'www.rhodo-rock.com']:
+            for path, language in [('/', 'bg'), ('/en', 'en'), ('/news', 'bg'), ('/posts?post_id=3275790685635843839', 'bg')]:
+                status, headers, body = request(host, path, port=port)
+                if status != 200:
+                    raise RuntimeError(f'HTTPS health failed: {host}:{port}{path}: {status}')
+                match = re.search(rb'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', body, re.S)
+                data = json.loads(match.group(1)) if match else {}
+                if data.get('buildId') != meta['build_id'] or data.get('locale') != language:
+                    raise RuntimeError('HTTPS release/locale mismatch')
+                headers = {k.lower(): v for k, v in headers.items()}
+                if port != 8443 and 'noindex' in headers.get('x-robots-tag', '').lower():
+                    raise RuntimeError('Public Rhodo unexpectedly has a noindex header')
+                result.append({'host': host, 'port': port, 'path': path, 'status': status})
+            for path in ['/.env', '/.git/config', '/package.json', '/scripts/production/deploy.py']:
+                if request(host, path, port=port)[0] != 404:
+                    raise RuntimeError('Private path was exposed')
     status, _, body = request('rhodo-rock.com', '/', tls=False)
     if status != 200 or meta['build_id'].encode() not in body:
         raise RuntimeError('Direct Node health failed')
-    for path in ['/.env', '/.git/config', '/package.json', '/scripts/production/deploy.py']:
-        if request('rhodo-rock.com', path)[0] != 404:
-            raise RuntimeError('Private path was exposed')
+    if mode == 'production':
+        for host in ['rhodo-rock.com', 'www.rhodo-rock.com']:
+            path = '/en/news?rhodo_health=1'
+            status, headers, _ = request(host, path, tls=False, port=public_http_port)
+            headers = {k.lower(): v for k, v in headers.items()}
+            if status != 308 or headers.get('location') != 'https://' + host + path:
+                raise RuntimeError('Public HTTP to HTTPS redirect failed')
+            status, _, body = request(host, '/.well-known/acme-challenge/rhodo-renewal-ready', tls=False, port=public_http_port)
+            if status != 200 or body != ACME_MARKER:
+                raise RuntimeError('Public ACME webroot health failed')
     return result
 
 
 class Deployer:
-    def __init__(self, base=BASE, state=STATE):
+    def __init__(self, base=BASE, state=STATE, mode='private-preview'):
+        self.mode = mode
         self.base, self.state = Path(base), Path(state)
         self.current = self.base / 'current'
         self.statefile = self.state / 'current.json'
@@ -115,7 +146,7 @@ class Deployer:
         last = None
         for _ in range(15):
             try:
-                return check_health(meta)
+                return check_health(meta, mode=self.mode)
             except (OSError, ValueError, RuntimeError, http.client.HTTPException) as error:
                 last = error
                 time.sleep(1)
@@ -133,7 +164,7 @@ class Deployer:
             self.service('restart')
             proof = self.health(meta)
             saved = dict(meta, previous_release=old_state['release'] if old_state else None,
-                         mode='private-preview', health=proof)
+                         mode=self.mode, health=proof)
             atomic_json(self.statefile, saved)
         except BaseException:
             self.point(old_target)
@@ -250,6 +281,9 @@ def backup_operation(state):
                   Path('/etc/systemd/system/rhodo-certbot.timer'),
                   Path('/etc/nginx/snippets/rhodo-private-common.conf'),
                   Path('/etc/nginx/sites-available/rhodo-private-preview.conf'),
+                  Path('/etc/nginx/snippets/rhodo-public-common.conf'),
+                  Path('/etc/nginx/snippets/rhodo-public-headers.conf'),
+                  Path('/etc/nginx/sites-available/rhodo-production.conf'),
                   state / 'current.json', state / 'releases']
     fd = os.open(destination, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
     with os.fdopen(fd, 'wb') as output:
@@ -271,8 +305,7 @@ def main():
     if os.geteuid() != 0 or socket.gethostname().split('.')[0] != 'vmi3690666':
         raise RuntimeError('Run through sudo only on the approved VPS')
     config = json.loads(CONFIG.read_text())
-    if config != {'mode': 'private-preview', 'ready': True}:
-        raise RuntimeError('Private preview prerequisites are not ready')
+    mode = config_mode(config, public_ready=PUBLIC_GATE.is_file() and PUBLIC_GATE.stat().st_uid == 0)
     if BASE.stat().st_uid != 0 or STATE.stat().st_uid != 0:
         raise RuntimeError('Deployment parents must be administrator-owned')
     with (STATE / 'deploy.lock').open('a') as lock:
@@ -280,7 +313,7 @@ def main():
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError as error:
             raise RuntimeError('Another Rhodo operation is running') from error
-        deployer = Deployer()
+        deployer = Deployer(mode=mode)
         if args.check:
             current = deployer.load()
             if not current:

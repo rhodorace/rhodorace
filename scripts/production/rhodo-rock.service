@@ -1,5 +1,5 @@
 [Unit]
-Description=Rhodo Rock private Next.js production service
+Description=Rhodo Rock Next.js production service
 After=network-online.target
 Wants=network-online.target
 ConditionPathExists=/srv/rhodo-rock/current/.next/BUILD_ID
@@ -13,6 +13,7 @@ Group=rhodo-site
 WorkingDirectory=/srv/rhodo-rock/current
 ExecStart=/opt/node-v24.22.1-linux-x64/bin/node --max-old-space-size=512 node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3002
 Environment=NODE_ENV=production APP_ENV=prod NEXT_TELEMETRY_DISABLED=1
+SuccessExitStatus=143
 Restart=on-failure
 RestartSec=3
 TimeoutStopSec=30
