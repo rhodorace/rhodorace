@@ -6,18 +6,9 @@ import track_23 from "../public/images/track_23.png";
 import track_9 from "../public/images/track_9.png";
 
 export default function Stripes() {
-    const [openNav, setOpenNav] = React.useState(false);
-
-    React.useEffect(() => {
-        if(window.innerWidth <= 960) {
-            setOpenNav(true);
-        }
-    }, []);
-
     return (
         <div className="max-w-8xl container relative mt-0 sm:mt-44">
-            {openNav &&
-                <div className="responsiveLogo">
+            <div className="responsiveLogo rhodo-mobile-logo">
                     <Image
                         priority
                         src={rhodo_race}
@@ -26,7 +17,6 @@ export default function Stripes() {
                         alt="RhodoRock Momchilgrad"
                     />
                 </div>
-            }
             <div className="rhodo-stripe blue grid gap-2 grid-cols-2">
                 <div className="text-right">
                     <h1 className="mb-4 mt-4 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">RHODO&nbsp;ROCK</h1>

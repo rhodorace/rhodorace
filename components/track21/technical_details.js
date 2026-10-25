@@ -1,4 +1,4 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { useTranslation } from 'next-i18next';
 import { TECHNICAL_DETAILS_TABLE_INFO } from '@/lib/track21_info';
 import TechnicalDetailsTable from '../technical_details_table';
@@ -42,14 +42,4 @@ export default function TechnicalDetails() {
   return (
     <TechnicalDetailsTable tableRows={TABLE_ROWS} />
   );
-}
-
-export async function getStaticProps(context) {
-  const { locale } = context
-
-  return {
-    props: {
-      ...(await serverSideTranslations(locale)),
-    },
-  }
 }

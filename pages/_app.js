@@ -45,4 +45,10 @@ const App = ({ Component, pageProps }) => (
     </>
 )
 
-export default appWithTranslation(App)
+const AppWithTranslation = appWithTranslation(App)
+
+export default function LocalizedApp(props) {
+  // Newly mounted pages must start in the requested language, before they subscribe
+  // to languageChanged. Keep the provider stable during same-language navigation.
+  return <AppWithTranslation {...props} key={props.router.locale} />
+}

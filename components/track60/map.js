@@ -1,4 +1,4 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { useTranslation } from 'next-i18next';
 import DownloadTrackInfoButton from '../download-track-info-button';
 
@@ -18,14 +18,4 @@ export default function Map() {
             </div>
         </>
     );
-}
-
-export async function getStaticProps(context) {
-    const { locale } = context
-
-    return {
-        props: {
-            ...(await serverSideTranslations(locale)),
-        },
-    }
 }

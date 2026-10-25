@@ -1,4 +1,4 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { useTranslation } from 'next-i18next';
 import { Card, Typography } from "@material-tailwind/react";
 
@@ -88,14 +88,4 @@ export default function PriceTable() {
             </Card>
         </>
     );
-}
-
-export async function getStaticProps(context) {
-    const { locale } = context
-
-    return {
-        props: {
-            ...(await serverSideTranslations(locale)),
-        },
-    }
 }

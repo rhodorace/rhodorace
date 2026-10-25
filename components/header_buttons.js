@@ -9,7 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import rhodo_race from "../public/rhodo_race.jpg";
 import ReactCountryFlag from "react-country-flag";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { useTranslation } from 'next-i18next';
 import { useRouter } from "next/router";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
@@ -145,7 +145,7 @@ export default function HeaderButtons({ withLogo }) {
     // ========= CHANGE LANGUAGE BUTTON =========
     let changeLanguage;
     if (router.locale === "en") {
-        changeLanguage = <Link href="/bg" passHref>
+        changeLanguage = <Link href={{ pathname: router.pathname, query: router.query }} locale="bg" passHref>
             <ReactCountryFlag
                 className="emojiFlag"
                 countryCode="BG"
@@ -157,7 +157,7 @@ export default function HeaderButtons({ withLogo }) {
             />
         </Link>;
     } else if (router.locale === "bg") {
-        changeLanguage = <Link href="/en" passHref>
+        changeLanguage = <Link href={{ pathname: router.pathname, query: router.query }} locale="en" passHref>
             <ReactCountryFlag
                 className="emojiFlag"
                 countryCode="GB"
@@ -177,13 +177,4 @@ export default function HeaderButtons({ withLogo }) {
             {withLogo ? buttonsWithLogo : buttonsWithoutLogo}
         </>
     );
-}
-export async function getStaticProps(context) {
-    const { locale } = context
-
-    return {
-        props: {
-            ...(await serverSideTranslations(locale)),
-        },
-    }
 }

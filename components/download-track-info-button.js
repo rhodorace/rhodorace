@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { useTranslation } from 'next-i18next';
 import { Button } from '@material-tailwind/react';
 
@@ -22,12 +22,3 @@ export default function DownloadTrackInfoButton({ trackInfoFileName, downloadFil
         <Button className='backGroundGreen mb-5' onClick={handleDownload}>{t("DOWNLOAD")} GPX</Button>
     );
 };
-export async function getStaticProps(context) {
-    const { locale } = context
-
-    return {
-        props: {
-            ...(await serverSideTranslations(locale)),
-        },
-    }
-}

@@ -195,3 +195,7 @@ video {
 .background-purple {
   background-color: #bd00bd;
 }
+
+/* Same <=960px logo visibility without effect-driven state. */
+.rhodo-mobile-logo { display: none; }
+@media (max-width: 960px) { .rhodo-mobile-logo { display: flex; } }

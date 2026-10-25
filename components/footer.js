@@ -1,7 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { useTranslation } from 'next-i18next';
 import Link from "next/link";
 
@@ -51,15 +51,7 @@ export default function Footer({ copyright }) {
   );
 }
 
-export async function getStaticProps(context) {
-  const { locale } = context
 
-  return {
-    props: {
-      ...(await serverSideTranslations(locale)),
-    },
-  }
-}
 
 Footer.defaultProps = {
   copyright: (

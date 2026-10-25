@@ -1,5 +1,5 @@
 import Countdown from 'react-countdown';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { useTranslation } from 'next-i18next';
 import {
     Card,
@@ -92,14 +92,4 @@ export default function Counter() {
             </div>
         </section>
     );
-}
-
-export async function getStaticProps(context) {
-    const { locale } = context
-
-    return {
-        props: {
-            ...(await serverSideTranslations(locale)),
-        },
-    }
 }

@@ -1,4 +1,4 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { useTranslation } from 'next-i18next';
 import FeeBenefits from '../fee_benefits';
 import { Button } from "@material-tailwind/react";
@@ -20,14 +20,4 @@ export default function Price() {
       </div>
     </>
   );
-}
-
-export async function getStaticProps(context) {
-  const { locale } = context
-
-  return {
-    props: {
-      ...(await serverSideTranslations(locale)),
-    },
-  }
 }

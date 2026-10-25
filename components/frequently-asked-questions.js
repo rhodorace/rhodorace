@@ -6,7 +6,7 @@ import {
 } from "@material-tailwind/react";
 
 import { Typography } from "@material-tailwind/react";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { useTranslation } from 'next-i18next';
 
 export function FrequentlyAskedQuestions() {
@@ -48,13 +48,4 @@ export function FrequentlyAskedQuestions() {
       </div>
     </section>
   );
-}
-export async function getStaticProps(context) {
-  const { locale } = context
-
-  return {
-    props: {
-      ...(await serverSideTranslations(locale)),
-    },
-  }
 }

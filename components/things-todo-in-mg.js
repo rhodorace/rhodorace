@@ -1,5 +1,5 @@
 import { Typography } from "@material-tailwind/react";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { useTranslation } from 'next-i18next';
 import Image from "next/image";
 
@@ -271,14 +271,4 @@ export default function ThingsToDoInMg() {
             </section>
         </div>
     );
-}
-
-export async function getStaticProps(context) {
-    const { locale } = context
-
-    return {
-        props: {
-            ...(await serverSideTranslations(locale)),
-        },
-    }
 }
